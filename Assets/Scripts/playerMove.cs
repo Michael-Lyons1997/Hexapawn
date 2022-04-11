@@ -95,14 +95,15 @@ public class playerMove : MonoBehaviour
         PawnThreeOnB2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnB2;
         PawnThreeOnB3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnB3;
         PawnThreeOnC3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnC3;
-        //if(!aiMoved)
-        //{
+        aiMoved = GameObject.FindWithTag("GameController").GetComponent<AIMove>().AITurn;
+        if(!aiMoved)
+        {
             playerTurn = true;
             if(Input.GetMouseButtonDown(0))
             {
                 if(hit.rigidbody != null)
                 {
-                    Debug.Log("click on " + hit.collider.gameObject.name);
+                    //Debug.Log("click on " + hit.collider.gameObject.name);
                     switch(hit.rigidbody.gameObject.tag) 
                     {
                         case "Player-1":
@@ -132,7 +133,7 @@ public class playerMove : MonoBehaviour
                 }
                 if (hit.collider != null) //Don't enter the check if nothing was clicked.
                 {
-                    Debug.Log("click on " + hit.collider.gameObject.name);
+                    //Debug.Log("click on " + hit.collider.gameObject.name);
                     switch(hit.collider.gameObject.tag) 
                     {
                         case "A1":
@@ -194,6 +195,6 @@ public class playerMove : MonoBehaviour
                     }
                 }
             }
-        //}
+        }
     }
 }

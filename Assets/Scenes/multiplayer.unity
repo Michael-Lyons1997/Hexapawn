@@ -841,7 +841,6 @@ GameObject:
   - component: {fileID: 1018508126}
   - component: {fileID: 1018508125}
   - component: {fileID: 1018508129}
-  - component: {fileID: 1018508130}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -982,7 +981,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
+  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1013,7 +1012,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018508124}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adb3af04138225442882cf707cb16293, type: 3}
   m_Name: 
@@ -1031,21 +1030,6 @@ MonoBehaviour:
   c2: {fileID: 967684857}
   c3: {fileID: 2061459570}
   AITurn: 1
---- !u!114 &1018508130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018508124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30141384981e9e9408934f663f1ae558, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pawnOneMove: 0
-  pawnTwoMove: 0
-  pawnThreeMove: 0
 --- !u!1 &1019222532
 GameObject:
   m_ObjectHideFlags: 0

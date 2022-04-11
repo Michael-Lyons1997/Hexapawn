@@ -35,9 +35,11 @@ public class AIMove : MonoBehaviour
     bool PawnThreeOnC1;
     bool PawnThreeOnC2;
     bool PawnThreeOnC3;
-    int whichPawnToMove = 0;
     bool playerMoved;
-    public bool AITurn = false;
+    bool movePawnOne;
+    bool movePawnTwo;
+    bool movePawnThree;
+    public bool AITurn;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class AIMove : MonoBehaviour
         c1 = GameObject.FindWithTag("C1");
         c2 = GameObject.FindWithTag("C2");
         c3 = GameObject.FindWithTag("C3");
+        AITurn = false;
     }
 
     // Update is called once per frame
@@ -77,47 +80,51 @@ public class AIMove : MonoBehaviour
         PawnThreeOnC1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnC1;
         PawnThreeOnC2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnC2;
         PawnThreeOnC3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnC3;
-        //playerMoved = GameObject.FindWithTag("GameController").GetComponent<playerMove>().playerTurn;
-        //if(!playerMoved)
-        //{
+        movePawnOne = GameObject.FindWithTag("GameController").GetComponent<AI>().pawnOneMove;
+        movePawnTwo = GameObject.FindWithTag("GameController").GetComponent<AI>().pawnTwoMove;
+        movePawnThree = GameObject.FindWithTag("GameController").GetComponent<AI>().pawnThreeMove;
+        playerMoved = GameObject.FindWithTag("GameController").GetComponent<playerMove>().playerTurn;
+        if(!playerMoved)
+        {
             AITurn = true;
-            whichPawnToMove = Random.Range(1, 4);
-            switch(whichPawnToMove)
+            if(movePawnOne)
             {
-                case 1:
-                    if(PawnOneOnA1)
-                    {
-                        AIPawnOne.transform.position = b1.transform.position;
-                    }
-                    else
-                    {
-                        AIPawnOne.transform.position = c1.transform.position;
-                    }
-                    AITurn = false;
-                    break;
-                case 2:
-                    if(PawnTwoOnA2)
-                    {
-                        AIPawnTwo.transform.position = b2.transform.position;
-                    }
-                    else
-                    {
-                        AIPawnTwo.transform.position = c2.transform.position;
-                    }
-                    AITurn = false;
-                    break;
-                case 3: 
-                    if(PawnThreeOnA3)
-                    {
-                        AIPawnThree.transform.position = b3.transform.position;
-                    }
-                    else
-                    {
-                        AIPawnThree.transform.position = c3.transform.position;
-                    }
-                    AITurn = false;
-                    break;
+                if(PawnOneOnA1)
+                {
+                    AIPawnOne.transform.position = b1.transform.position;
+                }
+                else
+                {
+                    AIPawnOne.transform.position = c1.transform.position;
+                }
+                AITurn = false;
             }
-        //}
+            if(movePawnTwo)
+            {
+
+                if(PawnTwoOnA2)
+                {
+                    AIPawnTwo.transform.position = b2.transform.position;
+                }
+                else
+                {
+                    AIPawnTwo.transform.position = c2.transform.position;
+                }
+                AITurn = false;
+            }
+            if(movePawnThree)
+            {
+                if(PawnThreeOnA3)
+                {
+                    AIPawnThree.transform.position = b3.transform.position;
+                }
+                else
+                {
+                    AIPawnThree.transform.position = c3.transform.position;
+                }
+                AITurn = false;
+            }
+        
+        }
     }
 }
