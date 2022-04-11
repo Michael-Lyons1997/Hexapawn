@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - A1
+  - A2
+  - A3
+  - B1
+  - B2
+  - B3
+  - C1
+  - C2
+  - C3
+  - Player-1
+  - Player-2
+  - Player-3
+  - AI-Pawn-1
+  - AI-Pawn-2
+  - AI-Pawn-3
+  - pawn-Highlight
+  - square-Highlight
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 46832955
+    locked: 0
+  - name: board
+    uniqueID: 2948283065
+    locked: 0
+  - name: pawn
+    uniqueID: 1351392437
+    locked: 0
+  - name: highlight
+    uniqueID: 511995339
+    locked: 0
