@@ -112,6 +112,16 @@ public class playerMove : MonoBehaviour
                             pawnThreeClicked = false;
                             pawnHighlight.SetActive(true);
                             pawnHighlight.transform.position = playerPawnOne.transform.position;
+                            if(PawnOneOnC1)
+                            {
+                                squareHighlight.SetActive(true);
+                                squareHighlight.transform.position = b1.transform.position;
+                            }
+                            else if(PawnOneOnB1)
+                            {
+                                squareHighlight.SetActive(true);
+                                squareHighlight.transform.position = a1.transform.position;
+                            }
                             break;
                         case "Player-2":
                             pawnOneClicked = false; 
@@ -119,6 +129,16 @@ public class playerMove : MonoBehaviour
                             pawnThreeClicked = false;
                             pawnHighlight.SetActive(true);
                             pawnHighlight.transform.position = playerPawnTwo.transform.position;
+                            if(PawnTwoOnC2)
+                            {
+                                squareHighlight.SetActive(true);
+                                squareHighlight.transform.position = b2.transform.position;
+                            }
+                            else if(PawnTwoOnB2)
+                            {
+                                squareHighlight.SetActive(true);
+                                squareHighlight.transform.position = a2.transform.position;
+                            }
                             break;
                         case "Player-3":
                             pawnOneClicked = false; 
@@ -126,6 +146,16 @@ public class playerMove : MonoBehaviour
                             pawnThreeClicked = true;
                             pawnHighlight.SetActive(true);
                             pawnHighlight.transform.position = playerPawnThree.transform.position;
+                            if(PawnThreeOnC3)
+                            {
+                                squareHighlight.SetActive(true);
+                                squareHighlight.transform.position = b3.transform.position;
+                            }
+                            else if(PawnThreeOnB3)
+                            {
+                                squareHighlight.SetActive(true);
+                                squareHighlight.transform.position = a3.transform.position;
+                            }
                             break;
                         default:
                         break; 
@@ -142,6 +172,7 @@ public class playerMove : MonoBehaviour
                                 playerPawnOne.transform.position = a1.transform.position;
                                 pawnOneClicked = false; 
                                 pawnHighlight.SetActive(false);
+                                squareHighlight.SetActive(false);
                                 playerTurn = false;
                             }
                             break;
@@ -151,6 +182,7 @@ public class playerMove : MonoBehaviour
                                 playerPawnTwo.transform.position = a2.transform.position;
                                 pawnTwoClicked = false;
                                 pawnHighlight.SetActive(false);
+                                squareHighlight.SetActive(false);
                                 playerTurn = false;
                             }   
                             break;
@@ -160,6 +192,7 @@ public class playerMove : MonoBehaviour
                                 playerPawnThree.transform.position = a3.transform.position;
                                 pawnThreeClicked = false;
                                 pawnHighlight.SetActive(false);
+                                squareHighlight.SetActive(false);
                                 playerTurn = false;
                             }
                             break;
@@ -169,6 +202,7 @@ public class playerMove : MonoBehaviour
                                 playerPawnOne.transform.position = b1.transform.position;
                                 pawnOneClicked = false;
                                 pawnHighlight.SetActive(false);
+                                squareHighlight.SetActive(false);
                                 playerTurn = false;
                             }
                             break;
@@ -178,6 +212,7 @@ public class playerMove : MonoBehaviour
                                 playerPawnTwo.transform.position = b2.transform.position;
                                 pawnTwoClicked = false;
                                 pawnHighlight.SetActive(false);
+                                squareHighlight.SetActive(false);
                                 playerTurn = false;
                             }
                             break;
@@ -187,6 +222,7 @@ public class playerMove : MonoBehaviour
                                 playerPawnThree.transform.position = b3.transform.position;
                                 pawnThreeClicked = false;
                                 pawnHighlight.SetActive(false);
+                                squareHighlight.SetActive(false);
                                 playerTurn = false;
                             }
                             break; 

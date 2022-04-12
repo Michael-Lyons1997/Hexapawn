@@ -1000,8 +1000,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018508124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
-  m_LocalScale: {x: 32.665543, y: 13.961152, z: 1}
+  m_LocalPosition: {x: -0.1376, y: 0.8408, z: 0}
+  m_LocalScale: {x: 40.646847, y: 14.442613, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
@@ -1021,6 +1021,9 @@ MonoBehaviour:
   AIPawnOne: {fileID: 1688518095}
   AIPawnTwo: {fileID: 364772556}
   AIPawnThree: {fileID: 1153140766}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
   a1: {fileID: 1618070631}
   a2: {fileID: 1026409178}
   a3: {fileID: 1925343155}
@@ -1031,6 +1034,7 @@ MonoBehaviour:
   c2: {fileID: 967684857}
   c3: {fileID: 2061459570}
   AITurn: 1
+  playerPawnNumber: 0
 --- !u!114 &1018508130
 MonoBehaviour:
   m_ObjectHideFlags: 0

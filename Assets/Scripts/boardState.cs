@@ -58,9 +58,8 @@ public class boardState : MonoBehaviour
     public bool AIPawnThreeOnC1;
     public bool AIPawnThreeOnC2;
     public bool AIPawnThreeOnC3;
-    bool gameWin;
-    bool gameLose;
-
+    int numberofPlayerPawnsLeft;
+    int numberofAIPawnsLeft;
 
     // Start is called before the first frame update
     void Start()
@@ -104,14 +103,18 @@ public class boardState : MonoBehaviour
         AIPawnThreeOnC1 = false;
         AIPawnThreeOnC2 = false;
         AIPawnThreeOnC3 = false;
-
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        numberofPlayerPawnsLeft = GameObject.FindWithTag("GameController").GetComponent<AIMove>().playerPawnNumber;
         playerPawnCheck();
         AIPawnCheck();
+        if(numberofPlayerPawnsLeft == 0)
+        {
+            changeToLoseScreen();
+        }
     }
 
     void playerPawnCheck()
