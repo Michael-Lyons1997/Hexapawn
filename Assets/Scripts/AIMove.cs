@@ -124,36 +124,61 @@ public class AIMove : MonoBehaviour
                         AIPawnOne.transform.position = b2.transform.position;
                         playerPawnOne.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
                     else if(otherPawnTwoOnB2)
                     {
                         AIPawnOne.transform.position = b2.transform.position;
                         playerPawnTwo.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
-                    else
+                    else if(!otherPawnOneOnB1 && !otherPawnTwoOnB1)
                     {
                         AIPawnOne.transform.position = b1.transform.position;
+                        AITurn = false;
                     }
                 }
-                else
+                else if(PawnOneOnB1)
                 {
                     if(otherPawnTwoOnC2)
                     {
                         AIPawnOne.transform.position = c2.transform.position;
                         playerPawnTwo.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
-                    else
+                    else if(!otherPawnOneOnC1)
                     {
                         AIPawnOne.transform.position = c1.transform.position;
+                        AITurn = false;
                     }
                 }
-                AITurn = false;
+                else if(PawnOneOnB2)
+                {
+                    if(otherPawnOneOnC1)
+                    {
+                        AIPawnOne.transform.position = c1.transform.position;
+                        playerPawnOne.SetActive(false);
+                        playerPawnNumber--;
+                        AITurn = false;
+                    }
+                    else if(otherPawnThreeOnC3)
+                    {
+                        AIPawnOne.transform.position = c3.transform.position;
+                        playerPawnThree.SetActive(false);
+                        playerPawnNumber--;
+                        AITurn = false;
+                    }
+                    else if(!otherPawnTwoOnC2)
+                    {
+                        AIPawnOne.transform.position = c2.transform.position;
+                        AITurn = false;
+                    }
+                }
             }
             if(movePawnTwo)
             {
-
                 if(PawnTwoOnA2)
                 {
                     if(otherPawnOneOnB1)
@@ -161,50 +186,87 @@ public class AIMove : MonoBehaviour
                         AIPawnTwo.transform.position = b1.transform.position;
                         playerPawnOne.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
                     else if(otherPawnTwoOnB1)
                     {
                         AIPawnTwo.transform.position = b1.transform.position;
                         playerPawnTwo.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
                     else if(otherPawnTwoOnB3)
                     {
                         AIPawnTwo.transform.position = b3.transform.position;
                         playerPawnTwo.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
                     else if(otherPawnThreeOnB3)
                     {
                         AIPawnTwo.transform.position = b3.transform.position;
                         playerPawnThree.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
-                    else
+                    else if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2)
                     {
                         AIPawnTwo.transform.position = b2.transform.position;
+                        AITurn = false;
                     }
                 }
-                else
+                else if(PawnTwoOnB2)
                 {
                     if(otherPawnOneOnC1)
                     {
                         AIPawnTwo.transform.position = c1.transform.position;
                         playerPawnOne.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
                     else if(otherPawnThreeOnC3)
                     {
                         AIPawnTwo.transform.position = c3.transform.position;
                         playerPawnThree.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
-                    else
+                    else if(!otherPawnTwoOnC2)
                     {
                         AIPawnTwo.transform.position = c2.transform.position;
+                        AITurn = false;
                     }
                 }
-                AITurn = false;
+                else if(PawnTwoOnB1)
+                {
+                    if(otherPawnTwoOnC2)
+                    {
+                        AIPawnTwo.transform.position = c2.transform.position;
+                        playerPawnTwo.SetActive(false);
+                        playerPawnNumber--;
+                        AITurn = false;
+                    }
+                    else if(!otherPawnOneOnC1)
+                    {
+                        AIPawnTwo.transform.position = c1.transform.position;
+                        AITurn = false;
+                    }
+                }
+                else if(PawnTwoOnB3)
+                { 
+                    if(otherPawnTwoOnC2)
+                    {
+                        AIPawnTwo.transform.position = c2.transform.position;
+                        playerPawnTwo.SetActive(false);
+                        playerPawnNumber--;
+                        AITurn = false;
+                    }
+                    else if(!otherPawnThreeOnC3)
+                    {
+                        AIPawnTwo.transform.position = c3.transform.position;
+                        AITurn = false;
+                    }
+                }
             }
             if(movePawnThree)
             {
@@ -215,32 +277,58 @@ public class AIMove : MonoBehaviour
                         AIPawnThree.transform.position = b2.transform.position;
                         playerPawnOne.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
                     else if(otherPawnTwoOnB2)
                     {
                         AIPawnThree.transform.position = b2.transform.position;
                         playerPawnTwo.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
-                    else
+                    else if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3)
                     {
                         AIPawnThree.transform.position = b3.transform.position;
+                        AITurn = false;
                     }
                 }
-                else
+                else if(PawnThreeOnB3)
                 {
                     if(otherPawnTwoOnC2)
                     {
                         AIPawnThree.transform.position = c2.transform.position;
                         playerPawnTwo.SetActive(false);
                         playerPawnNumber--;
+                        AITurn = false;
                     }
-                    else
+                    else if(!otherPawnThreeOnC3)
                     {
                         AIPawnThree.transform.position = c3.transform.position;
+                        AITurn = false;
                     }
                 }
-                AITurn = false;
+                else if(PawnThreeOnB2)
+                {
+                    if(otherPawnOneOnC1)
+                    {
+                        AIPawnThree.transform.position = c1.transform.position;
+                        playerPawnOne.SetActive(false);
+                        playerPawnNumber--;
+                        AITurn = false;
+                    }
+                    else if(otherPawnThreeOnC3)
+                    {
+                        AIPawnThree.transform.position = c3.transform.position;
+                        playerPawnThree.SetActive(false);
+                        playerPawnNumber--;
+                        AITurn = false;
+                    }
+                    else if(!otherPawnTwoOnC2)
+                    {
+                        AIPawnThree.transform.position = c2.transform.position;
+                        AITurn = false;
+                    }
+                }
             }
         }
     }
