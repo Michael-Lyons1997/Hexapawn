@@ -21,6 +21,8 @@ TagManager:
   - AI-Pawn-3
   - pawn-Highlight
   - square-Highlight
+  - Square-Pawn-Highlight
+  - Square-Pawn-Two-Highlight
   layers:
   - Default
   - TransparentFX
