@@ -7,6 +7,9 @@ public class playerMove : MonoBehaviour
     public GameObject playerPawnOne;
     public GameObject playerPawnTwo;
     public GameObject playerPawnThree;
+    public GameObject AIPawnOne;
+    public GameObject AIPawnTwo;
+    public GameObject AIPawnThree;
     public GameObject pawnHighlight;
     public GameObject squareHighlight;
     public GameObject squarePawnHighlight;
@@ -63,6 +66,9 @@ public class playerMove : MonoBehaviour
         playerPawnOne = GameObject.FindWithTag("Player-1");
         playerPawnTwo = GameObject.FindWithTag("Player-2");
         playerPawnThree = GameObject.FindWithTag("Player-3");
+        AIPawnOne = GameObject.FindWithTag("AI-Pawn-1");
+        AIPawnTwo = GameObject.FindWithTag("AI-Pawn-2");
+        AIPawnThree = GameObject.FindWithTag("AI-Pawn-3");
         pawnHighlight = GameObject.FindWithTag("pawn-Highlight");
         squareHighlight = GameObject.FindWithTag("square-Highlight");
         squarePawnHighlight = GameObject.FindWithTag("Square-Pawn-Highlight");
@@ -88,10 +94,6 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos2D = new Vector2(mousePos.x, mousePos.y); // get the 2D co-ordinates of the mousePosition
-        hit = Physics2D.Raycast(mousePos2D, Vector2.zero); // Make a ray starting at the mouse position and ending at (0,0)
-        Debug.DrawLine(mousePos2D, Vector2.zero, Color.green);
         PawnOneOnA1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnA1;
         PawnOneOnA2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnA2;
         PawnOneOnA3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnA3;
@@ -127,9 +129,12 @@ public class playerMove : MonoBehaviour
             playerTurn = true;
             if(Input.GetMouseButtonDown(0))
             {
+                mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mousePos2D = new Vector2(mousePos.x, mousePos.y); // get the 2D co-ordinates of the mousePosition
+                hit = Physics2D.Raycast(mousePos2D, Vector2.zero); // Make a ray starting at the mouse position and ending at (0,0)
                 if(hit.rigidbody != null)
                 {
-                    //Debug.Log("click on " + hit.collider.gameObject.name);
+                    Debug.Log("click on " + hit.collider.gameObject.name);
                     switch(hit.rigidbody.gameObject.tag) 
                     {
                         case "Player-1":
@@ -313,13 +318,330 @@ public class playerMove : MonoBehaviour
                                 }
                             }
                             break;
+                    }
+                }
+                if(hit.rigidbody != null)
+                {
+                    Debug.Log("click on " + hit.collider.gameObject.name);
+                    switch(hit.rigidbody.gameObject.tag) 
+                    {
+                        case "AI-Pawn-1":
+                            if(pawnOneClicked)
+                            {
+                                if(PawnOneOnC1)
+                                {
+                                    if(otherPawnOneOnB2)
+                                    {
+                                        playerPawnOne.transform.position = AIPawnOne.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnOne.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnOneOnB2)
+                                {
+                                    if(otherPawnOneOnA1)
+                                    {
+                                        playerPawnOne.transform.position = AIPawnOne.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnOne.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }
+                            if(pawnTwoClicked)
+                            {
+                                if(PawnTwoOnC2)
+                                {
+                                    if(otherPawnOneOnB1)
+                                    {
+                                        playerPawnTwo.transform.position = AIPawnOne.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnOne.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnTwoOnB2)
+                                {
+                                    if(otherPawnOneOnA1)
+                                    {
+                                        playerPawnTwo.transform.position = AIPawnOne.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnOne.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }
+                            if(pawnThreeClicked)
+                            {
+                                if(PawnThreeOnC3)
+                                {
+                                    if(otherPawnOneOnB2)
+                                    {
+                                        playerPawnThree.transform.position = AIPawnOne.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnOne.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnThreeOnB2)
+                                {
+                                    if(otherPawnOneOnA1)
+                                    {
+                                        playerPawnThree.transform.position = AIPawnOne.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnOne.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }
+                            break;
+                        case "AI-Pawn-2":
+                            if(pawnOneClicked)
+                            {
+                                if(PawnOneOnC1)
+                                {
+                                    if(otherPawnTwoOnB2)
+                                    {
+                                        playerPawnOne.transform.position = AIPawnTwo.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnTwo.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnOneOnB1)
+                                {
+                                    if(otherPawnTwoOnA2)
+                                    {
+                                        playerPawnOne.transform.position = AIPawnTwo.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnTwo.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }   
+                            if(pawnTwoClicked)
+                            {
+                                if(PawnTwoOnC2)
+                                {
+                                    if(otherPawnTwoOnB1)
+                                    {
+                                        playerPawnTwo.transform.position = AIPawnTwo.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnTwo.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                    else if(otherPawnTwoOnB3)
+                                    {
+                                        playerPawnTwo.transform.position = AIPawnTwo.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnTwo.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnTwoOnB1)
+                                {
+                                    if(otherPawnTwoOnA2)
+                                    {
+                                        playerPawnTwo.transform.position = AIPawnTwo.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnTwo.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                                else if(PawnTwoOnB3)
+                                {
+                                    if(otherPawnTwoOnA2)
+                                    {
+                                        playerPawnTwo.transform.position = AIPawnTwo.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnTwo.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }
+                            if(pawnThreeClicked)
+                            {
+                                if(PawnThreeOnC3)
+                                {
+                                    if(otherPawnTwoOnB2)
+                                    {
+                                        playerPawnThree.transform.position = AIPawnTwo.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnTwo.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnThreeOnB3)
+                                {
+                                    if(otherPawnTwoOnA2)
+                                    {
+                                        playerPawnThree.transform.position = AIPawnTwo.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnTwo.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }
+                        break;
+                        case "AI-Pawn-3":
+                            if(pawnOneClicked)
+                            {
+                                if(PawnOneOnC1)
+                                {
+                                    if(otherPawnThreeOnB2)
+                                    {
+                                        playerPawnOne.transform.position = AIPawnThree.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnThree.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnOneOnB2)
+                                {
+                                    if(otherPawnThreeOnA3)
+                                    {
+                                        playerPawnOne.transform.position = AIPawnThree.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnThree.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }
+                            if(pawnTwoClicked)
+                            {
+                                if(PawnTwoOnC2)
+                                {
+                                    if(otherPawnThreeOnB3)
+                                    {
+                                        playerPawnTwo.transform.position = AIPawnThree.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnThree.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnTwoOnB2)
+                                {
+                                    if(otherPawnThreeOnB3)
+                                    {
+                                        playerPawnTwo.transform.position = AIPawnThree.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnThree.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }
+                            if(pawnThreeClicked)
+                            {
+                                if(PawnThreeOnC3)
+                                {
+                                    if(otherPawnThreeOnB2)
+                                    {
+                                        playerPawnThree.transform.position = AIPawnThree.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnThree.SetActive(false);
+                                        playerTurn = false;
+                                    }
+                                }
+                                else if(PawnThreeOnB2)
+                                {
+                                    if(otherPawnThreeOnA3)
+                                    {
+                                        playerPawnThree.transform.position = AIPawnThree.transform.position;
+                                        pawnOneClicked = false; 
+                                        pawnHighlight.SetActive(false);
+                                        squareHighlight.SetActive(false);
+                                        squarePawnHighlight.SetActive(false);
+                                        squarePawnHighlightTwo.SetActive(false);
+                                        AIPawnThree.SetActive(false);
+                                        playerTurn = false;
+                                    } 
+                                }
+                            }
+                        break;
                         default:
                         break; 
                     }   
                 }
                 if (hit.collider != null) //Don't enter the check if nothing was clicked.
                 {
-                    //Debug.Log("click on " + hit.collider.gameObject.name);
+                    Debug.Log("click on " + hit.collider.gameObject.name);
                     switch(hit.collider.gameObject.tag) 
                     {
                         case "A1":
@@ -416,6 +738,7 @@ public class playerMove : MonoBehaviour
                             break;                           
                     }
                 }
+                
             }
         }
     }
