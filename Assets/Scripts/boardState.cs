@@ -60,6 +60,12 @@ public class boardState : MonoBehaviour
     public bool AIPawnThreeOnC3;
     int numberofPlayerPawnsLeft;
     int numberofAIPawnsLeft;
+    bool playerPawnOneCantMove;
+    bool playerPawnTwoCantMove;
+    bool playerPawnThreeCantMove;
+    bool AIPawnOneCantMove;
+    bool AIPawnTwoCantMove;
+    bool AIPawnThreeCantMove;
 
     // Start is called before the first frame update
     void Start()
@@ -109,11 +115,30 @@ public class boardState : MonoBehaviour
     void Update()
     {   
         numberofPlayerPawnsLeft = GameObject.FindWithTag("GameController").GetComponent<AIMove>().playerPawnNumber;
+        numberofAIPawnsLeft = GameObject.FindWithTag("GameController").GetComponent<playerMove>().AIPawnNumber;
+        playerPawnOneCantMove = GameObject.FindWithTag("GameController").GetComponent<playerMove>().pawnOneCantMove;
+        playerPawnTwoCantMove = GameObject.FindWithTag("GameController").GetComponent<playerMove>().pawnTwoCantMove;
+        playerPawnThreeCantMove = GameObject.FindWithTag("GameController").GetComponent<playerMove>().pawnThreeCantMove;
+        AIPawnOneCantMove = GameObject.FindWithTag("GameController").GetComponent<AIMove>().pawnOneCantMove;
+        AIPawnTwoCantMove = GameObject.FindWithTag("GameController").GetComponent<AIMove>().pawnTwoCantMove;
+        AIPawnThreeCantMove = GameObject.FindWithTag("GameController").GetComponent<AIMove>().pawnThreeCantMove;
         playerPawnCheck();
         AIPawnCheck();
         if(numberofPlayerPawnsLeft == 0)
         {
             changeToLoseScreen();
+        }
+        if(numberofAIPawnsLeft == 0)
+        {
+            changeToWinScreen();
+        }
+        if(playerPawnOneCantMove && playerPawnTwoCantMove && playerPawnThreeCantMove)
+        {
+            changeToLoseScreen();
+        }
+        if(AIPawnOneCantMove && AIPawnTwoCantMove && AIPawnThreeCantMove)
+        {
+            changeToWinScreen();
         }
     }
 

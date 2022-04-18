@@ -432,6 +432,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &513664968
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +921,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1018508126}
           m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnB2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1554,6 +1578,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &1026409182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1823,6 +1859,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1181041308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,6 +2057,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1018508126}
           m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnB1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2400,6 +2460,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &1410576137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2530,6 +2602,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1018508126}
           m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnA1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2717,6 +2801,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1018508126}
           m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: TakeAIPawnOne
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3158,6 +3254,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1018508126}
           m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnA3
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
+          m_MethodName: swapTurns
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
