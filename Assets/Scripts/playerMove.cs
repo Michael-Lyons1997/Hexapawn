@@ -437,6 +437,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnOne.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnOneOnB2)
@@ -451,6 +452,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnOne.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }
@@ -468,6 +470,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnOne.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnTwoOnB2)
@@ -482,6 +485,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnOne.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }
@@ -499,6 +503,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnOne.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnThreeOnB2)
@@ -513,6 +518,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnOne.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }
@@ -536,6 +542,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnOneOnB1)
@@ -550,6 +557,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }   
@@ -567,6 +575,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                     else if(otherPawnTwoOnB3)
                     {
@@ -578,6 +587,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnTwoOnB1)
@@ -592,6 +602,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
                 else if(PawnTwoOnB3)
@@ -606,6 +617,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }
@@ -623,6 +635,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnThreeOnB3)
@@ -637,6 +650,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }
@@ -660,6 +674,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnThree.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnOneOnB2)
@@ -674,6 +689,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnThree.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }
@@ -691,6 +707,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnThree.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnTwoOnB2)
@@ -705,6 +722,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnThree.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }
@@ -722,6 +740,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnThree.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     }
                 }
                 else if(PawnThreeOnB2)
@@ -736,6 +755,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         squarePawnHighlightTwo.SetActive(false);
                         AIPawnThree.SetActive(false);
                         AIPawnNumber--;
+                        playerTurn = false;
                     } 
                 }
             }
@@ -756,6 +776,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squareHighlight.SetActive(false);
                     squarePawnHighlight.SetActive(false);
                     squarePawnHighlightTwo.SetActive(false);
+                    playerTurn = false;
                 }
             }
         }
@@ -774,6 +795,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squareHighlight.SetActive(false);
                     squarePawnHighlight.SetActive(false);
                     squarePawnHighlightTwo.SetActive(false);
+                    playerTurn = false; 
                 }
             }
         }
@@ -792,6 +814,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squareHighlight.SetActive(false);
                     squarePawnHighlight.SetActive(false);
                     squarePawnHighlightTwo.SetActive(false);
+                    playerTurn = false;
                 }
             }
         }
@@ -810,6 +833,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squareHighlight.SetActive(false);
                     squarePawnHighlight.SetActive(false);
                     squarePawnHighlightTwo.SetActive(false);
+                    playerTurn = false;
                 }
             }
         }
@@ -828,6 +852,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squareHighlight.SetActive(false);
                     squarePawnHighlight.SetActive(false);
                     squarePawnHighlightTwo.SetActive(false);
+                    playerTurn = false;
                 }
             }    
         }
@@ -846,13 +871,9 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squareHighlight.SetActive(false);
                     squarePawnHighlight.SetActive(false);
                     squarePawnHighlightTwo.SetActive(false);
+                    playerTurn = false;
                 }
             }
         }
-    }
-
-    public void swapTurns()
-    {
-        playerTurn = false;
     }
 }
