@@ -1154,13 +1154,13 @@ MonoBehaviour:
   playerPawnOne: {fileID: 1019222532}
   playerPawnTwo: {fileID: 1381798994}
   playerPawnThree: {fileID: 1989481816}
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
   pawnHighlight: {fileID: 1810527559}
   squareHighlight: {fileID: 1785832733}
-  squarePawnHighlight: {fileID: 0}
-  squarePawnHighlightTwo: {fileID: 0}
+  squarePawnHighlight: {fileID: 800631207}
+  squarePawnHighlightTwo: {fileID: 1398656064}
   a1: {fileID: 1618070631}
   a2: {fileID: 1026409178}
   a3: {fileID: 1925343155}
@@ -1170,6 +1170,7 @@ MonoBehaviour:
   c1: {fileID: 619622634}
   c2: {fileID: 967684857}
   c3: {fileID: 2061459570}
+  AIScript: {fileID: 1018508129}
   playerTurn: 1
   AIPawnNumber: 0
   pawnOneCantMove: 0
@@ -1267,6 +1268,7 @@ MonoBehaviour:
   c1: {fileID: 619622634}
   c2: {fileID: 967684857}
   c3: {fileID: 2061459570}
+  playerScript: {fileID: 1018508126}
   AITurn: 1
   playerPawnNumber: 0
   pawnOneCantMove: 0

@@ -19,6 +19,7 @@ public class AIMove : MonoBehaviour
     public GameObject c1;
     public GameObject c2;
     public GameObject c3;
+    public playerMove playerScript;
     bool PawnOneOnA1;
     bool PawnOneOnB1;
     bool PawnOneOnB2;
@@ -48,7 +49,6 @@ public class AIMove : MonoBehaviour
     bool otherPawnThreeOnB2;
     bool otherPawnThreeOnB3;
     bool otherPawnThreeOnC3;
-    bool playerMoved;
     bool movePawnOne;
     bool movePawnTwo;
     bool movePawnThree;
@@ -60,6 +60,7 @@ public class AIMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerScript = GameObject.FindWithTag("GameController").GetComponent<playerMove>();
         AIPawnOne = GameObject.FindWithTag("AI-Pawn-1");
         AIPawnTwo = GameObject.FindWithTag("AI-Pawn-2");
         AIPawnThree = GameObject.FindWithTag("AI-Pawn-3");
@@ -117,10 +118,8 @@ public class AIMove : MonoBehaviour
         movePawnOne = GameObject.FindWithTag("GameController").GetComponent<AI>().pawnOneMove;
         movePawnTwo = GameObject.FindWithTag("GameController").GetComponent<AI>().pawnTwoMove;
         movePawnThree = GameObject.FindWithTag("GameController").GetComponent<AI>().pawnThreeMove;
-        playerMoved = GameObject.FindWithTag("GameController").GetComponent<playerMove>().playerTurn;
-        if(!playerMoved)
+        if(AITurn)
         {
-            AITurn = true;
             if(movePawnOne)
             {
                 moveAIPawnOne();
@@ -146,7 +145,7 @@ public class AIMove : MonoBehaviour
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
                 pawnOneCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(otherPawnTwoOnB2)
             {
@@ -154,13 +153,13 @@ public class AIMove : MonoBehaviour
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
                 pawnOneCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnOneOnB1 && !otherPawnTwoOnB1 && !PawnTwoOnB1)
             {
                 AIPawnOne.transform.position = b1.transform.position;
                 pawnOneCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -175,13 +174,13 @@ public class AIMove : MonoBehaviour
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
                 pawnOneCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnOneOnC1 && !PawnTwoOnC1 && !PawnThreeOnC1)
             {
                 AIPawnOne.transform.position = c1.transform.position;
                 pawnOneCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -196,7 +195,7 @@ public class AIMove : MonoBehaviour
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
                 pawnOneCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(otherPawnThreeOnC3)
             {
@@ -204,13 +203,13 @@ public class AIMove : MonoBehaviour
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
                 pawnOneCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnTwoOnC2 && !PawnTwoOnC2 && !PawnThreeOnC2)
             {
                 AIPawnOne.transform.position = c2.transform.position;
                 pawnOneCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -228,7 +227,7 @@ public class AIMove : MonoBehaviour
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(otherPawnTwoOnB1)
             {
@@ -236,7 +235,7 @@ public class AIMove : MonoBehaviour
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(otherPawnTwoOnB3)
             {
@@ -244,7 +243,7 @@ public class AIMove : MonoBehaviour
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(otherPawnThreeOnB3)
             {
@@ -252,13 +251,13 @@ public class AIMove : MonoBehaviour
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2 && !PawnOneOnB2 && !PawnThreeOnB2)
             {
                 AIPawnTwo.transform.position = b2.transform.position;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -273,7 +272,7 @@ public class AIMove : MonoBehaviour
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(otherPawnThreeOnC3)
             {
@@ -281,13 +280,13 @@ public class AIMove : MonoBehaviour
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnTwoOnC2 && !PawnOneOnC2 && !PawnThreeOnC2)
             {
                 AIPawnTwo.transform.position = c2.transform.position;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -302,13 +301,13 @@ public class AIMove : MonoBehaviour
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnOneOnC1 && !PawnOneOnC1 && !PawnThreeOnC1)
             {
                 AIPawnTwo.transform.position = c1.transform.position;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -323,13 +322,13 @@ public class AIMove : MonoBehaviour
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnThreeOnC3 && !PawnOneOnC3 && !PawnThreeOnC3)
             {
                 AIPawnTwo.transform.position = c3.transform.position;
                 pawnTwoCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -347,7 +346,7 @@ public class AIMove : MonoBehaviour
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
                 pawnThreeCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(otherPawnTwoOnB2)
             {
@@ -355,13 +354,13 @@ public class AIMove : MonoBehaviour
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
                 pawnThreeCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !PawnTwoOnB3)
             {
                 AIPawnThree.transform.position = b3.transform.position;
                 pawnThreeCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -376,13 +375,13 @@ public class AIMove : MonoBehaviour
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
                 pawnThreeCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnThreeOnC3 && !PawnOneOnC3 && !PawnTwoOnC3)
             {
                 AIPawnThree.transform.position = c3.transform.position;
                 pawnThreeCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
@@ -397,7 +396,7 @@ public class AIMove : MonoBehaviour
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
                 pawnThreeCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(otherPawnThreeOnC3)
             {
@@ -405,18 +404,24 @@ public class AIMove : MonoBehaviour
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
                 pawnThreeCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else if(!otherPawnTwoOnC2 && !PawnOneOnC2 && !PawnThreeOnC2)
             {
                 AIPawnThree.transform.position = c2.transform.position;
                 pawnThreeCantMove = false;
-                AITurn = false;
+                swapToPlayerTurn();
             }
             else
             {
                 pawnThreeCantMove= true;
             }
         }
+    }
+
+    void swapToPlayerTurn()
+    {
+        AITurn = false;
+        playerScript.playerTurn = true;
     }
 }
