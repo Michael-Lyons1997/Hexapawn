@@ -57,6 +57,8 @@ public class AIMove : MonoBehaviour
     public bool pawnOneCantMove;
     public bool pawnTwoCantMove;
     public bool pawnThreeCantMove;
+    float timer;
+    float timeDelay;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +83,8 @@ public class AIMove : MonoBehaviour
         pawnOneCantMove = false;
         pawnTwoCantMove = false;
         pawnThreeCantMove = false;
+        timer = 0.0f;
+        timeDelay = 0.5f;
     }
 
     // Update is called once per frame
@@ -120,17 +124,23 @@ public class AIMove : MonoBehaviour
         movePawnThree = GameObject.FindWithTag("GameController").GetComponent<AI>().pawnThreeMove;
         if(AITurn)
         {
-            if(movePawnOne)
+           timer += 1.0f * Time.deltaTime;
+
+            if (timer >= timeDelay)
             {
-                moveAIPawnOne();
-            }
-            if(movePawnTwo)
-            {
-                moveAIPawnTwo();
-            }
-            if(movePawnThree)
-            {
-                moveAIPawnThree();
+                timer = 0.0f;
+                if(movePawnOne)
+                {
+                    moveAIPawnOne();
+                }
+                if(movePawnTwo)
+                {
+                    moveAIPawnTwo();
+                }
+                if(movePawnThree)
+                {
+                    moveAIPawnThree();
+                }
             }
         }
     }
