@@ -9,11 +9,23 @@ EditorBuildSettings:
     path: Assets/Scenes/mainMenu.unity
     guid: b0b1e1fc560e98d4ab39b0bb85317b64
   - enabled: 1
+    path: Assets/Scenes/whichGameToPlay.unity
+    guid: 26bcfd2020028ed4e87e7410b782aecd
+  - enabled: 1
+    path: Assets/Scenes/whichInstructionsToLoad.unity
+    guid: ed280fc7181967e44ab80d7ceb88f531
+  - enabled: 1
     path: Assets/Scenes/instructions.unity
     guid: 515fdeb896f03a64fb5a7ee74ab274d2
   - enabled: 1
+    path: Assets/Scenes/octopawnRules.unity
+    guid: bc3cb0fdfdb3f034c8b57e6428a5d1cc
+  - enabled: 1
     path: Assets/Scenes/singleplayer.unity
     guid: f316f1ea11b677a4082c5474d2ef59f9
+  - enabled: 1
+    path: Assets/Scenes/octopawnSingleplayer.unity
+    guid: 09a190b0ac468124f9fdcef75b230f4d
   - enabled: 1
     path: Assets/Scenes/multiplayer.unity
     guid: 116cdc87861881e4eacc0cf02065ab54

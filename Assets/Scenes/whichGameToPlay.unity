@@ -288,7 +288,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Multiplayer
+  m_Text: Octopawn
 --- !u!222 &70390177
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 182170592}
   - component: {fileID: 182170591}
   m_Layer: 5
-  m_Name: singleplayer
+  m_Name: playHexapawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,7 +333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000002861, y: 104}
+  m_AnchoredPosition: {x: 0.000002861, y: 69.999985}
   m_SizeDelta: {x: 480, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &182170591
@@ -381,8 +381,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 21647703}
-        m_TargetAssemblyTypeName: menus, Assembly-CSharp
-        m_MethodName: loadGameChoice
+        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
+        m_MethodName: loadSinglePlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 1016591437}
   - component: {fileID: 1016591436}
   m_Layer: 5
-  m_Name: multiplayer
+  m_Name: playOctopawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000002861, y: -52}
+  m_AnchoredPosition: {x: 0.000002861, y: -104}
   m_SizeDelta: {x: 480, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016591436
@@ -514,8 +514,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 21647703}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: loadMultiPlayer
+        m_TargetAssemblyTypeName: menus, Assembly-CSharp
+        m_MethodName: loadOctopawnSinglePlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -633,7 +633,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Single Player
+  m_Text: Hexapawn
 --- !u!222 &1034985298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -676,8 +676,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -37}
-  m_SizeDelta: {x: 1358.3872, y: 170.48438}
+  m_AnchoredPosition: {x: 0, y: -14.265015}
+  m_SizeDelta: {x: 1491.2891, y: 295.792}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1290104516
 MonoBehaviour:
@@ -712,7 +712,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome to hexapawn
+  m_Text: Do you want to play Hexapawn or Octopawn?
 --- !u!222 &1290104517
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -940,7 +940,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Instructions
+  m_Text: Main Menu
 --- !u!222 &1778706951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -962,7 +962,7 @@ GameObject:
   - component: {fileID: 1986474235}
   - component: {fileID: 1986474234}
   m_Layer: 5
-  m_Name: instructions
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -985,7 +985,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -203}
+  m_AnchoredPosition: {x: 0, y: -281}
   m_SizeDelta: {x: 480, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1986474234
@@ -1034,7 +1034,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 21647703}
         m_TargetAssemblyTypeName: menus, Assembly-CSharp
-        m_MethodName: loadInstructions
+        m_MethodName: loadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

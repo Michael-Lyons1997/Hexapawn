@@ -5,9 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class menus : MonoBehaviour
 {
+
+    public void loadGameChoice()
+    {
+        SceneManager.LoadScene("whichGameToPlay");
+    }
+
     public void loadSinglePlayer()
     {
         SceneManager.LoadScene("singleplayer");
+    }
+    
+     public void loadOctopawnSinglePlayer()
+    {
+        SceneManager.LoadScene("octopawnSingleplayer");
     }
 
     public void loadMultiPlayer()
