@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class boardState : MonoBehaviour
 {
+    public GameObject playerPawnOne;
+    public GameObject playerPawnTwo;
+    public GameObject playerPawnThree;
+    public GameObject AIPawnOne;
+    public GameObject AIPawnTwo;
+    public GameObject AIPawnThree;
     public Collider2D playerPawnOneCollider;
     public Collider2D playerPawnTwoCollider;
     public Collider2D playerPawnThreeCollider;
@@ -70,6 +76,12 @@ public class boardState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerPawnOne = GameObject.FindWithTag("Player-1");
+        playerPawnTwo = GameObject.FindWithTag("Player-2");
+        playerPawnThree = GameObject.FindWithTag("Player-3");
+        AIPawnOne = GameObject.FindWithTag("AI-Pawn-1");
+        AIPawnTwo = GameObject.FindWithTag("AI-Pawn-2");
+        AIPawnThree = GameObject.FindWithTag("AI-Pawn-3");
         playerPawnOneOnA1 = false;
         playerPawnOneOnA2 = false;
         playerPawnOneOnA3 = false;
@@ -136,9 +148,93 @@ public class boardState : MonoBehaviour
         {
             changeToLoseScreen();
         }
+        if(!playerPawnOne.active)
+        {
+            if(playerPawnTwoCantMove && playerPawnThreeCantMove)
+            {
+                changeToLoseScreen();
+            }
+        }
+        if(!playerPawnTwo.active)
+        {
+            if(playerPawnOneCantMove && playerPawnThreeCantMove)
+            {
+                changeToLoseScreen();
+            }
+        }
+        if(!playerPawnThree.active)
+        {
+            if(playerPawnOneCantMove && playerPawnTwoCantMove)
+            {
+                changeToLoseScreen();
+            }
+        }
+        if(!playerPawnOne.active && !playerPawnTwo.active)
+        {
+            if(playerPawnThreeCantMove)
+            {
+                changeToLoseScreen();
+            }
+        }
+        if(!playerPawnOne.active && !playerPawnThree.active)
+        {
+            if(playerPawnTwoCantMove)
+            {
+                changeToLoseScreen();
+            }
+        }
+        else if(!playerPawnTwo.active && !playerPawnThree.active)
+        {
+            if(playerPawnOneCantMove)
+            {
+                changeToLoseScreen();
+            } 
+        }
         if(AIPawnOneCantMove && AIPawnTwoCantMove && AIPawnThreeCantMove)
         {
             changeToWinScreen();
+        }
+        if(!AIPawnOne.active)
+        {
+            if(AIPawnTwoCantMove && AIPawnThreeCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
+        if(!AIPawnTwo.active)
+        {
+            if(AIPawnOneCantMove && AIPawnThreeCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
+        if(!AIPawnThree.active)
+        {
+            if(AIPawnTwoCantMove && AIPawnThreeCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
+        if(!AIPawnOne.active && !AIPawnTwo.active)
+        {
+            if(AIPawnThreeCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
+        if(!AIPawnOne.active && !AIPawnThree.active)
+        {
+            if(AIPawnTwoCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
+        if(!AIPawnTwo.active && !AIPawnThree.active)
+        {
+            if(AIPawnOneCantMove)
+            {
+                changeToWinScreen();
+            } 
         }
     }
 

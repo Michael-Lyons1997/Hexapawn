@@ -1086,6 +1086,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8617aa1fd5b7c14c9b04463ea66cff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
   playerPawnOneCollider: {fileID: 1019222535}
   playerPawnTwoCollider: {fileID: 1381798997}
   playerPawnThreeCollider: {fileID: 1989481819}

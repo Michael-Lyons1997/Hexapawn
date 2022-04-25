@@ -132,6 +132,79 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
         otherPawnThreeOnA3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnA3;
         otherPawnThreeOnB2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnB2;
         otherPawnThreeOnB3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnB3;
+        if(playerTurn)
+        {
+            if(PawnOneOnC1)
+            {
+                if((otherPawnOneOnB1 || otherPawnTwoOnB1 || PawnTwoOnB1) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 & !otherPawnThreeOnB2))
+                {
+                    pawnOneCantMove = true;
+                }
+            }
+            else if(PawnOneOnB1)
+            {
+                if(otherPawnOneOnA1 && !otherPawnTwoOnA2)
+                {
+                    pawnOneCantMove = true;
+                }
+            }
+            else if(PawnOneOnB2)
+            {
+                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
+                {
+                    pawnOneCantMove = true;
+                }
+            }
+            if(PawnTwoOnC2)
+            {
+                if((otherPawnOneOnB2 || otherPawnTwoOnB2 || otherPawnThreeOnB2 || PawnOneOnB2 || PawnThreeOnB2) && (!otherPawnOneOnB1 && !otherPawnTwoOnB1) && (!otherPawnTwoOnB3 && !otherPawnThreeOnB3))
+                {
+                    pawnTwoCantMove = true;
+                } 
+            }
+            else if(PawnTwoOnB2)
+            {
+                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
+                {
+                    pawnTwoCantMove = true;
+                }
+            }
+            else if(PawnTwoOnB1)
+            {
+                if(otherPawnOneOnA1 && !otherPawnTwoOnA2)
+                {
+                    pawnTwoCantMove = true;
+                }
+            }
+            else if(PawnTwoOnB3)
+            {   
+                if(otherPawnThreeOnA3 && !otherPawnTwoOnA2)
+                {
+                    pawnTwoCantMove = true;
+                }
+            }
+            if(PawnThreeOnC3)
+            {
+               if((otherPawnTwoOnB3 || otherPawnThreeOnB3 || PawnTwoOnB3) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2))
+                {
+                    pawnThreeCantMove = true;
+                }
+            }
+            else if(PawnThreeOnB3)
+            {
+                if(otherPawnThreeOnA3 && !otherPawnTwoOnA2)
+                {
+                    pawnThreeCantMove = true;
+                } 
+            }
+            else if(PawnThreeOnB2)
+            {
+                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
+                {
+                    pawnThreeCantMove = true;
+                }
+            }  
+        }
     }
 
     void addPhysics2DRaycaster() 
@@ -181,10 +254,6 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     pawnOneCantMove = false;
                     squarePawnHighlight.transform.position = b2.transform.position; 
                 }
-                if((otherPawnOneOnB1 || otherPawnTwoOnB1 || PawnTwoOnB1) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 & !otherPawnThreeOnB2))
-                {
-                    pawnOneCantMove = true;
-                }
             }
             else if(PawnOneOnB1)
             {   
@@ -199,10 +268,6 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squarePawnHighlight.SetActive(true);
                     pawnOneCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position; 
-                }
-                if(otherPawnOneOnA1 && !otherPawnTwoOnA2)
-                {
-                    pawnOneCantMove = true;
                 }
             }
             else if(PawnOneOnB2)
@@ -224,10 +289,6 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squarePawnHighlightTwo.SetActive(true);
                     pawnOneCantMove = false;
                     squarePawnHighlightTwo.transform.position = a3.transform.position;
-                }
-                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
-                {
-                    pawnOneCantMove = true;
                 }
             }
         }
@@ -266,10 +327,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     pawnTwoCantMove = false;
                     squarePawnHighlightTwo.transform.position = b3.transform.position;
                 }
-                if((otherPawnOneOnB2 || otherPawnTwoOnB2 || otherPawnThreeOnB2 || PawnOneOnB2 || PawnThreeOnB2) && (!otherPawnOneOnB1 && !otherPawnTwoOnB1) && (!otherPawnTwoOnB3 && !otherPawnThreeOnB3))
-                {
-                    pawnTwoCantMove = true;
-                }
+                
             }
             else if(PawnTwoOnB2)
             {
@@ -291,10 +349,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     pawnTwoCantMove = false;
                     squarePawnHighlightTwo.transform.position = a3.transform.position;
                 }
-                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
-                {
-                    pawnTwoCantMove = true;
-                }
+                
             }
             else if(PawnTwoOnB1)
             {
@@ -310,10 +365,6 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     pawnTwoCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position; 
                 }
-                if(otherPawnOneOnA1 && !otherPawnTwoOnA2)
-                {
-                    pawnTwoCantMove = true;
-                }
             }
             else if(PawnTwoOnB3)
             {   
@@ -328,10 +379,6 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squarePawnHighlight.SetActive(true);
                     pawnTwoCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position;
-                }
-                if(otherPawnThreeOnA3 && !otherPawnTwoOnA2)
-                {
-                    pawnTwoCantMove = true;
                 }
             }
         }
@@ -363,10 +410,6 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     pawnThreeCantMove = false;
                     squarePawnHighlight.transform.position = b2.transform.position;
                 }
-                if((otherPawnTwoOnB3 || otherPawnThreeOnB3 || PawnTwoOnB3) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2))
-                {
-                    pawnThreeCantMove = true;
-                }
             }
             else if(PawnThreeOnB3)
             {
@@ -381,10 +424,6 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squarePawnHighlight.SetActive(true);
                     pawnThreeCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position;
-                }
-                if(otherPawnThreeOnA3 && !otherPawnTwoOnA2)
-                {
-                    pawnThreeCantMove = true;
                 }
             }
             else if(PawnThreeOnB2)
@@ -406,10 +445,6 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     squarePawnHighlightTwo.SetActive(true);
                     pawnThreeCantMove = false;
                     squarePawnHighlightTwo.transform.position = a3.transform.position;
-                }
-                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
-                {
-                    pawnThreeCantMove = true;
                 }
             }
         }

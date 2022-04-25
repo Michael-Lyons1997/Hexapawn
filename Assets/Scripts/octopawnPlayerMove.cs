@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class octopawnPlayerMove : MonoBehaviour
+public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
     public GameObject playerPawnOne;
     public GameObject playerPawnTwo;
@@ -37,6 +37,7 @@ public class octopawnPlayerMove : MonoBehaviour
     bool pawnOneClicked;
     bool pawnTwoClicked;
     bool pawnThreeClicked;
+    bool pawnFourClicked;
     bool PawnOneOnA1;
     bool PawnOneOnA2;
     bool PawnOneOnA3;
@@ -56,7 +57,7 @@ public class octopawnPlayerMove : MonoBehaviour
     bool PawnTwoOnB3;
     bool PawnTwoOnB4;
     bool PawnTwoOnC1; 
-    bool PawnTwoOnC2;
+    bool PawnTwoOnC2; 
     bool PawnTwoOnC3; 
     bool PawnTwoOnD2; 
     bool PawnThreeOnA1;
@@ -90,7 +91,7 @@ public class octopawnPlayerMove : MonoBehaviour
     bool otherPawnTwoOnA2;
     bool otherPawnTwoOnB1;
     bool otherPawnTwoOnB2;
-    bool otherPawnTwoOnB3;
+    bool otherPawnTwoOnB3; 
     bool otherPawnTwoOnC1;
     bool otherPawnTwoOnC2;
     bool otherPawnTwoOnC3;
@@ -102,7 +103,7 @@ public class octopawnPlayerMove : MonoBehaviour
     bool otherPawnThreeOnC1;
     bool otherPawnThreeOnC2;
     bool otherPawnThreeOnC3;
-    bool otherPawnThreeOnC4;  
+    bool otherPawnThreeOnC4;
     bool otherPawnFourOnA4;
     bool otherPawnFourOnB3;
     bool otherPawnFourOnB4;
@@ -114,6 +115,7 @@ public class octopawnPlayerMove : MonoBehaviour
     public bool pawnOneCantMove;
     public bool pawnTwoCantMove;
     public bool pawnThreeCantMove;
+    public bool pawnFourCantMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -155,35 +157,108 @@ public class octopawnPlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PawnOneOnA1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnA1;
-        PawnOneOnA2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnA2;
-        PawnOneOnA3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnA3;
-        PawnOneOnB1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnB1;
-        PawnOneOnB2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnB2;
-        PawnOneOnC1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnOneOnC1;
-        PawnTwoOnA1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnTwoOnA1; 
-        PawnTwoOnA2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnTwoOnA2; 
-        PawnTwoOnA3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnTwoOnA3; 
-        PawnTwoOnB1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnTwoOnB1;
-        PawnTwoOnB2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnTwoOnB2;
-        PawnTwoOnB3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnTwoOnB3; 
-        PawnTwoOnC2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnTwoOnC2; 
-        PawnThreeOnA1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnA1;
-        PawnThreeOnA2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnA2;
-        PawnThreeOnA3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnA3;
-        PawnThreeOnB2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnB2;
-        PawnThreeOnB3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnB3;
-        PawnThreeOnC3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().playerPawnThreeOnC3;
-        otherPawnOneOnA1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnOneOnA1;
-        otherPawnOneOnB1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnOneOnB1;
-        otherPawnOneOnB2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnOneOnB2;
-        otherPawnTwoOnA2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnTwoOnA2;
-        otherPawnTwoOnB1 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnTwoOnB1;
-        otherPawnTwoOnB2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnTwoOnB2;
-        otherPawnTwoOnB3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnTwoOnB3; 
-        otherPawnThreeOnA3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnA3;
-        otherPawnThreeOnB2 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnB2;
-        otherPawnThreeOnB3 = GameObject.FindWithTag("GameController").GetComponent<boardState>().AIPawnThreeOnB3;
+        PawnOneOnA1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnOneOnA1;
+        PawnOneOnA2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnOneOnA2;
+        PawnOneOnA3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnOneOnA3;
+        PawnOneOnB1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnOneOnB1;
+        PawnOneOnB2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnOneOnB2;
+        PawnOneOnC1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnOneOnC1;
+        PawnTwoOnA1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnTwoOnA1; 
+        PawnTwoOnA2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnTwoOnA2; 
+        PawnTwoOnA3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnTwoOnA3; 
+        PawnTwoOnB1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnTwoOnB1;
+        PawnTwoOnB2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnTwoOnB2;
+        PawnTwoOnB3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnTwoOnB3; 
+        PawnTwoOnC2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnTwoOnC2; 
+        PawnThreeOnA1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnThreeOnA1;
+        PawnThreeOnA2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnThreeOnA2;
+        PawnThreeOnA3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnThreeOnA3;
+        PawnThreeOnB2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnThreeOnB2;
+        PawnThreeOnB3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnThreeOnB3;
+        PawnThreeOnC3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().playerPawnThreeOnC3;
+        otherPawnOneOnA1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnOneOnA1;
+        otherPawnOneOnB1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnOneOnB1;
+        otherPawnOneOnB2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnOneOnB2;
+        otherPawnTwoOnA2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnTwoOnA2;
+        otherPawnTwoOnB1 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnTwoOnB1;
+        otherPawnTwoOnB2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnTwoOnB2;
+        otherPawnTwoOnB3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnTwoOnB3; 
+        otherPawnThreeOnA3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnThreeOnA3;
+        otherPawnThreeOnB2 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnThreeOnB2;
+        otherPawnThreeOnB3 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnThreeOnB3;
+        if(playerTurn)
+        {
+            if(PawnOneOnC1)
+            {
+                if((otherPawnOneOnB1 || otherPawnTwoOnB1 || PawnTwoOnB1) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 & !otherPawnThreeOnB2))
+                {
+                    pawnOneCantMove = true;
+                }
+            }
+            else if(PawnOneOnB1)
+            {
+                if(otherPawnOneOnA1 && !otherPawnTwoOnA2)
+                {
+                    pawnOneCantMove = true;
+                }
+            }
+            else if(PawnOneOnB2)
+            {
+                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
+                {
+                    pawnOneCantMove = true;
+                }
+            }
+            if(PawnTwoOnC2)
+            {
+                if((otherPawnOneOnB2 || otherPawnTwoOnB2 || otherPawnThreeOnB2 || PawnOneOnB2 || PawnThreeOnB2) && (!otherPawnOneOnB1 && !otherPawnTwoOnB1) && (!otherPawnTwoOnB3 && !otherPawnThreeOnB3))
+                {
+                    pawnTwoCantMove = true;
+                } 
+            }
+            else if(PawnTwoOnB2)
+            {
+                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
+                {
+                    pawnTwoCantMove = true;
+                }
+            }
+            else if(PawnTwoOnB1)
+            {
+                if(otherPawnOneOnA1 && !otherPawnTwoOnA2)
+                {
+                    pawnTwoCantMove = true;
+                }
+            }
+            else if(PawnTwoOnB3)
+            {   
+                if(otherPawnThreeOnA3 && !otherPawnTwoOnA2)
+                {
+                    pawnTwoCantMove = true;
+                }
+            }
+            if(PawnThreeOnC3)
+            {
+               if((otherPawnTwoOnB3 || otherPawnThreeOnB3 || PawnTwoOnB3) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2))
+                {
+                    pawnThreeCantMove = true;
+                }
+            }
+            else if(PawnThreeOnB3)
+            {
+                if(otherPawnThreeOnA3 && !otherPawnTwoOnA2)
+                {
+                    pawnThreeCantMove = true;
+                } 
+            }
+            else if(PawnThreeOnB2)
+            {
+                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
+                {
+                    pawnThreeCantMove = true;
+                }
+            }  
+        }
     }
 
     void addPhysics2DRaycaster() 
@@ -233,10 +308,6 @@ public class octopawnPlayerMove : MonoBehaviour
                     pawnOneCantMove = false;
                     squarePawnHighlight.transform.position = b2.transform.position; 
                 }
-                if((otherPawnOneOnB1 || otherPawnTwoOnB1 || PawnTwoOnB1) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 & !otherPawnThreeOnB2))
-                {
-                    pawnOneCantMove = true;
-                }
             }
             else if(PawnOneOnB1)
             {   
@@ -251,10 +322,6 @@ public class octopawnPlayerMove : MonoBehaviour
                     squarePawnHighlight.SetActive(true);
                     pawnOneCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position; 
-                }
-                if(otherPawnOneOnA1 && !otherPawnTwoOnA2)
-                {
-                    pawnOneCantMove = true;
                 }
             }
             else if(PawnOneOnB2)
@@ -276,10 +343,6 @@ public class octopawnPlayerMove : MonoBehaviour
                     squarePawnHighlightTwo.SetActive(true);
                     pawnOneCantMove = false;
                     squarePawnHighlightTwo.transform.position = a3.transform.position;
-                }
-                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
-                {
-                    pawnOneCantMove = true;
                 }
             }
         }
@@ -318,10 +381,7 @@ public class octopawnPlayerMove : MonoBehaviour
                     pawnTwoCantMove = false;
                     squarePawnHighlightTwo.transform.position = b3.transform.position;
                 }
-                if((otherPawnOneOnB2 || otherPawnTwoOnB2 || otherPawnThreeOnB2 || PawnOneOnB2 || PawnThreeOnB2) && (!otherPawnOneOnB1 && !otherPawnTwoOnB1) && (!otherPawnTwoOnB3 && !otherPawnThreeOnB3))
-                {
-                    pawnTwoCantMove = true;
-                }
+                
             }
             else if(PawnTwoOnB2)
             {
@@ -343,10 +403,7 @@ public class octopawnPlayerMove : MonoBehaviour
                     pawnTwoCantMove = false;
                     squarePawnHighlightTwo.transform.position = a3.transform.position;
                 }
-                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
-                {
-                    pawnTwoCantMove = true;
-                }
+                
             }
             else if(PawnTwoOnB1)
             {
@@ -362,10 +419,6 @@ public class octopawnPlayerMove : MonoBehaviour
                     pawnTwoCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position; 
                 }
-                if(otherPawnOneOnA1 && !otherPawnTwoOnA2)
-                {
-                    pawnTwoCantMove = true;
-                }
             }
             else if(PawnTwoOnB3)
             {   
@@ -380,10 +433,6 @@ public class octopawnPlayerMove : MonoBehaviour
                     squarePawnHighlight.SetActive(true);
                     pawnTwoCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position;
-                }
-                if(otherPawnThreeOnA3 && !otherPawnTwoOnA2)
-                {
-                    pawnTwoCantMove = true;
                 }
             }
         }
@@ -415,10 +464,6 @@ public class octopawnPlayerMove : MonoBehaviour
                     pawnThreeCantMove = false;
                     squarePawnHighlight.transform.position = b2.transform.position;
                 }
-                if((otherPawnTwoOnB3 || otherPawnThreeOnB3 || PawnTwoOnB3) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2))
-                {
-                    pawnThreeCantMove = true;
-                }
             }
             else if(PawnThreeOnB3)
             {
@@ -433,10 +478,6 @@ public class octopawnPlayerMove : MonoBehaviour
                     squarePawnHighlight.SetActive(true);
                     pawnThreeCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position;
-                }
-                if(otherPawnThreeOnA3 && !otherPawnTwoOnA2)
-                {
-                    pawnThreeCantMove = true;
                 }
             }
             else if(PawnThreeOnB2)
@@ -458,10 +499,6 @@ public class octopawnPlayerMove : MonoBehaviour
                     squarePawnHighlightTwo.SetActive(true);
                     pawnThreeCantMove = false;
                     squarePawnHighlightTwo.transform.position = a3.transform.position;
-                }
-                if(otherPawnTwoOnA2 && !otherPawnOneOnA1 && !otherPawnThreeOnA3)
-                {
-                    pawnThreeCantMove = true;
                 }
             }
         }
