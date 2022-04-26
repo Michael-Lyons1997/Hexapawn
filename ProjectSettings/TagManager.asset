@@ -4,34 +4,25 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - A1
-  - A2
-  - A3
-  - B1
-  - B2
-  - B3
-  - C1
-  - C2
-  - C3
-  - Player-1
-  - Player-2
-  - Player-3
-  - AI-Pawn-1
   - AI-Pawn-2
-  - AI-Pawn-3
-  - pawn-Highlight
-  - square-Highlight
+  - C1
   - Square-Pawn-Highlight
+  - B2
+  - C2
+  - Player-1
+  - A2
+  - AI-Pawn-3
+  - B1
+  - Player-2
   - Square-Pawn-Two-Highlight
-  - A4
-  - B4
-  - C4
-  - D1
-  - D2
-  - D3
-  - D4
-  - Player-4
-  - AI-Pawn-4
+  - B3
+  - A1
+  - AI-Pawn-1
+  - square-Highlight
+  - pawn-Highlight
+  - A3
+  - Player-3
+  - C3
   layers:
   - Default
   - TransparentFX
@@ -70,14 +61,14 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: background
-    uniqueID: 46832955
+    uniqueID: 2326622909
     locked: 0
   - name: board
-    uniqueID: 2948283065
+    uniqueID: 473976997
     locked: 0
   - name: pawn
-    uniqueID: 1351392437
+    uniqueID: 3264249179
     locked: 0
   - name: highlight
-    uniqueID: 511995339
+    uniqueID: 3347660643
     locked: 0

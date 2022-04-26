@@ -601,14 +601,6 @@ public class octopawnBoardState : MonoBehaviour
         {
             playerPawnTwoOnC3 = false;
         }
-        if (playerPawnTwoCollider.IsTouching(c4Collider))
-        {
-            playerPawnTwoOnC4 = true;
-        }
-        else
-        {
-            playerPawnTwoOnC4 = false;
-        }
         if (playerPawnTwoCollider.IsTouching(d2Collider))
         {
             playerPawnTwoOnD2 = true;

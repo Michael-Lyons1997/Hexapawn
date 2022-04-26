@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,8 +118,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    maxJobWorkers: 0
-    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -155,7 +153,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -177,7 +174,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a4426637b9b0324783d56c837c58613, type: 3}
@@ -303,7 +300,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -325,7 +321,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e735cc94a34344993f4258430c2fae, type: 3}
@@ -385,7 +381,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -407,7 +402,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e735cc94a34344993f4258430c2fae, type: 3}
@@ -470,7 +465,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -492,7 +486,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1351392437
+  m_SortingLayerID: -1030718117
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 746bba4dfd62cb341b22cdd0a48de589, type: 3}
@@ -585,7 +579,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: TakeAIPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -628,7 +621,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -650,7 +642,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1351392437
+  m_SortingLayerID: -1030718117
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f95a805c974fb6c4a820ee8223acfa54, type: 3}
@@ -710,7 +702,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -732,7 +723,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0baee18baca89664ab2bc430cd59cebd, type: 3}
@@ -893,7 +884,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -915,7 +905,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e524b17c9464e842b30e18d9f8eec48, type: 3}
@@ -1001,7 +991,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1023,7 +1012,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 511995339
+  m_SortingLayerID: -947306653
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a435c4ee741e07546b4902e659ace203, type: 3}
@@ -1083,7 +1072,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1105,7 +1093,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e735cc94a34344993f4258430c2fae, type: 3}
@@ -1165,7 +1153,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1187,7 +1174,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e524b17c9464e842b30e18d9f8eec48, type: 3}
@@ -1249,7 +1236,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1271,7 +1257,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e524b17c9464e842b30e18d9f8eec48, type: 3}
@@ -1317,7 +1303,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnB2
           m_Mode: 1
           m_Arguments:
@@ -1387,7 +1372,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1409,7 +1393,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e735cc94a34344993f4258430c2fae, type: 3}
@@ -1495,7 +1479,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1517,7 +1500,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1351392437
+  m_SortingLayerID: -1030718117
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 746bba4dfd62cb341b22cdd0a48de589, type: 3}
@@ -1581,24 +1564,34 @@ MonoBehaviour:
   AIPawnOne: {fileID: 0}
   AIPawnTwo: {fileID: 0}
   AIPawnThree: {fileID: 0}
+  AIPawnFour: {fileID: 0}
   playerPawnOne: {fileID: 0}
   playerPawnTwo: {fileID: 0}
   playerPawnThree: {fileID: 0}
+  playerPawnFour: {fileID: 0}
   a1: {fileID: 0}
   a2: {fileID: 0}
   a3: {fileID: 0}
+  a4: {fileID: 0}
   b1: {fileID: 0}
   b2: {fileID: 0}
   b3: {fileID: 0}
+  b4: {fileID: 0}
   c1: {fileID: 0}
   c2: {fileID: 0}
   c3: {fileID: 0}
+  c4: {fileID: 0}
+  d1: {fileID: 0}
+  d2: {fileID: 0}
+  d3: {fileID: 0}
+  d4: {fileID: 0}
   playerScript: {fileID: 1018508130}
   AITurn: 0
   playerPawnNumber: 0
   pawnOneCantMove: 0
   pawnTwoCantMove: 0
   pawnThreeCantMove: 0
+  pawnFourCantMove: 0
 --- !u!114 &1018508126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,7 +1623,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1652,10 +1644,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 46832955
+  m_SortingLayerID: -1968344387
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
+    type: 3}
   m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1663,7 +1656,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1018508128
@@ -1692,46 +1685,92 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8f735f37fe7fe4dbd9615d95a65e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPawnOne: {fileID: 0}
+  playerPawnTwo: {fileID: 0}
+  playerPawnThree: {fileID: 0}
+  playerPawnFour: {fileID: 0}
+  AIPawnOne: {fileID: 0}
+  AIPawnTwo: {fileID: 0}
+  AIPawnThree: {fileID: 0}
+  AIPawnFour: {fileID: 0}
   playerPawnOneCollider: {fileID: 0}
   playerPawnTwoCollider: {fileID: 0}
   playerPawnThreeCollider: {fileID: 0}
+  playerPawnFourCollider: {fileID: 0}
   AIPawnOneCollider: {fileID: 0}
   AIPawnTwoCollider: {fileID: 0}
   AIPawnThreeCollider: {fileID: 0}
+  AIPawnFourCollider: {fileID: 0}
   a1Collider: {fileID: 0}
   a2Collider: {fileID: 0}
   a3Collider: {fileID: 0}
+  a4Collider: {fileID: 0}
   b1Collider: {fileID: 0}
   b2Collider: {fileID: 0}
   b3Collider: {fileID: 0}
+  b4Collider: {fileID: 0}
   c1Collider: {fileID: 0}
   c2Collider: {fileID: 0}
   c3Collider: {fileID: 0}
+  c4Collider: {fileID: 0}
+  d1Collider: {fileID: 0}
+  d2Collider: {fileID: 0}
+  d3Collider: {fileID: 0}
+  d4Collider: {fileID: 0}
   playerPawnOneOnA1: 0
   playerPawnOneOnA2: 0
   playerPawnOneOnA3: 0
+  playerPawnOneOnA4: 0
   playerPawnOneOnB1: 0
   playerPawnOneOnB2: 0
+  playerPawnOneOnB3: 0
   playerPawnOneOnC1: 0
+  playerPawnOneOnC2: 0
+  playerPawnOneOnD1: 0
   playerPawnTwoOnA1: 0
   playerPawnTwoOnA2: 0
   playerPawnTwoOnA3: 0
+  playerPawnTwoOnA4: 0
   playerPawnTwoOnB1: 0
   playerPawnTwoOnB2: 0
   playerPawnTwoOnB3: 0
+  playerPawnTwoOnB4: 0
+  playerPawnTwoOnC1: 0
   playerPawnTwoOnC2: 0
+  playerPawnTwoOnC3: 0
+  playerPawnTwoOnD2: 0
   playerPawnThreeOnA1: 0
   playerPawnThreeOnA2: 0
   playerPawnThreeOnA3: 0
+  playerPawnThreeOnA4: 0
+  playerPawnThreeOnB1: 0
   playerPawnThreeOnB2: 0
   playerPawnThreeOnB3: 0
+  playerPawnThreeOnB4: 0
+  playerPawnThreeOnC2: 0
   playerPawnThreeOnC3: 0
+  playerPawnThreeOnC4: 0
+  playerPawnThreeOnD3: 0
+  playerPawnFourOnA1: 0
+  playerPawnFourOnA2: 0
+  playerPawnFourOnA3: 0
+  playerPawnFourOnA4: 0
+  playerPawnFourOnB2: 0
+  playerPawnFourOnB3: 0
+  playerPawnFourOnB4: 0
+  playerPawnFourOnC3: 0
+  playerPawnFourOnC4: 0
+  playerPawnFourOnD4: 0
   AIPawnOneOnA1: 0
   AIPawnOneOnB1: 0
   AIPawnOneOnB2: 0
   AIPawnOneOnC1: 0
   AIPawnOneOnC2: 0
   AIPawnOneOnC3: 0
+  AIPawnOneOnD1: 0
+  AIPawnOneOnD2: 0
+  AIPawnOneOnD3: 0
+  AIPawnOneOnD4: 0
   AIPawnTwoOnA2: 0
   AIPawnTwoOnB1: 0
   AIPawnTwoOnB2: 0
@@ -1739,12 +1778,33 @@ MonoBehaviour:
   AIPawnTwoOnC1: 0
   AIPawnTwoOnC2: 0
   AIPawnTwoOnC3: 0
+  AIPawnTwoOnC4: 0
+  AIPawnTwoOnD1: 0
+  AIPawnTwoOnD2: 0
+  AIPawnTwoOnD3: 0
+  AIPawnTwoOnD4: 0
   AIPawnThreeOnA3: 0
   AIPawnThreeOnB2: 0
   AIPawnThreeOnB3: 0
+  AIPawnThreeOnB4: 0
   AIPawnThreeOnC1: 0
   AIPawnThreeOnC2: 0
   AIPawnThreeOnC3: 0
+  AIPawnThreeOnC4: 0
+  AIPawnThreeOnD1: 0
+  AIPawnThreeOnD2: 0
+  AIPawnThreeOnD3: 0
+  AIPawnThreeOnD4: 0
+  AIPawnFourOnA4: 0
+  AIPawnFourOnB3: 0
+  AIPawnFourOnB4: 0
+  AIPawnFourOnC2: 0
+  AIPawnFourOnC3: 0
+  AIPawnFourOnC4: 0
+  AIPawnFourOnD1: 0
+  AIPawnFourOnD2: 0
+  AIPawnFourOnD3: 0
+  AIPawnFourOnD4: 0
 --- !u!114 &1018508130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,6 +1851,7 @@ MonoBehaviour:
   pawnOneCantMove: 0
   pawnTwoCantMove: 0
   pawnThreeCantMove: 0
+  pawnFourCantMove: 0
 --- !u!1 &1019222532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,7 +1887,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1848,7 +1908,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1351392437
+  m_SortingLayerID: -1030718117
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f95a805c974fb6c4a820ee8223acfa54, type: 3}
@@ -1941,7 +2001,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: selectPlayerPawnOne
           m_Mode: 1
           m_Arguments:
@@ -1986,7 +2045,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2008,7 +2066,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e735cc94a34344993f4258430c2fae, type: 3}
@@ -2054,7 +2112,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnA2
           m_Mode: 1
           m_Arguments:
@@ -2123,7 +2180,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2145,7 +2201,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7508379677f0c43499c52be2f3090b17, type: 3}
@@ -2208,7 +2264,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2230,7 +2285,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1351392437
+  m_SortingLayerID: -1030718117
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 746bba4dfd62cb341b22cdd0a48de589, type: 3}
@@ -2323,7 +2378,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: TakeAIPawnThree
           m_Mode: 1
           m_Arguments:
@@ -2366,7 +2420,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2388,7 +2441,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e6ee6c4df287f2a4682470173b0b7c9d, type: 3}
@@ -2450,7 +2503,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2472,7 +2524,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e735cc94a34344993f4258430c2fae, type: 3}
@@ -2518,7 +2570,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnB1
           m_Mode: 1
           m_Arguments:
@@ -2587,7 +2638,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2609,7 +2659,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 94cbb48ff26344444903bea3d327624f, type: 3}
@@ -2672,7 +2722,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2694,7 +2743,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1351392437
+  m_SortingLayerID: -1030718117
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f95a805c974fb6c4a820ee8223acfa54, type: 3}
@@ -2787,7 +2836,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: selectPlayerPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -2830,7 +2878,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2852,7 +2899,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 511995339
+  m_SortingLayerID: -947306653
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a435c4ee741e07546b4902e659ace203, type: 3}
@@ -2914,7 +2961,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2936,7 +2982,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e735cc94a34344993f4258430c2fae, type: 3}
@@ -2982,7 +3028,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnB3
           m_Mode: 1
           m_Arguments:
@@ -3051,7 +3096,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3073,7 +3117,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e524b17c9464e842b30e18d9f8eec48, type: 3}
@@ -3133,7 +3177,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3155,7 +3198,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58e735cc94a34344993f4258430c2fae, type: 3}
@@ -3217,7 +3260,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3239,7 +3281,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e524b17c9464e842b30e18d9f8eec48, type: 3}
@@ -3285,7 +3327,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnA1
           m_Mode: 1
           m_Arguments:
@@ -3383,7 +3424,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3405,7 +3445,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1351392437
+  m_SortingLayerID: -1030718117
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 746bba4dfd62cb341b22cdd0a48de589, type: 3}
@@ -3472,7 +3512,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: TakeAIPawnOne
           m_Mode: 1
           m_Arguments:
@@ -3515,7 +3554,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3537,7 +3575,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e524b17c9464e842b30e18d9f8eec48, type: 3}
@@ -3597,7 +3635,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3619,7 +3656,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 34f334cf547f2264b85de9c2c863da93, type: 3}
@@ -3679,7 +3716,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3701,7 +3737,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 511995339
+  m_SortingLayerID: -947306653
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a435c4ee741e07546b4902e659ace203, type: 3}
@@ -3761,7 +3797,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3783,7 +3818,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5aebd3fb0f31f4d47858c64b457da0e1, type: 3}
@@ -3843,7 +3878,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3865,7 +3899,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 511995339
+  m_SortingLayerID: -947306653
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9060dc7b8e0e40f4d90610b71cd59003, type: 3}
@@ -3925,7 +3959,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3947,7 +3980,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 56dfff70300c0ce4da8c00e7ad7c10ed, type: 3}
@@ -4009,7 +4042,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4031,7 +4063,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e524b17c9464e842b30e18d9f8eec48, type: 3}
@@ -4077,7 +4109,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: clickOnA3
           m_Mode: 1
           m_Arguments:
@@ -4149,7 +4180,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4171,7 +4201,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1351392437
+  m_SortingLayerID: -1030718117
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f95a805c974fb6c4a820ee8223acfa54, type: 3}
@@ -4264,7 +4294,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: playerMove, Assembly-CSharp
           m_MethodName: selectPlayerPawnThree
           m_Mode: 1
           m_Arguments:
@@ -4308,7 +4337,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4330,7 +4358,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1346684231
+  m_SortingLayerID: 473976997
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e524b17c9464e842b30e18d9f8eec48, type: 3}
