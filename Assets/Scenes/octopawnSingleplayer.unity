@@ -278,6 +278,8 @@ GameObject:
   m_Component:
   - component: {fileID: 262956643}
   - component: {fileID: 262956642}
+  - component: {fileID: 262956644}
+  - component: {fileID: 262956645}
   m_Layer: 0
   m_Name: C4
   m_TagString: C4
@@ -349,6 +351,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &262956644
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262956641}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
+--- !u!114 &262956645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262956641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508130}
+          m_MethodName: clickOnC4
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &318100656
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +415,8 @@ GameObject:
   m_Component:
   - component: {fileID: 318100658}
   - component: {fileID: 318100657}
+  - component: {fileID: 318100659}
+  - component: {fileID: 318100660}
   m_Layer: 0
   m_Name: A4
   m_TagString: A4
@@ -430,6 +488,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &318100659
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318100656}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
+--- !u!114 &318100660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318100656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508130}
+          m_MethodName: clickOnA4
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &364772556
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +690,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: TakeAIPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -599,6 +711,9 @@ GameObject:
   m_Component:
   - component: {fileID: 483016142}
   - component: {fileID: 483016141}
+  - component: {fileID: 483016145}
+  - component: {fileID: 483016144}
+  - component: {fileID: 483016143}
   m_Layer: 0
   m_Name: player-pawn-4
   m_TagString: Player-4
@@ -670,6 +785,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483016143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483016140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508130}
+          m_MethodName: selectPlayerPawnFour
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!50 &483016144
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483016140}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &483016145
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483016140}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &513664968
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +1052,7 @@ GameObject:
   - component: {fileID: 619622636}
   - component: {fileID: 619622635}
   - component: {fileID: 619622638}
+  - component: {fileID: 619622637}
   m_Layer: 0
   m_Name: C1
   m_TagString: C1
@@ -933,6 +1124,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619622637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619622634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508130}
+          m_MethodName: clickOnC1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &619622638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1050,6 +1269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810135096}
   - component: {fileID: 810135095}
+  - component: {fileID: 810135097}
   m_Layer: 0
   m_Name: D1
   m_TagString: D1
@@ -1121,6 +1341,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &810135097
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810135094}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &839278462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839278464}
   - component: {fileID: 839278463}
+  - component: {fileID: 839278465}
   m_Layer: 0
   m_Name: D2
   m_TagString: D2
@@ -1202,6 +1449,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &839278465
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839278462}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &905451236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1575,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: clickOnB2
           m_Mode: 1
           m_Arguments:
@@ -1350,6 +1623,7 @@ GameObject:
   - component: {fileID: 967684859}
   - component: {fileID: 967684858}
   - component: {fileID: 967684861}
+  - component: {fileID: 967684860}
   m_Layer: 0
   m_Name: C2
   m_TagString: C2
@@ -1421,6 +1695,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &967684860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967684857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508130}
+          m_MethodName: clickOnC2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &967684861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1457,6 +1759,9 @@ GameObject:
   m_Component:
   - component: {fileID: 976000135}
   - component: {fileID: 976000134}
+  - component: {fileID: 976000138}
+  - component: {fileID: 976000137}
+  - component: {fileID: 976000136}
   m_Layer: 0
   m_Name: AI-Pawn-4
   m_TagString: AI-Pawn-4
@@ -1528,6 +1833,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &976000136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976000133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+--- !u!50 &976000137
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976000133}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &976000138
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976000133}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1018508124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,8 +2012,7 @@ SpriteRenderer:
   m_SortingLayerID: -1968344387
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1685,38 +2049,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8f735f37fe7fe4dbd9615d95a65e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  playerPawnFour: {fileID: 0}
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  AIPawnFour: {fileID: 0}
-  playerPawnOneCollider: {fileID: 0}
-  playerPawnTwoCollider: {fileID: 0}
-  playerPawnThreeCollider: {fileID: 0}
-  playerPawnFourCollider: {fileID: 0}
-  AIPawnOneCollider: {fileID: 0}
-  AIPawnTwoCollider: {fileID: 0}
-  AIPawnThreeCollider: {fileID: 0}
-  AIPawnFourCollider: {fileID: 0}
-  a1Collider: {fileID: 0}
-  a2Collider: {fileID: 0}
-  a3Collider: {fileID: 0}
-  a4Collider: {fileID: 0}
-  b1Collider: {fileID: 0}
-  b2Collider: {fileID: 0}
-  b3Collider: {fileID: 0}
-  b4Collider: {fileID: 0}
-  c1Collider: {fileID: 0}
-  c2Collider: {fileID: 0}
-  c3Collider: {fileID: 0}
-  c4Collider: {fileID: 0}
-  d1Collider: {fileID: 0}
-  d2Collider: {fileID: 0}
-  d3Collider: {fileID: 0}
-  d4Collider: {fileID: 0}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  playerPawnFour: {fileID: 483016140}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
+  AIPawnFour: {fileID: 976000133}
+  playerPawnOneCollider: {fileID: 1019222535}
+  playerPawnTwoCollider: {fileID: 1381798997}
+  playerPawnThreeCollider: {fileID: 1989481819}
+  playerPawnFourCollider: {fileID: 483016145}
+  AIPawnOneCollider: {fileID: 1688518096}
+  AIPawnTwoCollider: {fileID: 364772559}
+  AIPawnThreeCollider: {fileID: 1153140769}
+  AIPawnFourCollider: {fileID: 976000138}
+  a1Collider: {fileID: 1618070635}
+  a2Collider: {fileID: 1026409182}
+  a3Collider: {fileID: 1925343159}
+  a4Collider: {fileID: 318100659}
+  b1Collider: {fileID: 1224825144}
+  b2Collider: {fileID: 905451240}
+  b3Collider: {fileID: 1410576137}
+  b4Collider: {fileID: 1702284550}
+  c1Collider: {fileID: 619622638}
+  c2Collider: {fileID: 967684861}
+  c3Collider: {fileID: 2061459574}
+  c4Collider: {fileID: 262956644}
+  d1Collider: {fileID: 810135097}
+  d2Collider: {fileID: 839278465}
+  d3Collider: {fileID: 1576025390}
+  d4Collider: {fileID: 1538060568}
   playerPawnOneOnA1: 0
   playerPawnOneOnA2: 0
   playerPawnOneOnA3: 0
@@ -2000,7 +2364,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: selectPlayerPawnOne
           m_Mode: 1
           m_Arguments:
@@ -2111,7 +2475,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: clickOnA2
           m_Mode: 1
           m_Arguments:
@@ -2377,7 +2741,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: TakeAIPawnThree
           m_Mode: 1
           m_Arguments:
@@ -2569,7 +2933,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: clickOnB1
           m_Mode: 1
           m_Arguments:
@@ -2835,7 +3199,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: selectPlayerPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -3027,7 +3391,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: clickOnB3
           m_Mode: 1
           m_Arguments:
@@ -3074,6 +3438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1538060567}
   - component: {fileID: 1538060566}
+  - component: {fileID: 1538060568}
   m_Layer: 0
   m_Name: D4
   m_TagString: D4
@@ -3145,6 +3510,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1538060568
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538060565}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1576025387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3155,6 +3546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1576025389}
   - component: {fileID: 1576025388}
+  - component: {fileID: 1576025390}
   m_Layer: 0
   m_Name: D3
   m_TagString: D3
@@ -3226,6 +3618,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1576025390
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576025387}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &1618070631
 GameObject:
   m_ObjectHideFlags: 0
@@ -3326,7 +3744,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: clickOnA1
           m_Mode: 1
           m_Arguments:
@@ -3511,7 +3929,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: TakeAIPawnOne
           m_Mode: 1
           m_Arguments:
@@ -3532,6 +3950,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1702284549}
   - component: {fileID: 1702284548}
+  - component: {fileID: 1702284550}
+  - component: {fileID: 1702284551}
   m_Layer: 0
   m_Name: B4
   m_TagString: B4
@@ -3603,6 +4023,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1702284550
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702284547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0
+--- !u!114 &1702284551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702284547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508130}
+          m_MethodName: clickOnB4
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1747232696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,7 +4582,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: clickOnA3
           m_Mode: 1
           m_Arguments:
@@ -4293,7 +4767,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508130}
           m_MethodName: selectPlayerPawnThree
           m_Mode: 1
           m_Arguments:
@@ -4315,6 +4789,7 @@ GameObject:
   - component: {fileID: 2061459572}
   - component: {fileID: 2061459571}
   - component: {fileID: 2061459574}
+  - component: {fileID: 2061459573}
   m_Layer: 0
   m_Name: C3
   m_TagString: C3
@@ -4386,6 +4861,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061459573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061459570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508130}
+          m_MethodName: clickOnC3
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &2061459574
 BoxCollider2D:
   m_ObjectHideFlags: 0

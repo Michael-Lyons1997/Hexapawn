@@ -604,7 +604,6 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnTwoCollider.IsTouching(d2Collider))
         {
             playerPawnTwoOnD2 = true;
-            changeToWinScreen();
         }
         else
         {
@@ -699,7 +698,6 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnThreeCollider.IsTouching(d3Collider))
         {
             playerPawnThreeOnD3 = true;
-            changeToWinScreen();
         }
         else
         {
@@ -786,7 +784,6 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnFourCollider.IsTouching(d4Collider))
         {
             playerPawnFourOnD4 = true;
-            changeToWinScreen();
         }
         else
         {
