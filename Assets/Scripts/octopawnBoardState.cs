@@ -822,7 +822,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(c1Collider))
         {
             AIPawnOneOnC1 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -831,7 +830,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(c2Collider))
         {
             AIPawnOneOnC2 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -840,7 +838,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(c3Collider))
         {
             AIPawnOneOnC3 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -849,6 +846,8 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(d1Collider))
         {
             AIPawnOneOnD1 = true;
+            changeToLoseScreen();
+            
         }
         else
         {
@@ -918,7 +917,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(c1Collider))
         {
             AIPawnTwoOnC1 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -927,7 +925,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(c2Collider))
         {
             AIPawnTwoOnC2 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -937,7 +934,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(c3Collider))
         {
             AIPawnTwoOnC3 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -947,7 +943,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(c4Collider))
         {
             AIPawnTwoOnC4 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -1028,7 +1023,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(c1Collider))
         {
             AIPawnThreeOnC1 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -1037,7 +1031,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(c2Collider))
         {
             AIPawnThreeOnC2 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -1046,7 +1039,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(c3Collider))
         {
             AIPawnThreeOnC3 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -1055,7 +1047,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(c4Collider))
         {
             AIPawnThreeOnC4 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -1127,7 +1118,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnFourCollider.IsTouching(c2Collider))
         {
             AIPawnFourOnC2 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -1136,7 +1126,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnFourCollider.IsTouching(c3Collider))
         {
             AIPawnFourOnC3 = true;
-            changeToLoseScreen();
         }
         else
         {
@@ -1145,7 +1134,6 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnFourCollider.IsTouching(c4Collider))
         {
             AIPawnFourOnC4 = true;
-            changeToLoseScreen();
         }
         else
         {

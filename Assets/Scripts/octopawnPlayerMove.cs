@@ -521,7 +521,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnOneCantMove = false;
                     squarePawnHighlight.transform.position = b2.transform.position;
                 }
-                if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2)
+                if(!otherPawnOneOnB1 && !otherPawnTwoOnB1)
                 {
                     squareHighlight.SetActive(true);
                     pawnOneCantMove = false;
@@ -1140,8 +1140,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     if(otherPawnOneOnC1)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnTwo.transform.position = AIPawnOne.transform.position;
+                        pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1152,8 +1152,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     }
                     if(otherPawnOneOnC3)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnTwo.transform.position = AIPawnOne.transform.position;
+                        pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1167,8 +1167,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     if(otherPawnOneOnB2)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnTwo.transform.position = AIPawnOne.transform.position;
+                        pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1182,8 +1182,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     if(otherPawnOneOnB1)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnTwo.transform.position = AIPawnOne.transform.position;
+                        pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1197,8 +1197,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     if(otherPawnOneOnB2)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnTwo.transform.position = AIPawnOne.transform.position;
+                        pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1212,8 +1212,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     if(otherPawnOneOnA1)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnTwo.transform.position = AIPawnOne.transform.position;
+                        pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1230,8 +1230,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                {
                    if(otherPawnOneOnC2)
                    {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnThree.transform.position = AIPawnOne.transform.position;
+                        pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1245,8 +1245,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                {
                    if(otherPawnOneOnB1)
                    {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnThree.transform.position = AIPawnOne.transform.position;
+                        pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1260,8 +1260,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                {
                    if(otherPawnOneOnB2)
                    {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnThree.transform.position = AIPawnOne.transform.position;
+                        pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1275,8 +1275,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                {
                    if(otherPawnOneOnA1)
                    {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnThree.transform.position = AIPawnOne.transform.position;
+                        pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1293,8 +1293,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     if(otherPawnOneOnC3)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnFour.transform.position = AIPawnOne.transform.position;
+                        pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1308,8 +1308,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     if(otherPawnOneOnB2)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnFour.transform.position = AIPawnOne.transform.position;
+                        pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -1323,8 +1323,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     if(otherPawnOneOnA1)
                     {
-                        playerPawnOne.transform.position = AIPawnOne.transform.position;
-                        pawnOneClicked = false; 
+                        playerPawnFour.transform.position = AIPawnOne.transform.position;
+                        pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
@@ -2833,7 +2833,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
     }
     void swapToAITurn()
     {
-        //playerTurn = false;
-        //AIScript.AITurn = true;
+        playerTurn = false;
+        AIScript.AITurn = true;
     }
 }

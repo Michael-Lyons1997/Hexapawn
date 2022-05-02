@@ -1941,30 +1941,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049063327fb5a3d499f427e14e2d8e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  AIPawnFour: {fileID: 0}
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  playerPawnFour: {fileID: 0}
-  a1: {fileID: 0}
-  a2: {fileID: 0}
-  a3: {fileID: 0}
-  a4: {fileID: 0}
-  b1: {fileID: 0}
-  b2: {fileID: 0}
-  b3: {fileID: 0}
-  b4: {fileID: 0}
-  c1: {fileID: 0}
-  c2: {fileID: 0}
-  c3: {fileID: 0}
-  c4: {fileID: 0}
-  d1: {fileID: 0}
-  d2: {fileID: 0}
-  d3: {fileID: 0}
-  d4: {fileID: 0}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
+  AIPawnFour: {fileID: 976000133}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  playerPawnFour: {fileID: 483016140}
+  a1: {fileID: 1618070631}
+  a2: {fileID: 1026409178}
+  a3: {fileID: 1925343155}
+  a4: {fileID: 318100656}
+  b1: {fileID: 1224825140}
+  b2: {fileID: 905451236}
+  b3: {fileID: 1410576133}
+  b4: {fileID: 1702284547}
+  c1: {fileID: 619622634}
+  c2: {fileID: 967684857}
+  c3: {fileID: 2061459570}
+  c4: {fileID: 262956641}
+  d1: {fileID: 810135094}
+  d2: {fileID: 839278462}
+  d3: {fileID: 1576025387}
+  d4: {fileID: 1538060565}
   playerScript: {fileID: 1018508130}
   AITurn: 0
   playerPawnNumber: 0
