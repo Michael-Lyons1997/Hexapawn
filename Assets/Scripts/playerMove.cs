@@ -136,7 +136,7 @@ public class playerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
         {
             if(PawnOneOnC1)
             {
-                if((otherPawnOneOnB1 || otherPawnTwoOnB1 || PawnTwoOnB1) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 & !otherPawnThreeOnB2))
+                if((otherPawnOneOnB1 || otherPawnTwoOnB1 || PawnTwoOnB1) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2))
                 {
                     pawnOneCantMove = true;
                 }

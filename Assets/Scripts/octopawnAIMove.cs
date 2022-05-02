@@ -260,15 +260,138 @@ public class octopawnAIMove : MonoBehaviour
     {
         if(PawnOneOnA1)
         {
-            
+            if(otherPawnOneOnB2)
+            {
+                AIPawnOne.transform.position = b2.transform.position;
+                playerPawnOne.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnTwoOnB2)
+            {
+                AIPawnOne.transform.position = b2.transform.position;
+                playerPawnTwo.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnThreeOnB2)
+            {
+                AIPawnOne.transform.position = b2.transform.position;
+                playerPawnThree.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnFourOnB2)
+            {
+                AIPawnOne.transform.position = b2.transform.position;
+                playerPawnFour.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(!otherPawnOneOnB1 && !otherPawnTwoOnB1 && !otherPawnThreeOnB1 && !PawnTwoOnB1)
+            {
+                AIPawnOne.transform.position = b1.transform.position;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else
+            {
+                pawnOneCantMove = true;
+            }
         }
         else if(PawnOneOnB1)
         {
-            
+            if(otherPawnOneOnC2)
+            {
+                AIPawnOne.transform.position = c2.transform.position;
+                playerPawnOne.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnTwoOnC2)
+            {
+                AIPawnOne.transform.position = c2.transform.position;
+                playerPawnTwo.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnThreeOnC2)
+            {
+                AIPawnOne.transform.position = c2.transform.position;
+                playerPawnThree.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(!otherPawnOneOnC1 && !otherPawnTwoOnC1 && !PawnTwoOnC1 && !PawnThreeOnC1)
+            {
+                AIPawnOne.transform.position = b1.transform.position;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else
+            {
+                pawnOneCantMove = true;
+            }
         }
         else if(PawnOneOnB2)
         {
-            
+            if(otherPawnOneOnC1)
+            {
+                AIPawnOne.transform.position = c1.transform.position;
+                playerPawnOne.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnTwoOnC1)
+            {
+                AIPawnOne.transform.position = c1.transform.position;
+                playerPawnTwo.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnTwoOnC3)
+            {
+                AIPawnOne.transform.position = c3.transform.position;
+                playerPawnTwo.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnThreeOnC3)
+            {
+                AIPawnOne.transform.position = c3.transform.position;
+                playerPawnThree.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(otherPawnFourOnC3)
+            {
+                AIPawnOne.transform.position = c3.transform.position;
+                playerPawnFour.SetActive(false);
+                playerPawnNumber--;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !PawnTwoOnC2 && !PawnThreeOnC2 && !PawnFourOnC2)
+            {
+                AIPawnOne.transform.position = b2.transform.position;
+                pawnOneCantMove = false;
+                swapToPlayerTurn();
+            }
+            else
+            {
+                pawnOneCantMove = true;
+            }
         }
         else if(PawnOneOnC1)
         {
