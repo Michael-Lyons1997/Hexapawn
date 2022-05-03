@@ -960,7 +960,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 if(otherPawnOneOnC3 || otherPawnTwoOnC3 || otherPawnThreeOnC3 || otherPawnFourOnC3)
                 {
                     squarePawnHighlight.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlight.transform.position = c3.transform.position;
                 }
                 if(!otherPawnTwoOnC4 && !otherPawnThreeOnC4 && !otherPawnFourOnC4 && !PawnThreeOnC4)
@@ -975,13 +975,13 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 if(otherPawnOneOnB2 || otherPawnTwoOnB2 || otherPawnThreeOnB2)
                 {
                     squarePawnHighlight.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlight.transform.position = b2.transform.position;
                 }
                 if(otherPawnThreeOnB4 || otherPawnFourOnB4)
                 {
                     squarePawnHighlightTwo.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlightTwo.transform.position = b4.transform.position;
                 }
                 if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3 && !PawnOneOnB3 && !PawnTwoOnB3 && !PawnThreeOnB3)
@@ -996,7 +996,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 if(otherPawnTwoOnB3 || otherPawnThreeOnB3 || otherPawnFourOnB3)
                 {
                     squarePawnHighlight.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlight.transform.position = b3.transform.position;
                 }
                 if(!otherPawnThreeOnB4 && !otherPawnFourOnB4 && !PawnTwoOnB4 && !PawnThreeOnB4)
@@ -1011,13 +1011,13 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 if(otherPawnOneOnA1)
                 {
                     squarePawnHighlight.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlight.transform.position = a1.transform.position;
                 }
                 if(otherPawnThreeOnA3)
                 {
                     squarePawnHighlightTwo.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlightTwo.transform.position = a3.transform.position;
                 }
                 if(!otherPawnTwoOnA2)
@@ -1032,13 +1032,13 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 if(otherPawnTwoOnA2)
                 {
                     squarePawnHighlight.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlight.transform.position = a2.transform.position;
                 }
                 if(otherPawnFourOnA4)
                 {
                     squarePawnHighlightTwo.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlightTwo.transform.position = a4.transform.position;
                 }
                 if(!otherPawnThreeOnA3)
@@ -1053,7 +1053,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 if(otherPawnThreeOnA3)
                 {
                     squarePawnHighlight.SetActive(true);    
-                    pawnThreeCantMove = false;
+                    pawnFourCantMove = false;
                     squarePawnHighlight.transform.position = a3.transform.position;
                 }
                 if(!otherPawnFourOnA4)
@@ -1682,7 +1682,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         swapToAITurn();
                     }
                 }
-                else if(otherPawnFourOnC3)
+                else if(PawnFourOnC3)
                 {
                     if(otherPawnTwoOnB2)
                     {
@@ -1697,7 +1697,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         swapToAITurn();
                     }
                 }
-                else if(otherPawnFourOnC4)
+                else if(PawnFourOnC4)
                 {
                     if(otherPawnTwoOnB3)
                     {

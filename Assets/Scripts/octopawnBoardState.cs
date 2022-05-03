@@ -288,16 +288,23 @@ public class octopawnBoardState : MonoBehaviour
                 changeToLoseScreen();
             }
         }
-        if(!playerPawnOne.active && !playerPawnTwo.active)
+        if(!playerPawnThree.active && !playerPawnFour.active)
         {
-            if(playerPawnThreeCantMove && playerPawnFourCantMove)
+            if(playerPawnOneCantMove && playerPawnTwoCantMove)
             {
                 changeToLoseScreen();
             }
         }
-        if(!playerPawnOne.active && !playerPawnThree.active)
+        if(!playerPawnTwo.active && !playerPawnFour.active)
         {
-            if(playerPawnTwoCantMove && playerPawnFourCantMove)
+            if(playerPawnOneCantMove && playerPawnThreeCantMove)
+            {
+                changeToLoseScreen();
+            }
+        }
+        if(!playerPawnTwo.active && !playerPawnThree.active)
+        {
+            if(playerPawnOneCantMove && playerPawnFourCantMove)
             {
                 changeToLoseScreen();
             }
@@ -309,10 +316,24 @@ public class octopawnBoardState : MonoBehaviour
                 changeToLoseScreen();
             }
         }
+        if(!playerPawnOne.active && !playerPawnThree.active)
+        {
+            if(playerPawnTwoCantMove && playerPawnFourCantMove)
+            {
+                changeToLoseScreen();
+            }
+        }
+        if(!playerPawnOne.active && !playerPawnTwo.active)
+        {
+            if(playerPawnThreeCantMove && playerPawnFourCantMove)
+            {
+                changeToLoseScreen();
+            }
+        }
         if(!playerPawnOne.active && !playerPawnTwo.active && !playerPawnThree.active)
         {
             if(playerPawnFourCantMove)
-            {
+            {   
                 changeToLoseScreen();
             }
         }
@@ -337,7 +358,7 @@ public class octopawnBoardState : MonoBehaviour
                 changeToLoseScreen();
             }
         }    
-        if(AIPawnOneCantMove && AIPawnTwoCantMove && AIPawnThreeCantMove)
+        if(AIPawnOneCantMove && AIPawnTwoCantMove && AIPawnThreeCantMove && AIPawnFourCantMove)
         {
             changeToWinScreen();
         }
@@ -390,6 +411,34 @@ public class octopawnBoardState : MonoBehaviour
                 changeToWinScreen();
             }
         }
+        if(!AIPawnTwo.active && !AIPawnThree.active)
+        {
+            if(AIPawnOneCantMove && AIPawnTwoCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
+        if(!AIPawnTwo.active && !AIPawnFour.active)
+        {
+            if(AIPawnOneCantMove && AIPawnThreeCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
+        if(AIPawnThree.active && !AIPawnFour.active)
+        {
+            if(AIPawnOneCantMove && AIPawnTwoCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
+        if(!AIPawnOne.active && !AIPawnFour.active)
+        {
+            if(AIPawnTwoCantMove && AIPawnThreeCantMove)
+            {
+                changeToWinScreen();
+            }
+        }
         if(!AIPawnOne.active && !AIPawnTwo.active && !AIPawnThree.active)
         {
             if(AIPawnFourCantMove)
@@ -406,7 +455,7 @@ public class octopawnBoardState : MonoBehaviour
         }  
         if(!playerPawnOne.active && !playerPawnThree.active && !playerPawnFour.active)
         {
-            if(playerPawnTwoCantMove)
+            if(AIPawnTwoCantMove)
             {
                 changeToWinScreen();
             }
@@ -1142,6 +1191,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnFourCollider.IsTouching(d1Collider))
         {
             AIPawnFourOnD1 = true;
+            changeToLoseScreen();
         }
         else
         {
