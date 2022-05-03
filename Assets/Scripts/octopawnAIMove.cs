@@ -148,7 +148,7 @@ public class octopawnAIMove : MonoBehaviour
         pawnThreeCantMove = false;
         pawnFourCantMove = false;
         timer = 0.0f;
-        timeDelay = 1.0f;
+        timeDelay = 0.5f;
     }
 
     // Update is called once per frame

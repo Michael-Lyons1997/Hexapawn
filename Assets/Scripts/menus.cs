@@ -11,6 +11,16 @@ public class menus : MonoBehaviour
         SceneManager.LoadScene("whichGameToPlay");
     }
 
+    public void loadMultiplayerGameChoice()
+    {
+        SceneManager.LoadScene("whichMultiplayerGameToPlay");
+    }
+
+    public void loadInstructionsChoice()
+    {
+        SceneManager.LoadScene("whichInstructionstoShow");
+    }
+
     public void loadSinglePlayer()
     {
         SceneManager.LoadScene("singleplayer");
@@ -26,9 +36,19 @@ public class menus : MonoBehaviour
         SceneManager.LoadScene("multiplayer");
     }
 
+    public void loadOctopawnMultiPlayer()
+    {
+        SceneManager.LoadScene("octopawnMultiplayer");
+    }
+
     public void loadInstructions()
     {
         SceneManager.LoadScene("instructions");
+    }
+
+    public void loadMultiplayerInstructions()
+    {
+        SceneManager.LoadScene("multiplayerInstructions");
     }
 
     public void loadMenu()

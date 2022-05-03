@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 560930347}
   - component: {fileID: 560930346}
   m_Layer: 5
-  m_Name: multiplayer
+  m_Name: playOctopawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1587556118}
-        m_MethodName: loadMultiPlayer
+        m_MethodName: loadOctopawnSinglePlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 1193386516}
   - component: {fileID: 1193386515}
   m_Layer: 5
-  m_Name: singleplayer
+  m_Name: playHexapawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1587556118}
-        m_MethodName: loadGameChoice
+        m_MethodName: loadSinglePlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -678,7 +678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play a multiplayer game
+  m_Text: Play octopawn
 --- !u!222 &1470207943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1084,7 +1084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play a single player game
+  m_Text: Play hexapawn
 --- !u!222 &2063718226
 CanvasRenderer:
   m_ObjectHideFlags: 0
