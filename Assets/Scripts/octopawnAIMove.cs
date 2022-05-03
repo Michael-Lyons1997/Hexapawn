@@ -146,6 +146,7 @@ public class octopawnAIMove : MonoBehaviour
         pawnOneCantMove = false;
         pawnTwoCantMove = false;
         pawnThreeCantMove = false;
+        pawnFourCantMove = false;
         timer = 0.0f;
         timeDelay = 1.0f;
     }

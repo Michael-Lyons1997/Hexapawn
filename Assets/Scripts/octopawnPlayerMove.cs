@@ -504,9 +504,9 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 { 
                     squarePawnHighlight.SetActive(true);
                     pawnOneCantMove = false;
-                    squarePawnHighlight.transform.position = c1.transform.position;
+                    squarePawnHighlight.transform.position = c2.transform.position;
                 }
-                if(!otherPawnOneOnC1 && !otherPawnTwoOnC1 && !otherPawnThreeOnC1)
+                if(!otherPawnOneOnC1 && !otherPawnTwoOnC1 && !otherPawnThreeOnC1 && !PawnTwoOnC1)
                 {
                     squareHighlight.SetActive(true);
                     pawnOneCantMove = false;
@@ -521,7 +521,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnOneCantMove = false;
                     squarePawnHighlight.transform.position = b2.transform.position;
                 }
-                if(!otherPawnOneOnB1 && !otherPawnTwoOnB1)
+                if(!otherPawnOneOnB1 && !otherPawnTwoOnB1 && !PawnTwoOnB1 && !PawnThreeOnB1)
                 {
                     squareHighlight.SetActive(true);
                     pawnOneCantMove = false;
@@ -542,7 +542,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnOneCantMove = false;
                     squarePawnHighlightTwo.transform.position = b3.transform.position;
                 }
-                if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2)
+                if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2 && !PawnTwoOnB2 && !PawnThreeOnB2 && !PawnFourOnB2)
                 {
                     squareHighlight.SetActive(true);
                     pawnOneCantMove = false;
@@ -599,7 +599,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnOneCantMove = false;
                     squarePawnHighlightTwo.transform.position = a4.transform.position;
                 }
-                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3)
+                if(!otherPawnThreeOnA3)
                 {
                     squareHighlight.SetActive(true);
                     pawnOneCantMove = false;
@@ -637,7 +637,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnTwoCantMove = false;
                     squarePawnHighlightTwo.transform.position = c3.transform.position;
                 }
-                if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !otherPawnThreeOnC2 && !otherPawnFourOnC2)
+                if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !otherPawnThreeOnC2 && !otherPawnFourOnC2 && !PawnOneOnC2 && !PawnThreeOnC2)
                 {
                     squareHighlight.SetActive(true);
                     pawnTwoCantMove = false;
@@ -652,7 +652,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnTwoCantMove = false;
                     squarePawnHighlight.transform.position = b2.transform.position;
                 }
-                if(!otherPawnOneOnB1 && !otherPawnTwoOnB1)
+                if(!otherPawnOneOnB1 && !otherPawnTwoOnB1 && !PawnOneOnB1 && !PawnThreeOnB1)
                 {
                     squareHighlight.SetActive(true);
                     pawnTwoCantMove = false;
@@ -673,7 +673,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnTwoCantMove = false;
                     squarePawnHighlightTwo.transform.position = b3.transform.position;
                 }
-                if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2)
+                if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2 && !PawnOneOnB2 && !PawnThreeOnB2 && !PawnFourOnB2)
                 {
                     squareHighlight.SetActive(true);
                     pawnTwoCantMove = false;
@@ -686,7 +686,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                 {
                     squarePawnHighlight.SetActive(true);        
                     pawnTwoCantMove = false;
-                    squarePawnHighlight.transform.position = b3.transform.position;
+                    squarePawnHighlight.transform.position = b2.transform.position;
                 }
                 if(otherPawnThreeOnB4 || otherPawnFourOnB4)
                 {
@@ -694,7 +694,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnTwoCantMove = false;
                     squarePawnHighlightTwo.transform.position = b4.transform.position;
                 }
-                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3)
+                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3 && !PawnOneOnB3 && !PawnThreeOnB3 && !PawnFourOnB3)
                 {
                     squareHighlight.SetActive(true);
                     pawnTwoCantMove = false;
@@ -760,7 +760,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
             }
             else if(PawnTwoOnB4)
             {   
-                if(otherPawnThreeOnB3)
+                if(otherPawnThreeOnA3)
                 {
                     squarePawnHighlight.SetActive(true);    
                     pawnTwoCantMove = false;
@@ -803,7 +803,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnThreeCantMove = false;
                     squarePawnHighlightTwo.transform.position = c4.transform.position;
                 }
-                if(!otherPawnOneOnC3 && !otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3)
+                if(!otherPawnOneOnC3 && !otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3 && !PawnTwoOnC3 && !PawnFourOnC3)
                 {
                     squareHighlight.SetActive(true);
                     pawnThreeCantMove = false;
@@ -824,7 +824,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnThreeCantMove = false;
                     squarePawnHighlightTwo.transform.position = b3.transform.position;
                 }
-                if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2)
+                if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2 && !PawnOneOnB2 && !PawnTwoOnB2 && !PawnFourOnB2)
                 {
                     squareHighlight.SetActive(true);
                     pawnThreeCantMove = false;
@@ -845,7 +845,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnThreeCantMove = false;
                     squarePawnHighlightTwo.transform.position = b4.transform.position;
                 }
-                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3)
+                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3 && !PawnOneOnB3 && !PawnTwoOnB3 && !PawnFourOnB3)
                 {
                     squareHighlight.SetActive(true);
                     pawnThreeCantMove = false;
@@ -860,7 +860,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnThreeCantMove = false;
                     squarePawnHighlight.transform.position = b3.transform.position;
                 }
-                if(!otherPawnThreeOnB4 && !otherPawnFourOnB4)
+                if(!otherPawnThreeOnB4 && !otherPawnFourOnB4 && !PawnTwoOnB4 && !PawnFourOnB4)
                 {
                     squareHighlight.SetActive(true);
                     pawnThreeCantMove = false;
@@ -963,7 +963,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnThreeCantMove = false;
                     squarePawnHighlight.transform.position = c3.transform.position;
                 }
-                if(!otherPawnTwoOnC4 && !otherPawnThreeOnC4 && !otherPawnFourOnC4)
+                if(!otherPawnTwoOnC4 && !otherPawnThreeOnC4 && !otherPawnFourOnC4 && !PawnThreeOnC4)
                 {
                     squareHighlight.SetActive(true);
                     pawnFourCantMove = false;
@@ -984,7 +984,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnThreeCantMove = false;
                     squarePawnHighlightTwo.transform.position = b4.transform.position;
                 }
-                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3)
+                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3 && !PawnOneOnB3 && !PawnTwoOnB3 && !PawnThreeOnB3)
                 {
                     squareHighlight.SetActive(true);
                     pawnFourCantMove = false;
@@ -999,7 +999,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                     pawnThreeCantMove = false;
                     squarePawnHighlight.transform.position = b3.transform.position;
                 }
-                if(!otherPawnThreeOnB4 && !otherPawnFourOnB4)
+                if(!otherPawnThreeOnB4 && !otherPawnFourOnB4 && !PawnTwoOnB4 && !PawnThreeOnB4)
                 {
                     squareHighlight.SetActive(true);
                     pawnFourCantMove = false;
@@ -1353,7 +1353,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1368,7 +1368,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1383,7 +1383,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1395,7 +1395,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1410,7 +1410,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1425,7 +1425,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1443,7 +1443,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1455,7 +1455,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1470,7 +1470,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1485,7 +1485,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1497,7 +1497,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1512,7 +1512,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1527,7 +1527,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1542,7 +1542,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1560,7 +1560,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1572,7 +1572,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1587,7 +1587,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1599,7 +1599,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1614,7 +1614,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1629,7 +1629,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1644,7 +1644,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1659,7 +1659,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1677,7 +1677,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1692,7 +1692,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1707,7 +1707,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1722,7 +1722,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnTwo.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1746,7 +1746,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1761,7 +1761,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1776,7 +1776,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1791,7 +1791,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1809,7 +1809,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1821,7 +1821,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1836,7 +1836,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1851,7 +1851,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1866,7 +1866,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1878,7 +1878,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1893,7 +1893,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1908,7 +1908,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1926,7 +1926,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1938,7 +1938,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1953,7 +1953,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1968,7 +1968,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1980,7 +1980,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -1995,7 +1995,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2010,7 +2010,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2025,7 +2025,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2043,7 +2043,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2058,7 +2058,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2070,7 +2070,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2085,7 +2085,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2100,7 +2100,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2115,7 +2115,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnThree.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2140,7 +2140,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2155,7 +2155,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2170,7 +2170,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn(); 
                     }
@@ -2188,7 +2188,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2203,7 +2203,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2218,7 +2218,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2233,7 +2233,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2251,7 +2251,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                    }
@@ -2263,7 +2263,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                    }
@@ -2278,7 +2278,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                    }
@@ -2293,7 +2293,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                    }
@@ -2308,7 +2308,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                    }
@@ -2323,7 +2323,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2341,7 +2341,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2356,7 +2356,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2371,7 +2371,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
@@ -2386,7 +2386,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                         squareHighlight.SetActive(false);
                         squarePawnHighlight.SetActive(false);
                         squarePawnHighlightTwo.SetActive(false);
-                        AIPawnOne.SetActive(false);
+                        AIPawnFour.SetActive(false);
                         AIPawnNumber--;
                         swapToAITurn();
                     }
