@@ -121,7 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &21865763
+--- !u!1 &130480730
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,22 +129,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 21865765}
-  - component: {fileID: 21865764}
+  - component: {fileID: 130480732}
+  - component: {fileID: 130480731}
   m_Layer: 0
-  m_Name: upside down 3
-  m_TagString: Untagged
+  m_Name: player-2-square-highlight
+  m_TagString: player-2-square-highlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &21865764
+--- !u!212 &130480731
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21865763}
+  m_GameObject: {fileID: 130480730}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -174,34 +174,34 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 473976997
-  m_SortingLayer: 2
+  m_SortingLayerID: -947306653
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e6ee6c4df287f2a4682470173b0b7c9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a435c4ee741e07546b4902e659ace203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 1.32}
+  m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &21865765
+--- !u!4 &130480732
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21865763}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 4, y: -6.7, z: 0}
+  m_GameObject: {fileID: 130480730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.35, y: 2.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &200901732
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,8 +363,8 @@ GameObject:
   - component: {fileID: 364772560}
   - component: {fileID: 364772561}
   m_Layer: 0
-  m_Name: AI-Pawn-2
-  m_TagString: AI-Pawn-2
+  m_Name: Player-Two-Pawn-2
+  m_TagString: player-2-pawn-2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1018508126}
-          m_MethodName: TakeAIPawnTwo
+          m_MethodName: selectPlayerPawnTwo
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -508,6 +508,98 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1018508127}
+          m_MethodName: TakeOpponentPawnTwo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &371347825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371347827}
+  - component: {fileID: 371347826}
+  m_Layer: 0
+  m_Name: player-2-square-highlight
+  m_TagString: player-2-square-pawn-two-highlight
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &371347826
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371347825}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -947306653
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a435c4ee741e07546b4902e659ace203, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4, y: 4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &371347827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371347825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.35, y: 2.42, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &513664968
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +679,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -659,7 +751,7 @@ Camera:
   far clip plane: 9999
   field of view: 60
   orthographic: 1
-  orthographic size: 7.635809
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -683,11 +775,92 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0.6, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &613148364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 613148366}
+  - component: {fileID: 613148365}
+  m_Layer: 0
+  m_Name: player-2-pawn-highlight
+  m_TagString: player-2-pawn-highlight
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &613148365
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613148364}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -947306653
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 9060dc7b8e0e40f4d90610b71cd59003, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4, y: 4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &613148366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613148364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.11, y: -1.91, z: 0}
+  m_LocalScale: {x: 0.81, y: 0.81, z: 0.81}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619622634
 GameObject:
@@ -700,6 +873,7 @@ GameObject:
   - component: {fileID: 619622636}
   - component: {fileID: 619622635}
   - component: {fileID: 619622638}
+  - component: {fileID: 619622637}
   m_Layer: 0
   m_Name: C1
   m_TagString: C1
@@ -771,6 +945,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619622637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619622634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: clickOnC1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &619622638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -797,87 +999,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
---- !u!1 &659027020
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 659027022}
-  - component: {fileID: 659027021}
-  m_Layer: 0
-  m_Name: upside down C
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &659027021
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659027020}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 473976997
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a4426637b9b0324783d56c837c58613, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.32, y: 4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &659027022
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659027020}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 6.7, y: -4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
 --- !u!1 &800631207
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,89 +1078,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &829505773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 829505775}
-  - component: {fileID: 829505774}
-  m_Layer: 0
-  m_Name: upside down 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &829505774
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829505773}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 473976997
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7508379677f0c43499c52be2f3090b17, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4, y: 1.32}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &829505775
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829505773}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: -4, y: -6.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
 --- !u!1 &905451236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1180,17 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1018508127}
+          m_MethodName: clickOnB2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1018508126}
           m_MethodName: clickOnB2
           m_Mode: 1
@@ -1188,6 +1239,7 @@ GameObject:
   - component: {fileID: 967684859}
   - component: {fileID: 967684858}
   - component: {fileID: 967684861}
+  - component: {fileID: 967684860}
   m_Layer: 0
   m_Name: C2
   m_TagString: C2
@@ -1259,6 +1311,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &967684860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967684857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: clickOnC2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &967684861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1297,8 +1377,6 @@ GameObject:
   - component: {fileID: 1018508127}
   - component: {fileID: 1018508126}
   - component: {fileID: 1018508125}
-  - component: {fileID: 1018508129}
-  - component: {fileID: 1018508130}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1315,21 +1393,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018508124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8617aa1fd5b7c14c9b04463ea66cff7, type: 3}
+  m_Script: {fileID: 11500000, guid: a92e007f3c169694597cfd278e068899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  playerPawnOneCollider: {fileID: 1019222535}
-  playerPawnTwoCollider: {fileID: 1381798997}
-  playerPawnThreeCollider: {fileID: 1989481819}
-  AIPawnOneCollider: {fileID: 1688518096}
-  AIPawnTwoCollider: {fileID: 364772559}
-  AIPawnThreeCollider: {fileID: 1153140769}
+  playerOnePawnOne: {fileID: 1019222532}
+  playerOnePawnTwo: {fileID: 1381798994}
+  playerOnePawnThree: {fileID: 1989481816}
+  playerTwoPawnOne: {fileID: 1688518095}
+  playerTwoPawnTwo: {fileID: 364772556}
+  playerTwoPawnThree: {fileID: 1153140766}
+  playerOnePawnOneCollider: {fileID: 1019222535}
+  playerOnePawnTwoCollider: {fileID: 1381798997}
+  playerOnePawnThreeCollider: {fileID: 1989481819}
+  playerTwoPawnOneCollider: {fileID: 1688518096}
+  playerTwoPawnTwoCollider: {fileID: 364772559}
+  playerTwoPawnThreeCollider: {fileID: 1153140769}
   a1Collider: {fileID: 1618070635}
   a2Collider: {fileID: 1026409182}
   a3Collider: {fileID: 1925343159}
@@ -1339,44 +1417,44 @@ MonoBehaviour:
   c1Collider: {fileID: 619622638}
   c2Collider: {fileID: 967684861}
   c3Collider: {fileID: 2061459574}
-  playerPawnOneOnA1: 0
-  playerPawnOneOnA2: 0
-  playerPawnOneOnA3: 0
-  playerPawnOneOnB1: 0
-  playerPawnOneOnB2: 0
-  playerPawnOneOnC1: 0
-  playerPawnTwoOnA1: 0
-  playerPawnTwoOnA2: 0
-  playerPawnTwoOnA3: 0
-  playerPawnTwoOnB1: 0
-  playerPawnTwoOnB2: 0
-  playerPawnTwoOnB3: 0
-  playerPawnTwoOnC2: 0
-  playerPawnThreeOnA1: 0
-  playerPawnThreeOnA2: 0
-  playerPawnThreeOnA3: 0
-  playerPawnThreeOnB2: 0
-  playerPawnThreeOnB3: 0
-  playerPawnThreeOnC3: 0
-  AIPawnOneOnA1: 0
-  AIPawnOneOnB1: 0
-  AIPawnOneOnB2: 0
-  AIPawnOneOnC1: 0
-  AIPawnOneOnC2: 0
-  AIPawnOneOnC3: 0
-  AIPawnTwoOnA2: 0
-  AIPawnTwoOnB1: 0
-  AIPawnTwoOnB2: 0
-  AIPawnTwoOnB3: 0
-  AIPawnTwoOnC1: 0
-  AIPawnTwoOnC2: 0
-  AIPawnTwoOnC3: 0
-  AIPawnThreeOnA3: 0
-  AIPawnThreeOnB2: 0
-  AIPawnThreeOnB3: 0
-  AIPawnThreeOnC1: 0
-  AIPawnThreeOnC2: 0
-  AIPawnThreeOnC3: 0
+  playerOnePawnOneOnA1: 0
+  playerOnePawnOneOnA2: 0
+  playerOnePawnOneOnA3: 0
+  playerOnePawnOneOnB1: 0
+  playerOnePawnOneOnB2: 0
+  playerOnePawnOneOnC1: 0
+  playerOnePawnTwoOnA1: 0
+  playerOnePawnTwoOnA2: 0
+  playerOnePawnTwoOnA3: 0
+  playerOnePawnTwoOnB1: 0
+  playerOnePawnTwoOnB2: 0
+  playerOnePawnTwoOnB3: 0
+  playerOnePawnTwoOnC2: 0
+  playerOnePawnThreeOnA1: 0
+  playerOnePawnThreeOnA2: 0
+  playerOnePawnThreeOnA3: 0
+  playerOnePawnThreeOnB2: 0
+  playerOnePawnThreeOnB3: 0
+  playerOnePawnThreeOnC3: 0
+  playerTwoPawnOneOnA1: 0
+  playerTwoPawnOneOnB1: 0
+  playerTwoPawnOneOnB2: 0
+  playerTwoPawnOneOnC1: 0
+  playerTwoPawnOneOnC2: 0
+  playerTwoPawnOneOnC3: 0
+  playerTwoPawnTwoOnA2: 0
+  playerTwoPawnTwoOnB1: 0
+  playerTwoPawnTwoOnB2: 0
+  playerTwoPawnTwoOnB3: 0
+  playerTwoPawnTwoOnC1: 0
+  playerTwoPawnTwoOnC2: 0
+  playerTwoPawnTwoOnC3: 0
+  playerTwoPawnThreeOnA3: 0
+  playerTwoPawnThreeOnB2: 0
+  playerTwoPawnThreeOnB3: 0
+  playerTwoPawnThreeOnC1: 0
+  playerTwoPawnThreeOnC2: 0
+  playerTwoPawnThreeOnC3: 0
 --- !u!114 &1018508126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1386,18 +1464,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018508124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8908372325441e84e8e01ed4b54f0c2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 32ed54aff2efd9d47904754b77275bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 1019222532}
-  playerPawnTwo: {fileID: 1381798994}
-  playerPawnThree: {fileID: 1989481816}
-  AIPawnOne: {fileID: 1688518095}
-  AIPawnTwo: {fileID: 364772556}
-  AIPawnThree: {fileID: 1153140766}
+  playerPawnOne: {fileID: 1688518095}
+  playerPawnTwo: {fileID: 364772556}
+  playerPawnThree: {fileID: 1153140766}
+  opponentPawnOne: {fileID: 1019222532}
+  opponentPawnTwo: {fileID: 1381798994}
+  opponentPawnThree: {fileID: 1989481816}
   pawnHighlight: {fileID: 1810527559}
-  squareHighlight: {fileID: 1785832733}
-  squarePawnHighlight: {fileID: 800631207}
+  squareHighlight: {fileID: 800631207}
+  squarePawnHighlight: {fileID: 1785832733}
   squarePawnHighlightTwo: {fileID: 1398656064}
   a1: {fileID: 1618070631}
   a2: {fileID: 1026409178}
@@ -1408,63 +1486,49 @@ MonoBehaviour:
   c1: {fileID: 619622634}
   c2: {fileID: 967684857}
   c3: {fileID: 2061459570}
-  AIScript: {fileID: 1018508129}
-  playerTurn: 1
-  AIPawnNumber: 0
+  playerOneMoveScript: {fileID: 1018508127}
+  playerTwoTurn: 0
+  playerOnePawnNumber: 0
   pawnOneCantMove: 0
   pawnTwoCantMove: 0
   pawnThreeCantMove: 0
---- !u!212 &1018508127
-SpriteRenderer:
+--- !u!114 &1018508127
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018508124}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1968344387
-  m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
-    type: 3}
-  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451b7515709941a4dbfaf926149f486e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  opponentPawnOne: {fileID: 1688518095}
+  opponentPawnTwo: {fileID: 364772556}
+  opponentPawnThree: {fileID: 1153140766}
+  pawnHighlight: {fileID: 1810527559}
+  squareHighlight: {fileID: 800631207}
+  squarePawnHighlight: {fileID: 1785832733}
+  squarePawnHighlightTwo: {fileID: 1398656064}
+  a1: {fileID: 1618070631}
+  a2: {fileID: 1026409178}
+  a3: {fileID: 1925343155}
+  b1: {fileID: 1224825140}
+  b2: {fileID: 905451236}
+  b3: {fileID: 1410576133}
+  c1: {fileID: 619622634}
+  c2: {fileID: 967684857}
+  c3: {fileID: 2061459570}
+  playerTwoMoveScript: {fileID: 1018508126}
+  playerOneTurn: 0
+  playerTwoPawnNumber: 0
+  pawnOneCantMove: 0
+  pawnTwoCantMove: 0
+  pawnThreeCantMove: 0
 --- !u!4 &1018508128
 Transform:
   m_ObjectHideFlags: 0
@@ -1477,56 +1541,8 @@ Transform:
   m_LocalScale: {x: 40.602135, y: 16.077517, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018508129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018508124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb3af04138225442882cf707cb16293, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AIPawnOne: {fileID: 1688518095}
-  AIPawnTwo: {fileID: 364772556}
-  AIPawnThree: {fileID: 1153140766}
-  playerPawnOne: {fileID: 1019222532}
-  playerPawnTwo: {fileID: 1381798994}
-  playerPawnThree: {fileID: 1989481816}
-  a1: {fileID: 1618070631}
-  a2: {fileID: 1026409178}
-  a3: {fileID: 1925343155}
-  b1: {fileID: 1224825140}
-  b2: {fileID: 905451236}
-  b3: {fileID: 1410576133}
-  c1: {fileID: 619622634}
-  c2: {fileID: 967684857}
-  c3: {fileID: 2061459570}
-  playerScript: {fileID: 1018508126}
-  AITurn: 1
-  playerPawnNumber: 0
-  pawnOneCantMove: 0
-  pawnTwoCantMove: 0
-  pawnThreeCantMove: 0
---- !u!114 &1018508130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018508124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30141384981e9e9408934f663f1ae558, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pawnOneMove: 0
-  pawnTwoMove: 0
-  pawnThreeMove: 0
 --- !u!1 &1019222532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,8 +1691,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508126}
+        - m_Target: {fileID: 1018508127}
           m_MethodName: selectPlayerPawnOne
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: TakeOpponentPawnOne
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1786,7 +1813,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508126}
+        - m_Target: {fileID: 1018508127}
           m_MethodName: clickOnA2
           m_Mode: 1
           m_Arguments:
@@ -1902,7 +1929,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1153140766
 GameObject:
@@ -1918,8 +1945,8 @@ GameObject:
   - component: {fileID: 1153140770}
   - component: {fileID: 1153140771}
   m_Layer: 0
-  m_Name: AI-Pawn-3
-  m_TagString: AI-Pawn-3
+  m_Name: Player-Two-Pawn-3
+  m_TagString: player-2-pawn-3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2053,7 +2080,18 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1018508126}
-          m_MethodName: TakeAIPawnThree
+          m_MethodName: selectPlayerPawnThree
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508127}
+          m_MethodName: TakeOpponentPawnThree
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2142,7 +2180,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1224825140
 GameObject:
@@ -2244,6 +2282,17 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1018508127}
+          m_MethodName: clickOnB1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1018508126}
           m_MethodName: clickOnB1
           m_Mode: 1
@@ -2429,8 +2478,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508126}
+        - m_Target: {fileID: 1018508127}
           m_MethodName: selectPlayerPawnTwo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: TakeOpponentPawnTwo
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2519,7 +2579,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410576133
 GameObject:
@@ -2621,6 +2681,17 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1018508127}
+          m_MethodName: clickOnB3
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1018508126}
           m_MethodName: clickOnB3
           m_Mode: 1
@@ -2658,7 +2729,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
---- !u!1 &1461188627
+--- !u!1 &1595274212
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2666,22 +2737,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1461188629}
-  - component: {fileID: 1461188628}
+  - component: {fileID: 1595274214}
+  - component: {fileID: 1595274213}
   m_Layer: 0
-  m_Name: upside down B
-  m_TagString: Untagged
+  m_Name: player-2-square-highlight
+  m_TagString: player-2-square-pawn-highlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &1461188628
+--- !u!212 &1595274213
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461188627}
+  m_GameObject: {fileID: 1595274212}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2711,34 +2782,34 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 473976997
-  m_SortingLayer: 2
+  m_SortingLayerID: -947306653
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5aebd3fb0f31f4d47858c64b457da0e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a435c4ee741e07546b4902e659ace203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.32, y: 4}
+  m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1461188629
+--- !u!4 &1595274214
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461188627}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 6.7, y: 0, z: 0}
+  m_GameObject: {fileID: 1595274212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.35, y: 2.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1618070631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,7 +2910,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508126}
+        - m_Target: {fileID: 1018508127}
           m_MethodName: clickOnA1
           m_Mode: 1
           m_Arguments:
@@ -2876,87 +2947,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
---- !u!1 &1677529888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1677529890}
-  - component: {fileID: 1677529889}
-  m_Layer: 0
-  m_Name: upside down 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1677529889
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677529888}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 473976997
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0baee18baca89664ab2bc430cd59cebd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4, y: 1.32}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1677529890
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677529888}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -6.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
 --- !u!1 &1688518095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,8 +2961,8 @@ GameObject:
   - component: {fileID: 1688518099}
   - component: {fileID: 1688518100}
   m_Layer: 0
-  m_Name: AI-Pawn-1
-  m_TagString: AI-Pawn-1
+  m_Name: Player-Two-Pawn-1
+  m_TagString: player-2-pawn-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3106,7 +3096,18 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1018508126}
-          m_MethodName: TakeAIPawnOne
+          m_MethodName: selectPlayerPawnOne
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508127}
+          m_MethodName: TakeOpponentPawnOne
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3195,7 +3196,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1785832733
 GameObject:
@@ -3276,7 +3277,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794176689
 GameObject:
@@ -3357,7 +3358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1810527559
 GameObject:
@@ -3438,7 +3439,7 @@ Transform:
   m_LocalScale: {x: 0.81, y: 0.81, z: 0.81}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1925343155
 GameObject:
@@ -3540,7 +3541,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508126}
+        - m_Target: {fileID: 1018508127}
           m_MethodName: clickOnA3
           m_Mode: 1
           m_Arguments:
@@ -3725,8 +3726,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508126}
+        - m_Target: {fileID: 1018508127}
           m_MethodName: selectPlayerPawnThree
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: TakeOpponentPawnThree
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3747,6 +3759,7 @@ GameObject:
   - component: {fileID: 2061459572}
   - component: {fileID: 2061459571}
   - component: {fileID: 2061459574}
+  - component: {fileID: 2061459573}
   m_Layer: 0
   m_Name: C3
   m_TagString: C3
@@ -3818,6 +3831,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061459573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061459570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: clickOnC3
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &2061459574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3844,84 +3885,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
---- !u!1 &2107910615
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2107910617}
-  - component: {fileID: 2107910616}
-  m_Layer: 0
-  m_Name: upside down A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &2107910616
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107910615}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 473976997
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34f334cf547f2264b85de9c2c863da93, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.32, y: 4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &2107910617
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107910615}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 6.7, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}

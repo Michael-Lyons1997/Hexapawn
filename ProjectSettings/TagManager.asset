@@ -23,6 +23,23 @@ TagManager:
   - A3
   - Player-3
   - C3
+  - C4
+  - A4
+  - Player-4
+  - D1
+  - D2
+  - AI-Pawn-4
+  - D4
+  - D3
+  - B4
+  - player-2-pawn-1
+  - player-2-pawn-2
+  - player-2-pawn-3
+  - player-2-pawn-4
+  - player-2-pawn-highlight
+  - player-2-square-highlight
+  - player-2-square-pawn-highlight
+  - player-2-square-pawn-two-highlight
   layers:
   - Default
   - TransparentFX

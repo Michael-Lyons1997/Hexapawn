@@ -11,9 +11,19 @@ public class menus : MonoBehaviour
         SceneManager.LoadScene("whichGameToPlay");
     }
 
+    public void loadOnlineOrOffline()
+    {
+        SceneManager.LoadScene("onlineOrOffline");
+    }
+
     public void loadMultiplayerGameChoice()
     {
         SceneManager.LoadScene("whichMultiplayerGameToPlay");
+    }
+
+    public void loadOnlineMultiplayerGameChoice()
+    {
+        SceneManager.LoadScene("whichOnlineMultiplayerGameToPlay");
     }
 
     public void loadInstructionsChoice()
@@ -32,6 +42,16 @@ public class menus : MonoBehaviour
     }
 
     public void loadMultiPlayer()
+    {
+        SceneManager.LoadScene("multiplayer");
+    }
+
+    public void loadOnlineMultiPlayer()
+    {
+        SceneManager.LoadScene("multiplayer");
+    }
+
+    public void loadOnlineOctopawnMultiPlayer()
     {
         SceneManager.LoadScene("multiplayer");
     }

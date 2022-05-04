@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/whichGameToPlay.unity
     guid: 26bcfd2020028ed4e87e7410b782aecd
   - enabled: 1
+    path: Assets/Scenes/onlineOrOffline.unity
+    guid: 72e84ab74af1ee34f827fdd769c8a359
+  - enabled: 1
+    path: Assets/Scenes/whichOnlineMultiplayerGametoPlay.unity
+    guid: 468395453de5b9e47a196fab57730910
+  - enabled: 1
     path: Assets/Scenes/whichMultiplayerGametoPlay.unity
     guid: e28ae7b2f6dc1224db1ef7f4037dc8df
   - enabled: 1
@@ -41,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/gameLoseScreen.unity
     guid: 1859966fc08bc404abfbfab6b8f4694e
+  - enabled: 1
+    path: Assets/Scenes/playerOneWins.unity
+    guid: 5b54d8fa1801ff74c91a6917aa7ddd6e
+  - enabled: 1
+    path: Assets/Scenes/playerTwoWins.unity
+    guid: d7d6aa30f2d782f44914be1955f40cb5
   m_configObjects: {}
