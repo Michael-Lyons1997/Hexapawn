@@ -1105,7 +1105,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
                   }
                   else if(PawnOneOnC2)
                   {
-                      if(otherPawnOneOnC1)
+                      if(otherPawnOneOnB1)
                       {
                         playerPawnOne.transform.position = AIPawnOne.transform.position;
                         pawnOneClicked = false; 
@@ -2684,7 +2684,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
         {
             if(pawnTwoClicked && PawnTwoOnC3)
             {
-                if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3)
+                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3)
                 {
                     playerPawnTwo.transform.position = b3.transform.position;
                     pawnTwoClicked = false; 
@@ -2697,7 +2697,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
             }
             else if(pawnThreeClicked && PawnThreeOnC3)
             {
-                if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3)
+                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3)
                 {
                     playerPawnThree.transform.position = b3.transform.position;
                     pawnThreeClicked = false; 
@@ -2710,7 +2710,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
             }
             else if(pawnFourClicked && PawnFourOnC3)
             {
-                if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3)
+                if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3)
                 {
                     playerPawnFour.transform.position = b3.transform.position;
                     pawnFourClicked = false; 
@@ -2729,7 +2729,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
         {
             if(pawnThreeClicked && PawnThreeOnC4)
             {
-                if(!otherPawnThreeOnC4 && !otherPawnFourOnC4)
+                if(!otherPawnThreeOnB4 && !otherPawnFourOnB4)
                 {
                     playerPawnThree.transform.position = b4.transform.position;
                     pawnThreeClicked = false; 
@@ -2742,7 +2742,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
             }
             else if(pawnFourClicked && PawnFourOnC4)
             {
-                if(!otherPawnThreeOnC4 && !otherPawnFourOnC4)
+                if(!otherPawnThreeOnB4 && !otherPawnFourOnB4)
                 {
                     playerPawnFour.transform.position = b4.transform.position;
                     pawnFourClicked = false; 

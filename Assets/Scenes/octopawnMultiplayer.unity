@@ -475,12 +475,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: clickOnC4
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -612,7 +623,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
+        - m_Target: {fileID: 0}
           m_MethodName: clickOnA4
           m_Mode: 1
           m_Arguments:
@@ -771,12 +782,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
+        - m_Target: {fileID: 0}
           m_MethodName: TakeAIPawnTwo
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -883,8 +905,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: selectPlayerPawnFour
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: selectplayerOnePawnFour
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508125}
+          m_MethodName: TakeplayerTwoPawnFour
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1222,12 +1255,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: clickOnC1
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1432,6 +1476,7 @@ GameObject:
   - component: {fileID: 810135096}
   - component: {fileID: 810135095}
   - component: {fileID: 810135097}
+  - component: {fileID: 810135098}
   m_Layer: 0
   m_Name: D1
   m_TagString: D1
@@ -1529,6 +1574,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &810135098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810135094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &839278462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,6 +1613,7 @@ GameObject:
   - component: {fileID: 839278464}
   - component: {fileID: 839278463}
   - component: {fileID: 839278465}
+  - component: {fileID: 839278466}
   m_Layer: 0
   m_Name: D2
   m_TagString: D2
@@ -1637,6 +1711,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &839278466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839278462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &874817067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,12 +1920,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: clickOnB2
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1955,12 +2068,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: clickOnC2
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2093,12 +2217,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
+        - m_Target: {fileID: 0}
           m_MethodName: TakeAIPawnFour
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2161,7 +2296,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1018508128}
   - component: {fileID: 1018508127}
-  - component: {fileID: 1018508130}
   - component: {fileID: 1018508129}
   - component: {fileID: 1018508126}
   - component: {fileID: 1018508125}
@@ -2181,17 +2315,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018508124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 049063327fb5a3d499f427e14e2d8e0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a0156b51ea758f4fab20642caeec74d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIPawnOne: {fileID: 1688518095}
-  AIPawnTwo: {fileID: 364772556}
-  AIPawnThree: {fileID: 1153140766}
-  AIPawnFour: {fileID: 976000133}
-  playerPawnOne: {fileID: 1019222532}
-  playerPawnTwo: {fileID: 1381798994}
-  playerPawnThree: {fileID: 1989481816}
-  playerPawnFour: {fileID: 483016140}
+  playerOnePawnOne: {fileID: 1019222532}
+  playerOnePawnTwo: {fileID: 1381798994}
+  playerOnePawnThree: {fileID: 1989481816}
+  playerOnePawnFour: {fileID: 483016140}
+  playerTwoPawnOne: {fileID: 1688518095}
+  playerTwoPawnTwo: {fileID: 364772556}
+  playerTwoPawnThree: {fileID: 1153140766}
+  playerTwoPawnFour: {fileID: 976000133}
+  pawnHighlight: {fileID: 2079063510}
+  squareHighlight: {fileID: 681305897}
+  squarePawnHighlight: {fileID: 874817067}
+  squarePawnHighlightTwo: {fileID: 218779871}
   a1: {fileID: 1618070631}
   a2: {fileID: 1026409178}
   a3: {fileID: 1925343155}
@@ -2208,9 +2346,9 @@ MonoBehaviour:
   d2: {fileID: 839278462}
   d3: {fileID: 1576025387}
   d4: {fileID: 1538060565}
-  playerScript: {fileID: 1018508130}
-  AITurn: 0
-  playerPawnNumber: 0
+  playerOneScript: {fileID: 1018508126}
+  playerTwoTurn: 0
+  playerOnePawnNumber: 0
   pawnOneCantMove: 0
   pawnTwoCantMove: 0
   pawnThreeCantMove: 0
@@ -2224,13 +2362,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018508124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2525aeefd73d85d4e87bfd95c37380b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 74b2a3239b113bf4bb817dc4342aa579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pawnOneMove: 0
-  pawnTwoMove: 0
-  pawnThreeMove: 0
-  pawnFourMove: 0
+  playerOnePawnOne: {fileID: 1019222532}
+  playerOnePawnTwo: {fileID: 1381798994}
+  playerOnePawnThree: {fileID: 1989481816}
+  playerOnePawnFour: {fileID: 976000133}
+  playerTwoPawnOne: {fileID: 1688518095}
+  playerTwoPawnTwo: {fileID: 364772556}
+  playerTwoPawnThree: {fileID: 1153140766}
+  playerTwoPawnFour: {fileID: 976000133}
+  pawnHighlight: {fileID: 1810527559}
+  squareHighlight: {fileID: 1398656064}
+  squarePawnHighlight: {fileID: 1785832733}
+  squarePawnHighlightTwo: {fileID: 800631207}
+  a1: {fileID: 1618070631}
+  a2: {fileID: 1026409178}
+  a3: {fileID: 1925343155}
+  a4: {fileID: 318100656}
+  b1: {fileID: 1224825140}
+  b2: {fileID: 905451236}
+  b3: {fileID: 1410576133}
+  b4: {fileID: 1702284547}
+  c1: {fileID: 619622634}
+  c2: {fileID: 967684857}
+  c3: {fileID: 2061459570}
+  c4: {fileID: 262956641}
+  d1: {fileID: 810135094}
+  d2: {fileID: 839278462}
+  d3: {fileID: 1576025387}
+  d4: {fileID: 1538060565}
+  playerTwoScript: {fileID: 1018508125}
+  playerOneTurn: 0
+  playerTwoPawnNumber: 0
+  pawnOneCantMove: 0
+  pawnTwoCantMove: 0
+  pawnThreeCantMove: 0
+  pawnFourCantMove: 0
 --- !u!212 &1018508127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2304,25 +2473,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018508124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8f735f37fe7fe4dbd9615d95a65e59, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ad4840745828af40844d90dca5046f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 1019222532}
-  playerPawnTwo: {fileID: 1381798994}
-  playerPawnThree: {fileID: 1989481816}
-  playerPawnFour: {fileID: 483016140}
-  AIPawnOne: {fileID: 1688518095}
-  AIPawnTwo: {fileID: 364772556}
-  AIPawnThree: {fileID: 1153140766}
-  AIPawnFour: {fileID: 976000133}
-  playerPawnOneCollider: {fileID: 1019222535}
-  playerPawnTwoCollider: {fileID: 1381798997}
-  playerPawnThreeCollider: {fileID: 1989481819}
-  playerPawnFourCollider: {fileID: 483016145}
-  AIPawnOneCollider: {fileID: 1688518096}
-  AIPawnTwoCollider: {fileID: 364772559}
-  AIPawnThreeCollider: {fileID: 1153140769}
-  AIPawnFourCollider: {fileID: 976000138}
+  playerOnePawnOne: {fileID: 1019222532}
+  playerOnePawnTwo: {fileID: 1381798994}
+  playerOnePawnThree: {fileID: 1989481816}
+  playerOnePawnFour: {fileID: 483016140}
+  playerTwoPawnOne: {fileID: 1688518095}
+  playerTwoPawnTwo: {fileID: 364772556}
+  playerTwoPawnThree: {fileID: 1153140766}
+  playerTwoPawnFour: {fileID: 976000133}
+  playerOnePawnOneCollider: {fileID: 1019222535}
+  playerOnePawnTwoCollider: {fileID: 1381798997}
+  playerOnePawnThreeCollider: {fileID: 1989481819}
+  playerOnePawnFourCollider: {fileID: 483016145}
+  playerTwoPawnOneCollider: {fileID: 1688518096}
+  playerTwoPawnTwoCollider: {fileID: 364772559}
+  playerTwoPawnThreeCollider: {fileID: 1153140769}
+  playerTwoPawnFourCollider: {fileID: 976000138}
   a1Collider: {fileID: 1618070635}
   a2Collider: {fileID: 1026409182}
   a3Collider: {fileID: 1925343159}
@@ -2339,141 +2508,94 @@ MonoBehaviour:
   d2Collider: {fileID: 839278465}
   d3Collider: {fileID: 1576025390}
   d4Collider: {fileID: 1538060568}
-  playerPawnOneOnA1: 0
-  playerPawnOneOnA2: 0
-  playerPawnOneOnA3: 0
-  playerPawnOneOnA4: 0
-  playerPawnOneOnB1: 0
-  playerPawnOneOnB2: 0
-  playerPawnOneOnB3: 0
-  playerPawnOneOnC1: 0
-  playerPawnOneOnC2: 0
-  playerPawnOneOnD1: 0
-  playerPawnTwoOnA1: 0
-  playerPawnTwoOnA2: 0
-  playerPawnTwoOnA3: 0
-  playerPawnTwoOnA4: 0
-  playerPawnTwoOnB1: 0
-  playerPawnTwoOnB2: 0
-  playerPawnTwoOnB3: 0
-  playerPawnTwoOnB4: 0
-  playerPawnTwoOnC1: 0
-  playerPawnTwoOnC2: 0
-  playerPawnTwoOnC3: 0
-  playerPawnTwoOnD2: 0
-  playerPawnThreeOnA1: 0
-  playerPawnThreeOnA2: 0
-  playerPawnThreeOnA3: 0
-  playerPawnThreeOnA4: 0
-  playerPawnThreeOnB1: 0
-  playerPawnThreeOnB2: 0
-  playerPawnThreeOnB3: 0
-  playerPawnThreeOnB4: 0
-  playerPawnThreeOnC2: 0
-  playerPawnThreeOnC3: 0
-  playerPawnThreeOnC4: 0
-  playerPawnThreeOnD3: 0
-  playerPawnFourOnA1: 0
-  playerPawnFourOnA2: 0
-  playerPawnFourOnA3: 0
-  playerPawnFourOnA4: 0
-  playerPawnFourOnB2: 0
-  playerPawnFourOnB3: 0
-  playerPawnFourOnB4: 0
-  playerPawnFourOnC3: 0
-  playerPawnFourOnC4: 0
-  playerPawnFourOnD4: 0
-  AIPawnOneOnA1: 0
-  AIPawnOneOnB1: 0
-  AIPawnOneOnB2: 0
-  AIPawnOneOnC1: 0
-  AIPawnOneOnC2: 0
-  AIPawnOneOnC3: 0
-  AIPawnOneOnD1: 0
-  AIPawnOneOnD2: 0
-  AIPawnOneOnD3: 0
-  AIPawnOneOnD4: 0
-  AIPawnTwoOnA2: 0
-  AIPawnTwoOnB1: 0
-  AIPawnTwoOnB2: 0
-  AIPawnTwoOnB3: 0
-  AIPawnTwoOnC1: 0
-  AIPawnTwoOnC2: 0
-  AIPawnTwoOnC3: 0
-  AIPawnTwoOnC4: 0
-  AIPawnTwoOnD1: 0
-  AIPawnTwoOnD2: 0
-  AIPawnTwoOnD3: 0
-  AIPawnTwoOnD4: 0
-  AIPawnThreeOnA3: 0
-  AIPawnThreeOnB2: 0
-  AIPawnThreeOnB3: 0
-  AIPawnThreeOnB4: 0
-  AIPawnThreeOnC1: 0
-  AIPawnThreeOnC2: 0
-  AIPawnThreeOnC3: 0
-  AIPawnThreeOnC4: 0
-  AIPawnThreeOnD1: 0
-  AIPawnThreeOnD2: 0
-  AIPawnThreeOnD3: 0
-  AIPawnThreeOnD4: 0
-  AIPawnFourOnA4: 0
-  AIPawnFourOnB3: 0
-  AIPawnFourOnB4: 0
-  AIPawnFourOnC2: 0
-  AIPawnFourOnC3: 0
-  AIPawnFourOnC4: 0
-  AIPawnFourOnD1: 0
-  AIPawnFourOnD2: 0
-  AIPawnFourOnD3: 0
-  AIPawnFourOnD4: 0
---- !u!114 &1018508130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018508124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1235b31b266c0ae42ab16406797dad08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 1019222532}
-  playerPawnTwo: {fileID: 1381798994}
-  playerPawnThree: {fileID: 1989481816}
-  playerPawnFour: {fileID: 483016140}
-  AIPawnOne: {fileID: 1688518095}
-  AIPawnTwo: {fileID: 364772556}
-  AIPawnThree: {fileID: 1153140766}
-  AIPawnFour: {fileID: 976000133}
-  pawnHighlight: {fileID: 1810527559}
-  squareHighlight: {fileID: 1785832733}
-  squarePawnHighlight: {fileID: 800631207}
-  squarePawnHighlightTwo: {fileID: 1398656064}
-  a1: {fileID: 1618070631}
-  a2: {fileID: 1026409178}
-  a3: {fileID: 1925343155}
-  a4: {fileID: 318100656}
-  b1: {fileID: 1224825140}
-  b2: {fileID: 905451236}
-  b3: {fileID: 1410576133}
-  b4: {fileID: 1702284547}
-  c1: {fileID: 619622634}
-  c2: {fileID: 967684857}
-  c3: {fileID: 2061459570}
-  c4: {fileID: 262956641}
-  d1: {fileID: 810135094}
-  d2: {fileID: 839278462}
-  d3: {fileID: 1576025387}
-  d4: {fileID: 1538060565}
-  AIScript: {fileID: 1018508125}
-  playerTurn: 0
-  AIPawnNumber: 0
-  pawnOneCantMove: 0
-  pawnTwoCantMove: 0
-  pawnThreeCantMove: 0
-  pawnFourCantMove: 0
+  playerOnePawnOneOnA1: 0
+  playerOnePawnOneOnA2: 0
+  playerOnePawnOneOnA3: 0
+  playerOnePawnOneOnA4: 0
+  playerOnePawnOneOnB1: 0
+  playerOnePawnOneOnB2: 0
+  playerOnePawnOneOnB3: 0
+  playerOnePawnOneOnC1: 0
+  playerOnePawnOneOnC2: 0
+  playerOnePawnOneOnD1: 0
+  playerOnePawnTwoOnA1: 0
+  playerOnePawnTwoOnA2: 0
+  playerOnePawnTwoOnA3: 0
+  playerOnePawnTwoOnA4: 0
+  playerOnePawnTwoOnB1: 0
+  playerOnePawnTwoOnB2: 0
+  playerOnePawnTwoOnB3: 0
+  playerOnePawnTwoOnB4: 0
+  playerOnePawnTwoOnC1: 0
+  playerOnePawnTwoOnC2: 0
+  playerOnePawnTwoOnC3: 0
+  playerOnePawnTwoOnD2: 0
+  playerOnePawnThreeOnA1: 0
+  playerOnePawnThreeOnA2: 0
+  playerOnePawnThreeOnA3: 0
+  playerOnePawnThreeOnA4: 0
+  playerOnePawnThreeOnB1: 0
+  playerOnePawnThreeOnB2: 0
+  playerOnePawnThreeOnB3: 0
+  playerOnePawnThreeOnB4: 0
+  playerOnePawnThreeOnC2: 0
+  playerOnePawnThreeOnC3: 0
+  playerOnePawnThreeOnC4: 0
+  playerOnePawnThreeOnD3: 0
+  playerOnePawnFourOnA1: 0
+  playerOnePawnFourOnA2: 0
+  playerOnePawnFourOnA3: 0
+  playerOnePawnFourOnA4: 0
+  playerOnePawnFourOnB2: 0
+  playerOnePawnFourOnB3: 0
+  playerOnePawnFourOnB4: 0
+  playerOnePawnFourOnC3: 0
+  playerOnePawnFourOnC4: 0
+  playerOnePawnFourOnD4: 0
+  playerTwoPawnOneOnA1: 0
+  playerTwoPawnOneOnB1: 0
+  playerTwoPawnOneOnB2: 0
+  playerTwoPawnOneOnC1: 0
+  playerTwoPawnOneOnC2: 0
+  playerTwoPawnOneOnC3: 0
+  playerTwoPawnOneOnD1: 0
+  playerTwoPawnOneOnD2: 0
+  playerTwoPawnOneOnD3: 0
+  playerTwoPawnOneOnD4: 0
+  playerTwoPawnTwoOnA2: 0
+  playerTwoPawnTwoOnB1: 0
+  playerTwoPawnTwoOnB2: 0
+  playerTwoPawnTwoOnB3: 0
+  playerTwoPawnTwoOnC1: 0
+  playerTwoPawnTwoOnC2: 0
+  playerTwoPawnTwoOnC3: 0
+  playerTwoPawnTwoOnC4: 0
+  playerTwoPawnTwoOnD1: 0
+  playerTwoPawnTwoOnD2: 0
+  playerTwoPawnTwoOnD3: 0
+  playerTwoPawnTwoOnD4: 0
+  playerTwoPawnThreeOnA3: 0
+  playerTwoPawnThreeOnB2: 0
+  playerTwoPawnThreeOnB3: 0
+  playerTwoPawnThreeOnB4: 0
+  playerTwoPawnThreeOnC1: 0
+  playerTwoPawnThreeOnC2: 0
+  playerTwoPawnThreeOnC3: 0
+  playerTwoPawnThreeOnC4: 0
+  playerTwoPawnThreeOnD1: 0
+  playerTwoPawnThreeOnD2: 0
+  playerTwoPawnThreeOnD3: 0
+  playerTwoPawnThreeOnD4: 0
+  playerTwoPawnFourOnA4: 0
+  playerTwoPawnFourOnB3: 0
+  playerTwoPawnFourOnB4: 0
+  playerTwoPawnFourOnC2: 0
+  playerTwoPawnFourOnC3: 0
+  playerTwoPawnFourOnC4: 0
+  playerTwoPawnFourOnD1: 0
+  playerTwoPawnFourOnD2: 0
+  playerTwoPawnFourOnD3: 0
+  playerTwoPawnFourOnD4: 0
 --- !u!1 &1019222532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,8 +2744,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: selectPlayerPawnOne
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: selectplayerOnePawnOne
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508125}
+          m_MethodName: TakeplayerTwoPawnOne
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2733,7 +2866,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
+        - m_Target: {fileID: 0}
           m_MethodName: clickOnA2
           m_Mode: 1
           m_Arguments:
@@ -2999,12 +3132,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
+        - m_Target: {fileID: 0}
           m_MethodName: TakeAIPawnThree
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3191,12 +3335,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: clickOnB1
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3457,8 +3612,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: selectPlayerPawnTwo
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: selectplayerOnePawnTwo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508125}
+          m_MethodName: TakeplayerTwoPawnTwo
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3649,12 +3815,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: clickOnB3
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3697,6 +3874,7 @@ GameObject:
   - component: {fileID: 1538060567}
   - component: {fileID: 1538060566}
   - component: {fileID: 1538060568}
+  - component: {fileID: 1538060569}
   m_Layer: 0
   m_Name: D4
   m_TagString: D4
@@ -3794,6 +3972,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &1538060569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538060565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1576025387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,6 +4011,7 @@ GameObject:
   - component: {fileID: 1576025389}
   - component: {fileID: 1576025388}
   - component: {fileID: 1576025390}
+  - component: {fileID: 1576025391}
   m_Layer: 0
   m_Name: D3
   m_TagString: D3
@@ -3902,6 +4109,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &1576025391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576025387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1618070631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,7 +4237,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
+        - m_Target: {fileID: 0}
           m_MethodName: clickOnA1
           m_Mode: 1
           m_Arguments:
@@ -4187,12 +4422,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
+        - m_Target: {fileID: 0}
           m_MethodName: TakeAIPawnOne
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4324,12 +4570,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: clickOnB4
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4840,7 +5097,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
+        - m_Target: {fileID: 0}
           m_MethodName: clickOnA3
           m_Mode: 1
           m_Arguments:
@@ -5025,8 +5282,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: selectPlayerPawnThree
+        - m_Target: {fileID: 1018508126}
+          m_MethodName: selectplayerOnePawnThree
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1018508125}
+          m_MethodName: TakeplayerTwoPawnThree
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5136,12 +5404,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1018508130}
-          m_MethodName: clickOnC3
+        - m_Target: {fileID: 1018508124}
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
