@@ -48,12 +48,12 @@ public class menus : MonoBehaviour
 
     public void loadOnlineMultiPlayer()
     {
-        SceneManager.LoadScene("multiplayer");
+        SceneManager.LoadScene("onlineMultiplayer");
     }
 
     public void loadOnlineOctopawnMultiPlayer()
     {
-        SceneManager.LoadScene("multiplayer");
+        SceneManager.LoadScene("onlineOctopawnMultiplayer");
     }
 
     public void loadOctopawnMultiPlayer()
