@@ -39,8 +39,14 @@ EditorBuildSettings:
     path: Assets/Scenes/multiplayer.unity
     guid: 116cdc87861881e4eacc0cf02065ab54
   - enabled: 1
+    path: Assets/Scenes/onlineMultiplayer.unity
+    guid: a9886269c27f8ad48b2d0ee973ed0b48
+  - enabled: 1
     path: Assets/Scenes/octopawnMultiplayer.unity
     guid: 6cf55929640ecf94d8b933183004c163
+  - enabled: 1
+    path: Assets/Scenes/onlineOctopawnMultiplayer.unity
+    guid: 53c4fd8792db2e5469d15509b935528c
   - enabled: 1
     path: Assets/Scenes/gameWinScreen.unity
     guid: d1684e5fe482af648be7ece8bdf8626c
