@@ -11,19 +11,9 @@ public class menus : MonoBehaviour
         SceneManager.LoadScene("whichGameToPlay");
     }
 
-    public void loadOnlineOrOffline()
-    {
-        SceneManager.LoadScene("onlineOrOffline");
-    }
-
     public void loadMultiplayerGameChoice()
     {
-        SceneManager.LoadScene("whichMultiplayerGameToPlay");
-    }
-
-    public void loadOnlineMultiplayerGameChoice()
-    {
-        SceneManager.LoadScene("whichOnlineMultiplayerGameToPlay");
+        SceneManager.LoadScene("pickMultiPlayerGame");
     }
 
     public void loadInstructionsChoice()

@@ -157,7 +157,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
         pawnTwoClicked = false;
         pawnThreeClicked = false;
         pawnFourClicked = false;
-        playerTwoTurn = true;
+        playerTwoTurn = false;
         playerOnePawnNumber = 4;
         pawnOneCantMove = false;
         pawnTwoCantMove = false;

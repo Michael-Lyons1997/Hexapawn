@@ -12,14 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/whichGameToPlay.unity
     guid: 26bcfd2020028ed4e87e7410b782aecd
   - enabled: 1
-    path: Assets/Scenes/onlineOrOffline.unity
-    guid: 72e84ab74af1ee34f827fdd769c8a359
-  - enabled: 1
-    path: Assets/Scenes/whichOnlineMultiplayerGametoPlay.unity
-    guid: 468395453de5b9e47a196fab57730910
-  - enabled: 1
-    path: Assets/Scenes/whichMultiplayerGametoPlay.unity
-    guid: e28ae7b2f6dc1224db1ef7f4037dc8df
+    path: Assets/Scenes/pickMultiPlayerGame.unity
+    guid: 2d798af5f0e0d3147a0466dfbccab1c4
   - enabled: 1
     path: Assets/Scenes/whichInstructionstoShow.unity
     guid: 72f6f40d469b4c243a7607e908fd8947
