@@ -236,7 +236,6 @@ public class octopawnAIMove : MonoBehaviour
 
             if (timer >= timeDelay)
             {
-                timer = 0.0f;
                 if(movePawnOne)
                 {
                     moveAIPawnOne();
@@ -253,6 +252,7 @@ public class octopawnAIMove : MonoBehaviour
                 {
                     moveAIPawnFour();
                 }
+                timer = 0.0f;
             }
         }
     }

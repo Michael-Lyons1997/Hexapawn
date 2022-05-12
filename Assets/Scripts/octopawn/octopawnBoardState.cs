@@ -250,221 +250,221 @@ public class octopawnBoardState : MonoBehaviour
         AIPawnCheck();
         if(numberofPlayerPawnsLeft == 0)
         {
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         if(numberofAIPawnsLeft == 0)
         {
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         if(playerPawnOneCantMove && playerPawnTwoCantMove && playerPawnThreeCantMove && playerPawnFourCantMove)
         {
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         if(!playerPawnOne.active)
         {
             if(playerPawnTwoCantMove && playerPawnThreeCantMove && playerPawnFourCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnTwo.active)
         {
             if(playerPawnOneCantMove && playerPawnThreeCantMove && playerPawnFourCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnThree.active)
         {
             if(playerPawnOneCantMove && playerPawnTwoCantMove && playerPawnFourCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnFour.active)
         {
             if(playerPawnOneCantMove && playerPawnTwoCantMove && playerPawnThreeCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnThree.active && !playerPawnFour.active)
         {
             if(playerPawnOneCantMove && playerPawnTwoCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnTwo.active && !playerPawnFour.active)
         {
             if(playerPawnOneCantMove && playerPawnThreeCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnTwo.active && !playerPawnThree.active)
         {
             if(playerPawnOneCantMove && playerPawnFourCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnOne.active && !playerPawnFour.active)
         {
             if(playerPawnTwoCantMove && playerPawnThreeCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnOne.active && !playerPawnThree.active)
         {
             if(playerPawnTwoCantMove && playerPawnFourCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnOne.active && !playerPawnTwo.active)
         {
             if(playerPawnThreeCantMove && playerPawnFourCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnOne.active && !playerPawnTwo.active && !playerPawnThree.active)
         {
             if(playerPawnFourCantMove)
             {   
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnOne.active && !playerPawnTwo.active && !playerPawnFour.active)
         {
             if(playerPawnThreeCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }  
         if(!playerPawnOne.active && !playerPawnThree.active && !playerPawnFour.active)
         {
             if(playerPawnTwoCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }  
         if(!playerPawnTwo.active && !playerPawnThree.active && !playerPawnFour.active)
         {
             if(playerPawnOneCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }    
         if(AIPawnOneCantMove && AIPawnTwoCantMove && AIPawnThreeCantMove && AIPawnFourCantMove)
         {
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         if(!AIPawnOne.active)
         {
             if(AIPawnTwoCantMove && AIPawnThreeCantMove && AIPawnFourCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnTwo.active)
         {
             if(AIPawnOneCantMove && AIPawnThreeCantMove && AIPawnFourCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnThree.active)
         {
             if(AIPawnOneCantMove && AIPawnTwoCantMove && AIPawnFourCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnFour.active)
         {
             if(AIPawnOneCantMove && AIPawnTwoCantMove && AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnOne.active && !AIPawnTwo.active)
         {
             if(AIPawnThreeCantMove && AIPawnFourCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnOne.active && !AIPawnThree.active)
         {
             if(AIPawnTwoCantMove && AIPawnFourCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnOne.active && !AIPawnFour.active)
         {
             if(AIPawnTwoCantMove && AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnTwo.active && !AIPawnThree.active)
         {
             if(AIPawnOneCantMove && AIPawnTwoCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnTwo.active && !AIPawnFour.active)
         {
             if(AIPawnOneCantMove && AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(AIPawnThree.active && !AIPawnFour.active)
         {
             if(AIPawnOneCantMove && AIPawnTwoCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnOne.active && !AIPawnFour.active)
         {
             if(AIPawnTwoCantMove && AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnOne.active && !AIPawnTwo.active && !AIPawnThree.active)
         {
             if(AIPawnFourCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnOne.active && !AIPawnTwo.active && !AIPawnFour.active)
         {
             if(AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }  
         if(!playerPawnOne.active && !playerPawnThree.active && !playerPawnFour.active)
         {
             if(AIPawnTwoCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }  
         if(!AIPawnTwo.active && !AIPawnThree.active && !AIPawnFour.active)
         {
             if(AIPawnOneCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
     }
@@ -475,7 +475,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnOneCollider.IsTouching(a1Collider))
         {
             playerPawnOneOnA1 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -484,7 +484,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnOneCollider.IsTouching(a2Collider))
         {
             playerPawnOneOnA2 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -493,7 +493,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnOneCollider.IsTouching(a3Collider))
         {
             playerPawnOneOnA3 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -502,7 +502,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnOneCollider.IsTouching(a4Collider))
         {
             playerPawnOneOnA4 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -561,7 +561,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnTwoCollider.IsTouching(a1Collider))
         {
             playerPawnTwoOnA1 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -570,7 +570,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnTwoCollider.IsTouching(a2Collider))
         {
             playerPawnTwoOnA2 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -579,7 +579,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnTwoCollider.IsTouching(a3Collider))
         {
             playerPawnTwoOnA3 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -588,7 +588,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnTwoCollider.IsTouching(a4Collider))
         {
             playerPawnTwoOnA4 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -663,7 +663,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnThreeCollider.IsTouching(a1Collider))
         {
             playerPawnThreeOnA1 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -672,7 +672,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnThreeCollider.IsTouching(a2Collider))
         {
             playerPawnThreeOnA2 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -681,7 +681,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnThreeCollider.IsTouching(a3Collider))
         {
             playerPawnThreeOnA3 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -690,7 +690,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnThreeCollider.IsTouching(a4Collider))
         {
             playerPawnThreeOnA4 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -757,7 +757,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnFourCollider.IsTouching(a1Collider))
         {
             playerPawnFourOnA1 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -766,7 +766,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnFourCollider.IsTouching(a2Collider))
         {
             playerPawnFourOnA2 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -775,7 +775,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnFourCollider.IsTouching(a3Collider))
         {
             playerPawnFourOnA3 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -784,7 +784,7 @@ public class octopawnBoardState : MonoBehaviour
         if (playerPawnFourCollider.IsTouching(a4Collider))
         {
             playerPawnFourOnA4 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -895,7 +895,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(d1Collider))
         {
             AIPawnOneOnD1 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
             
         }
         else
@@ -905,7 +905,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(d2Collider))
         {
             AIPawnOneOnD2 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -914,7 +914,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(d3Collider))
         {
             AIPawnOneOnD3 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -923,7 +923,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(d4Collider))
         {
             AIPawnOneOnD4 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1000,7 +1000,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(d1Collider))
         {
             AIPawnTwoOnD1 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1009,7 +1009,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(d2Collider))
         {
             AIPawnTwoOnD2 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1019,7 +1019,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(d3Collider))
         {
             AIPawnTwoOnD3 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1029,7 +1029,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(d4Collider))
         {
             AIPawnTwoOnD4 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1104,7 +1104,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(d1Collider))
         {
             AIPawnThreeOnD1 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1113,7 +1113,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(d2Collider))
         {
             AIPawnThreeOnD2 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1122,7 +1122,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(d3Collider))
         {
             AIPawnThreeOnD3 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1131,7 +1131,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(d4Collider))
         {
             AIPawnThreeOnD4 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1191,7 +1191,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnFourCollider.IsTouching(d1Collider))
         {
             AIPawnFourOnD1 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1200,7 +1200,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnFourCollider.IsTouching(d2Collider))
         {
             AIPawnFourOnD2 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1209,7 +1209,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnFourCollider.IsTouching(d3Collider))
         {
             AIPawnFourOnD3 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1218,7 +1218,7 @@ public class octopawnBoardState : MonoBehaviour
         if (AIPawnFourCollider.IsTouching(d4Collider))
         {
             AIPawnOneOnD4 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -1226,13 +1226,15 @@ public class octopawnBoardState : MonoBehaviour
         }
     }
 
-    void changeToWinScreen()
+    public IEnumerator changeToWinScreen()
     {
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("gameWinScreen");
     }
 
-    void changeToLoseScreen()
-    {
+    public IEnumerator changeToLoseScreen()
+    {   
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("gameLoseScreen");
     }
 }

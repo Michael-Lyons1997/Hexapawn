@@ -250,221 +250,221 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         playerTwoPawnCheck();
         if(numberofplayerOnePawnsLeft == 0)
         {
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         if(numberofPlayerTwoPawnsLeft == 0)
         {
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         if(playerOnePawnOneCantMove && playerOnePawnTwoCantMove && playerOnePawnThreeCantMove && playerOnePawnFourCantMove)
         {
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         if(!playerOnePawnOne.active)
         {
             if(playerOnePawnTwoCantMove && playerOnePawnThreeCantMove && playerOnePawnFourCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnTwo.active)
         {
             if(playerOnePawnOneCantMove && playerOnePawnThreeCantMove && playerOnePawnFourCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnThree.active)
         {
             if(playerOnePawnOneCantMove && playerOnePawnTwoCantMove && playerOnePawnFourCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnFour.active)
         {
             if(playerOnePawnOneCantMove && playerOnePawnTwoCantMove && playerOnePawnThreeCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnThree.active && !playerOnePawnFour.active)
         {
             if(playerOnePawnOneCantMove && playerOnePawnTwoCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnTwo.active && !playerOnePawnFour.active)
         {
             if(playerOnePawnOneCantMove && playerOnePawnThreeCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnTwo.active && !playerOnePawnThree.active)
         {
             if(playerOnePawnOneCantMove && playerOnePawnFourCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnOne.active && !playerOnePawnFour.active)
         {
             if(playerOnePawnTwoCantMove && playerOnePawnThreeCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnOne.active && !playerOnePawnThree.active)
         {
             if(playerOnePawnTwoCantMove && playerOnePawnFourCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnOne.active && !playerOnePawnTwo.active)
         {
             if(playerOnePawnThreeCantMove && playerOnePawnFourCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnOne.active && !playerOnePawnTwo.active && !playerOnePawnThree.active)
         {
             if(playerOnePawnFourCantMove)
             {   
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnOne.active && !playerOnePawnTwo.active && !playerOnePawnFour.active)
         {
             if(playerOnePawnThreeCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }  
         if(!playerOnePawnOne.active && !playerOnePawnThree.active && !playerOnePawnFour.active)
         {
             if(playerOnePawnTwoCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }  
         if(!playerOnePawnTwo.active && !playerOnePawnThree.active && !playerOnePawnFour.active)
         {
             if(playerOnePawnOneCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }    
         if(playerTwoPawnOneCantMove && playerTwoPawnTwoCantMove && playerTwoPawnThreeCantMove && playerTwoPawnFourCantMove)
         {
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         if(!playerTwoPawnOne.active)
         {
             if(playerTwoPawnTwoCantMove && playerTwoPawnThreeCantMove && playerTwoPawnFourCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnTwo.active)
         {
             if(playerTwoPawnOneCantMove && playerTwoPawnThreeCantMove && playerTwoPawnFourCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnThree.active)
         {
             if(playerTwoPawnOneCantMove && playerTwoPawnTwoCantMove && playerTwoPawnFourCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnFour.active)
         {
             if(playerTwoPawnOneCantMove && playerTwoPawnTwoCantMove && playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnOne.active && !playerTwoPawnTwo.active)
         {
             if(playerTwoPawnThreeCantMove && playerTwoPawnFourCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnOne.active && !playerTwoPawnThree.active)
         {
             if(playerTwoPawnTwoCantMove && playerTwoPawnFourCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnOne.active && !playerTwoPawnFour.active)
         {
             if(playerTwoPawnTwoCantMove && playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnTwo.active && !playerTwoPawnThree.active)
         {
             if(playerTwoPawnOneCantMove && playerTwoPawnTwoCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnTwo.active && !playerTwoPawnFour.active)
         {
             if(playerTwoPawnOneCantMove && playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(playerTwoPawnThree.active && !playerTwoPawnFour.active)
         {
             if(playerTwoPawnOneCantMove && playerTwoPawnTwoCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnOne.active && !playerTwoPawnFour.active)
         {
             if(playerTwoPawnTwoCantMove && playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnOne.active && !playerTwoPawnTwo.active && !playerTwoPawnThree.active)
         {
             if(playerTwoPawnFourCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnOne.active && !playerTwoPawnTwo.active && !playerTwoPawnFour.active)
         {
             if(playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }  
         if(!playerOnePawnOne.active && !playerOnePawnThree.active && !playerOnePawnFour.active)
         {
             if(playerTwoPawnTwoCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }  
         if(!playerTwoPawnTwo.active && !playerTwoPawnThree.active && !playerTwoPawnFour.active)
         {
             if(playerTwoPawnOneCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
     }
@@ -475,7 +475,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnOneCollider.IsTouching(a1Collider))
         {
             playerOnePawnOneOnA1 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -484,7 +484,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnOneCollider.IsTouching(a2Collider))
         {
             playerOnePawnOneOnA2 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -493,7 +493,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnOneCollider.IsTouching(a3Collider))
         {
             playerOnePawnOneOnA3 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -502,7 +502,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnOneCollider.IsTouching(a4Collider))
         {
             playerOnePawnOneOnA4 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -561,7 +561,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnTwoCollider.IsTouching(a1Collider))
         {
             playerOnePawnTwoOnA1 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -570,7 +570,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnTwoCollider.IsTouching(a2Collider))
         {
             playerOnePawnTwoOnA2 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -579,7 +579,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnTwoCollider.IsTouching(a3Collider))
         {
             playerOnePawnTwoOnA3 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -588,7 +588,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnTwoCollider.IsTouching(a4Collider))
         {
             playerOnePawnTwoOnA4 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -663,7 +663,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnThreeCollider.IsTouching(a1Collider))
         {
             playerOnePawnThreeOnA1 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -672,7 +672,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnThreeCollider.IsTouching(a2Collider))
         {
             playerOnePawnThreeOnA2 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -681,7 +681,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnThreeCollider.IsTouching(a3Collider))
         {
             playerOnePawnThreeOnA3 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -690,7 +690,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnThreeCollider.IsTouching(a4Collider))
         {
             playerOnePawnThreeOnA4 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -757,7 +757,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnFourCollider.IsTouching(a1Collider))
         {
             playerOnePawnFourOnA1 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -766,7 +766,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnFourCollider.IsTouching(a2Collider))
         {
             playerOnePawnFourOnA2 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -775,7 +775,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnFourCollider.IsTouching(a3Collider))
         {
             playerOnePawnFourOnA3 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -784,7 +784,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerOnePawnFourCollider.IsTouching(a4Collider))
         {
             playerOnePawnFourOnA4 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -895,7 +895,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnOneCollider.IsTouching(d1Collider))
         {
             playerTwoPawnOneOnD1 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
             
         }
         else
@@ -905,7 +905,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnOneCollider.IsTouching(d2Collider))
         {
             playerTwoPawnOneOnD2 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -914,7 +914,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnOneCollider.IsTouching(d3Collider))
         {
             playerTwoPawnOneOnD3 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -923,7 +923,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnOneCollider.IsTouching(d4Collider))
         {
             playerTwoPawnOneOnD4 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1000,7 +1000,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnTwoCollider.IsTouching(d1Collider))
         {
             playerTwoPawnTwoOnD1 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1009,7 +1009,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnTwoCollider.IsTouching(d2Collider))
         {
             playerTwoPawnTwoOnD2 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1019,7 +1019,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnTwoCollider.IsTouching(d3Collider))
         {
             playerTwoPawnTwoOnD3 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1029,7 +1029,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnTwoCollider.IsTouching(d4Collider))
         {
             playerTwoPawnTwoOnD4 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1104,7 +1104,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnThreeCollider.IsTouching(d1Collider))
         {
             playerTwoPawnThreeOnD1 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1113,7 +1113,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnThreeCollider.IsTouching(d2Collider))
         {
             playerTwoPawnThreeOnD2 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1122,7 +1122,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnThreeCollider.IsTouching(d3Collider))
         {
             playerTwoPawnThreeOnD3 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1131,7 +1131,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnThreeCollider.IsTouching(d4Collider))
         {
             playerTwoPawnThreeOnD4 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1191,7 +1191,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnFourCollider.IsTouching(d1Collider))
         {
             playerTwoPawnFourOnD1 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1200,7 +1200,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnFourCollider.IsTouching(d2Collider))
         {
             playerTwoPawnFourOnD2 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1209,7 +1209,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnFourCollider.IsTouching(d3Collider))
         {
             playerTwoPawnFourOnD3 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1218,7 +1218,7 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         if (playerTwoPawnFourCollider.IsTouching(d4Collider))
         {
             playerTwoPawnOneOnD4 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -1226,13 +1226,15 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         }
     }
 
-    void playerOneWins()
+    public IEnumerator playerOneWins()
     {
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("playerOneWins");
     }
 
-    void playerTwoWins()
+    public IEnumerator playerTwoWins()
     {
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("playerTwoWins");
     }
 }

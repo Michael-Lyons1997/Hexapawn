@@ -138,102 +138,102 @@ public class boardState : MonoBehaviour
         AIPawnCheck();
         if(numberofPlayerPawnsLeft == 0)
         {
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         if(numberofAIPawnsLeft == 0)
         {
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         if(playerPawnOneCantMove && playerPawnTwoCantMove && playerPawnThreeCantMove)
         {
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         if(!playerPawnOne.active)
         {
             if(playerPawnTwoCantMove && playerPawnThreeCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnTwo.active)
         {
             if(playerPawnOneCantMove && playerPawnThreeCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnThree.active)
         {
             if(playerPawnOneCantMove && playerPawnTwoCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnOne.active && !playerPawnTwo.active)
         {
             if(playerPawnThreeCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         if(!playerPawnOne.active && !playerPawnThree.active)
         {
             if(playerPawnTwoCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             }
         }
         else if(!playerPawnTwo.active && !playerPawnThree.active)
         {
             if(playerPawnOneCantMove)
             {
-                changeToLoseScreen();
+                StartCoroutine(changeToLoseScreen());
             } 
         }
         if(AIPawnOneCantMove && AIPawnTwoCantMove && AIPawnThreeCantMove)
         {
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         if(!AIPawnOne.active)
         {
             if(AIPawnTwoCantMove && AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnTwo.active)
         {
             if(AIPawnOneCantMove && AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnThree.active)
         {
             if(AIPawnTwoCantMove && AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnOne.active && !AIPawnTwo.active)
         {
             if(AIPawnThreeCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnOne.active && !AIPawnThree.active)
         {
             if(AIPawnTwoCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             }
         }
         if(!AIPawnTwo.active && !AIPawnThree.active)
         {
             if(AIPawnOneCantMove)
             {
-                changeToWinScreen();
+                StartCoroutine(changeToWinScreen());
             } 
         }
     }
@@ -244,7 +244,7 @@ public class boardState : MonoBehaviour
         if (playerPawnOneCollider.IsTouching(a1Collider))
         {
             playerPawnOneOnA1 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -253,7 +253,7 @@ public class boardState : MonoBehaviour
         if (playerPawnOneCollider.IsTouching(a2Collider))
         {
             playerPawnOneOnA2 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -262,7 +262,7 @@ public class boardState : MonoBehaviour
         if (playerPawnOneCollider.IsTouching(a3Collider))
         {
             playerPawnOneOnA3 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -297,7 +297,7 @@ public class boardState : MonoBehaviour
         if (playerPawnTwoCollider.IsTouching(a1Collider))
         {
             playerPawnTwoOnA1 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -306,7 +306,7 @@ public class boardState : MonoBehaviour
         if (playerPawnTwoCollider.IsTouching(a2Collider))
         {
             playerPawnTwoOnA2 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -315,7 +315,7 @@ public class boardState : MonoBehaviour
         if (playerPawnTwoCollider.IsTouching(a3Collider))
         {
             playerPawnTwoOnA3 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -358,7 +358,7 @@ public class boardState : MonoBehaviour
         if (playerPawnThreeCollider.IsTouching(a1Collider))
         {
             playerPawnThreeOnA1 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -367,7 +367,7 @@ public class boardState : MonoBehaviour
         if (playerPawnThreeCollider.IsTouching(a2Collider))
         {
             playerPawnThreeOnA2 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -376,7 +376,7 @@ public class boardState : MonoBehaviour
         if (playerPawnThreeCollider.IsTouching(a3Collider))
         {
             playerPawnThreeOnA3 = true;
-            changeToWinScreen();
+            StartCoroutine(changeToWinScreen());
         }
         else
         {
@@ -439,7 +439,7 @@ public class boardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(c1Collider))
         {
             AIPawnOneOnC1 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -448,7 +448,7 @@ public class boardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(c2Collider))
         {
             AIPawnOneOnC2 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -457,7 +457,7 @@ public class boardState : MonoBehaviour
         if (AIPawnOneCollider.IsTouching(c3Collider))
         {
             AIPawnOneOnC3 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -500,7 +500,7 @@ public class boardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(c1Collider))
         {
             AIPawnTwoOnC1 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -509,7 +509,7 @@ public class boardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(c2Collider))
         {
             AIPawnTwoOnC2 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -519,7 +519,7 @@ public class boardState : MonoBehaviour
         if (AIPawnTwoCollider.IsTouching(c3Collider))
         {
             AIPawnTwoOnC3 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -554,7 +554,7 @@ public class boardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(c1Collider))
         {
             AIPawnThreeOnC1 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -563,7 +563,7 @@ public class boardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(c2Collider))
         {
             AIPawnThreeOnC2 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -572,7 +572,7 @@ public class boardState : MonoBehaviour
         if (AIPawnThreeCollider.IsTouching(c3Collider))
         {
             AIPawnThreeOnC3 = true;
-            changeToLoseScreen();
+            StartCoroutine(changeToLoseScreen());
         }
         else
         {
@@ -580,13 +580,15 @@ public class boardState : MonoBehaviour
         }
     }
 
-    void changeToWinScreen()
+    public IEnumerator changeToWinScreen()
     {
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("gameWinScreen");
     }
 
-    void changeToLoseScreen()
-    {
+    public IEnumerator changeToLoseScreen()
+    {   
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("gameLoseScreen");
     }
 }

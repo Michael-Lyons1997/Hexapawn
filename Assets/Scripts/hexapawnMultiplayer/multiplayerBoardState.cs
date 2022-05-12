@@ -138,102 +138,102 @@ public class multiplayerBoardState : MonoBehaviour
         playerTwoPawnCheck();
         if(playerOnePawnsLeft == 0)
         {
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         if(playerTwoPawnsLeft == 0)
         {
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         if(playerOnePawnOneCantMove && playerOnePawnTwoCantMove && playerOnePawnThreeCantMove)
         {
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         if(!playerOnePawnOne.active)
         {
             if(playerOnePawnTwoCantMove && playerOnePawnThreeCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnTwo.active)
         {
             if(playerOnePawnOneCantMove && playerOnePawnThreeCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnThree.active)
         {
             if(playerOnePawnOneCantMove && playerOnePawnTwoCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnOne.active && !playerOnePawnTwo.active)
         {
             if(playerOnePawnThreeCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         if(!playerOnePawnOne.active && !playerOnePawnThree.active)
         {
             if(playerOnePawnTwoCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             }
         }
         else if(!playerOnePawnTwo.active && !playerOnePawnThree.active)
         {
             if(playerOnePawnOneCantMove)
             {
-                playerTwoWins();
+                StartCoroutine(playerTwoWins());
             } 
         }
         if(playerTwoPawnOneCantMove && playerTwoPawnTwoCantMove && playerTwoPawnThreeCantMove)
         {
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         if(!playerTwoPawnOne.active)
         {
             if(playerTwoPawnTwoCantMove && playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnTwo.active)
         {
             if(playerTwoPawnOneCantMove && playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnThree.active)
         {
             if(playerTwoPawnTwoCantMove && playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnOne.active && !playerTwoPawnTwo.active)
         {
             if(playerTwoPawnThreeCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnOne.active && !playerTwoPawnThree.active)
         {
             if(playerTwoPawnTwoCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             }
         }
         if(!playerTwoPawnTwo.active && !playerTwoPawnThree.active)
         {
             if(playerTwoPawnOneCantMove)
             {
-                playerOneWins();
+                StartCoroutine(playerOneWins());
             } 
         }
     }
@@ -244,7 +244,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnOneCollider.IsTouching(a1Collider))
         {
             playerOnePawnOneOnA1 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -253,7 +253,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnOneCollider.IsTouching(a2Collider))
         {
             playerOnePawnOneOnA2 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -262,7 +262,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnOneCollider.IsTouching(a3Collider))
         {
             playerOnePawnOneOnA3 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -297,7 +297,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnTwoCollider.IsTouching(a1Collider))
         {
             playerOnePawnTwoOnA1 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -306,7 +306,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnTwoCollider.IsTouching(a2Collider))
         {
             playerOnePawnTwoOnA2 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -315,7 +315,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnTwoCollider.IsTouching(a3Collider))
         {
             playerOnePawnTwoOnA3 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -358,7 +358,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnThreeCollider.IsTouching(a1Collider))
         {
             playerOnePawnThreeOnA1 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -367,7 +367,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnThreeCollider.IsTouching(a2Collider))
         {
             playerOnePawnThreeOnA2 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -376,7 +376,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerOnePawnThreeCollider.IsTouching(a3Collider))
         {
             playerOnePawnThreeOnA3 = true;
-            playerOneWins();
+            StartCoroutine(playerOneWins());
         }
         else
         {
@@ -439,7 +439,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnOneCollider.IsTouching(c1Collider))
         {
             playerTwoPawnOneOnC1 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -448,7 +448,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnOneCollider.IsTouching(c2Collider))
         {
             playerTwoPawnOneOnC2 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -457,7 +457,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnOneCollider.IsTouching(c3Collider))
         {
             playerTwoPawnOneOnC3 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -500,7 +500,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnTwoCollider.IsTouching(c1Collider))
         {
             playerTwoPawnTwoOnC1 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -509,7 +509,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnTwoCollider.IsTouching(c2Collider))
         {
             playerTwoPawnTwoOnC2 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -519,7 +519,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnTwoCollider.IsTouching(c3Collider))
         {
             playerTwoPawnTwoOnC3 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -554,7 +554,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnThreeCollider.IsTouching(c1Collider))
         {
             playerTwoPawnThreeOnC1 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -563,7 +563,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnThreeCollider.IsTouching(c2Collider))
         {
             playerTwoPawnThreeOnC2 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -572,7 +572,7 @@ public class multiplayerBoardState : MonoBehaviour
         if (playerTwoPawnThreeCollider.IsTouching(c3Collider))
         {
             playerTwoPawnThreeOnC3 = true;
-            playerTwoWins();
+            StartCoroutine(playerTwoWins());
         }
         else
         {
@@ -580,13 +580,15 @@ public class multiplayerBoardState : MonoBehaviour
         }
     }
 
-    void playerOneWins()
+    public IEnumerator playerOneWins()
     {
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("playerOneWins");
     }
 
-    void playerTwoWins()
+    public IEnumerator playerTwoWins()
     {
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("playerTwoWins");
     }
 }

@@ -128,7 +128,6 @@ public class AIMove : MonoBehaviour
 
             if (timer >= timeDelay)
             {
-                timer = 0.0f;
                 if(movePawnOne)
                 {
                     moveAIPawnOne();
@@ -141,6 +140,7 @@ public class AIMove : MonoBehaviour
                 {
                     moveAIPawnThree();
                 }
+                timer = 0.0f;
             }
         }
     }
