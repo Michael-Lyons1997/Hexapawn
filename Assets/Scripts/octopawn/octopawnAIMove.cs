@@ -29,6 +29,10 @@ public class octopawnAIMove : MonoBehaviour
     public GameObject d3;
     public GameObject d4;
     public octopawnPlayerMove playerScript;
+    public AudioSource audioSource;
+    public AudioClip pawnMove;
+    public AudioClip takePawn;
+    public float volume;
     bool PawnOneOnA1;
     bool PawnOneOnB1;
     bool PawnOneOnB2;
@@ -149,6 +153,7 @@ public class octopawnAIMove : MonoBehaviour
         pawnFourCantMove = false;
         timer = 0.0f;
         timeDelay = 0.5f;
+        volume = 1.0f;
     }
 
     // Update is called once per frame
@@ -263,6 +268,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = b2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -271,6 +277,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = b2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -279,6 +286,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = b2.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -287,6 +295,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = b2.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -295,6 +304,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnB1 && !otherPawnTwoOnB1 && !otherPawnThreeOnB1 && !PawnTwoOnB1)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = b1.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -308,6 +318,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -316,6 +327,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -324,6 +336,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c2.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -332,6 +345,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnC1 && !otherPawnTwoOnC1 && !PawnTwoOnC1 && !PawnThreeOnC1)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = c1.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -345,6 +359,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -353,6 +368,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c1.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -361,6 +377,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c3.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -369,6 +386,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -377,6 +395,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c3.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -385,6 +404,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !otherPawnThreeOnC2 && !PawnTwoOnC2 && !PawnThreeOnC2 && !PawnFourOnC2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = c2.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -398,6 +418,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnD2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = d2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -406,6 +427,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnD1 && !PawnTwoOnD1 && !PawnThreeOnD1 && !PawnFourOnD1)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = d1.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -419,6 +441,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnD1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = d1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -427,6 +450,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnD3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = d3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -435,6 +459,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnD2 && !PawnTwoOnD2 && !PawnThreeOnD2 && !PawnFourOnD2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = d2.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -448,6 +473,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnD2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = d2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -456,6 +482,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnD4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = d4.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -464,6 +491,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnThreeOnD3 && !PawnTwoOnD3 && !PawnThreeOnD3 && !PawnFourOnD3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = d3.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -480,6 +508,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnB1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -488,6 +517,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b1.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -496,6 +526,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnB1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b1.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -504,6 +535,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnOneOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b3.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -512,6 +544,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b3.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -520,6 +553,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -528,6 +562,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b3.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -536,6 +571,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2 && !otherPawnFourOnB2 && !PawnOneOnB2 && !PawnThreeOnB2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = b2.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -549,6 +585,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -557,6 +594,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c1.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -565,6 +603,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c3.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -573,6 +612,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -581,6 +621,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c3.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -589,6 +630,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !otherPawnThreeOnC2 && !PawnOneOnC2 && !PawnThreeOnC2 && !PawnFourOnC2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -602,6 +644,7 @@ public class octopawnAIMove : MonoBehaviour
         {
            if(otherPawnOneOnC2)
            {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -610,6 +653,7 @@ public class octopawnAIMove : MonoBehaviour
            }
            else if(otherPawnTwoOnC2)
            {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -618,6 +662,7 @@ public class octopawnAIMove : MonoBehaviour
            }
            else if(otherPawnThreeOnC2)
            {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -626,6 +671,7 @@ public class octopawnAIMove : MonoBehaviour
            }
            else if(!otherPawnOneOnC1 && !otherPawnTwoOnC1 && !PawnTwoOnC1 && !PawnThreeOnC1)
            {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = c1.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -639,6 +685,7 @@ public class octopawnAIMove : MonoBehaviour
         { 
             if(otherPawnOneOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -647,6 +694,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -655,6 +703,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -663,6 +712,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c4.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -671,6 +721,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnC4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c4.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -679,6 +730,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3 && !PawnTwoOnC3 && !PawnThreeOnC3 && !PawnFourOnC3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = c3.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -692,6 +744,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnD2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = d2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -700,6 +753,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnD1 && !PawnTwoOnD1 && !PawnThreeOnD1 && !PawnFourOnD1)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = d1.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -713,6 +767,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnD1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = d1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -721,6 +776,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnD3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = d3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -729,6 +785,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnD2 && !PawnTwoOnD2 && !PawnThreeOnD2 && !PawnFourOnD2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = d2.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -742,6 +799,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnD2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = d2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -750,6 +808,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnD4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = d4.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -758,6 +817,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnThreeOnD3 && !PawnTwoOnD3 && !PawnThreeOnD3 && !PawnFourOnD3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = c3.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -771,6 +831,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = d3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -779,6 +840,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnFourOnC4 && !PawnTwoOnD4 && !PawnThreeOnD4 && !PawnFourOnD4)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = c3.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -795,6 +857,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -803,6 +866,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -811,6 +875,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b2.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -819,6 +884,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b2.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -827,6 +893,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b4.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -835,6 +902,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnB4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b4.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -843,6 +911,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnB4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b4.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -851,6 +920,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnB3 && !otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3 && !PawnTwoOnB3 && !PawnFourOnB3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = b3.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -864,6 +934,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -872,6 +943,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -880,6 +952,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c2.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -888,6 +961,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c4.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -896,6 +970,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnC4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c4.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -904,6 +979,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnThreeOnC3 && !PawnOneOnC3 && !PawnTwoOnC3 && !PawnFourOnC3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -917,6 +993,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -925,6 +1002,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c1.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -933,6 +1011,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -941,6 +1020,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -949,6 +1029,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -957,6 +1038,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !otherPawnTwoOnC2 && !PawnOneOnC2 && !PawnTwoOnC2 && !PawnFourOnC2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = c2.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -970,6 +1052,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -978,6 +1061,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -986,6 +1070,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -994,6 +1079,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnThreeOnC4 && !otherPawnFourOnC4 && !PawnTwoOnC4 && !PawnFourOnC4)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = d1.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -1007,6 +1093,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnD2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = d2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -1015,6 +1102,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnFourOnD4 && !PawnOneOnD1 && !PawnTwoOnD1 && !PawnFourOnD1)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = d1.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -1028,6 +1116,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnD1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = d1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -1036,6 +1125,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnD3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = d3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -1044,6 +1134,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnD2 && !PawnOneOnD2 && !PawnTwoOnD2 && !PawnFourOnD2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = d2.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -1057,6 +1148,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnD2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = d2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -1065,6 +1157,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnD4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = d4.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -1073,6 +1166,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnThreeOnD3 && !PawnOneOnD3 && !PawnTwoOnD3 && !PawnFourOnD3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = d3.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -1086,6 +1180,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnThreeOnD3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = d3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -1094,6 +1189,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnFourOnD4 && !PawnOneOnD4 && !PawnTwoOnD4 && !PawnFourOnD4)
             {   
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = d4.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -1111,6 +1207,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = b3.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -1119,6 +1216,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = b3.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -1127,6 +1225,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = b3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -1135,6 +1234,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = b3.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -1143,6 +1243,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnB4 && !otherPawnThreeOnB4 && !otherPawnFourOnB4 && !PawnThreeOnB4 && !PawnFourOnB4)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnFour.transform.position = b4.transform.position;
                 pawnFourCantMove = false;
                 swapToPlayerTurn();
@@ -1156,6 +1257,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = c2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -1164,6 +1266,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -1172,6 +1275,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = c4.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -1180,6 +1284,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnC4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = c4.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -1188,6 +1293,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3 && !PawnOneOnC3 && !PawnTwoOnC3 && !PawnThreeOnC3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnFour.transform.position = c3.transform.position;
                 pawnFourCantMove = false;
                 swapToPlayerTurn();
@@ -1201,6 +1307,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = c3.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -1209,6 +1316,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = c3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -1217,6 +1325,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = c3.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -1225,6 +1334,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnThreeOnC4 && !otherPawnFourOnC4 && !PawnTwoOnC4 && !PawnThreeOnC4)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnFour.transform.position = c4.transform.position;
                 pawnFourCantMove = false;
                 swapToPlayerTurn();
@@ -1238,6 +1348,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnOneOnD1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = d1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -1246,6 +1357,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnD3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = d3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -1254,6 +1366,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnD2 && !PawnOneOnD2 && !PawnTwoOnD2 && !PawnThreeOnD2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnFour.transform.position = d2.transform.position;
                 pawnFourCantMove = false;
                 swapToPlayerTurn();
@@ -1267,6 +1380,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnTwoOnD2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = d2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -1275,6 +1389,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(otherPawnFourOnD4)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = d4.transform.position;
                 playerPawnFour.SetActive(false);
                 playerPawnNumber--;
@@ -1283,6 +1398,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnThreeOnD3 && !PawnOneOnD3 && !PawnTwoOnD3 && !PawnThreeOnD3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnFour.transform.position = d3.transform.position;
                 pawnFourCantMove = false;
                 swapToPlayerTurn();
@@ -1296,6 +1412,7 @@ public class octopawnAIMove : MonoBehaviour
         {
             if(otherPawnThreeOnD3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnFour.transform.position = d3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -1304,6 +1421,7 @@ public class octopawnAIMove : MonoBehaviour
             }
             else if(!otherPawnFourOnD4 && !PawnOneOnD4 && !PawnTwoOnD4 && !PawnThreeOnD4)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnFour.transform.position = d4.transform.position;
                 pawnFourCantMove = false;
                 swapToPlayerTurn();

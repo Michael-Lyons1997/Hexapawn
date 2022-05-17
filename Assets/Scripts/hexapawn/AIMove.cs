@@ -20,6 +20,10 @@ public class AIMove : MonoBehaviour
     public GameObject c2;
     public GameObject c3;
     public playerMove playerScript;
+    public AudioSource audioSource;
+    public AudioClip pawnMove;
+    public AudioClip takePawn;
+    public float volume;
     bool PawnOneOnA1;
     bool PawnOneOnB1;
     bool PawnOneOnB2;
@@ -85,6 +89,7 @@ public class AIMove : MonoBehaviour
         pawnThreeCantMove = false;
         timer = 0.0f;
         timeDelay = 0.5f;
+        volume = 1.0f;
     }
 
     // Update is called once per frame
@@ -151,6 +156,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnOneOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = b2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -159,6 +165,7 @@ public class AIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = b2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -167,6 +174,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnB1 && !otherPawnTwoOnB1 && !PawnTwoOnB1)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = b1.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -180,6 +188,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnTwoOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -188,6 +197,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnC1 && !PawnTwoOnC1 && !PawnThreeOnC1)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = c1.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -201,6 +211,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnOneOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -209,6 +220,7 @@ public class AIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnOne.transform.position = c3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -217,6 +229,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnC2 && !PawnTwoOnC2 && !PawnThreeOnC2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnOne.transform.position = c2.transform.position;
                 pawnOneCantMove = false;
                 swapToPlayerTurn();
@@ -233,6 +246,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnOneOnB1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -241,6 +255,7 @@ public class AIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b1.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -249,6 +264,7 @@ public class AIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b3.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -257,6 +273,7 @@ public class AIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnB3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = b3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -265,6 +282,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2 && !PawnOneOnB2 && !PawnThreeOnB2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = b2.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -278,6 +296,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnOneOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -286,6 +305,7 @@ public class AIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -294,6 +314,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnC2 && !PawnOneOnC2 && !PawnThreeOnC2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -307,6 +328,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnTwoOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -315,6 +337,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnOneOnC1 && !PawnOneOnC1 && !PawnThreeOnC1)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = c1.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -328,6 +351,7 @@ public class AIMove : MonoBehaviour
         { 
             if(otherPawnTwoOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnTwo.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -336,6 +360,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnThreeOnC3 && !PawnOneOnC3 && !PawnThreeOnC3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnTwo.transform.position = c3.transform.position;
                 pawnTwoCantMove = false;
                 swapToPlayerTurn();
@@ -352,6 +377,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnOneOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b2.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -360,6 +386,7 @@ public class AIMove : MonoBehaviour
             }
             else if(otherPawnTwoOnB2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = b2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -368,6 +395,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !PawnTwoOnB3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = b3.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -381,6 +409,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnTwoOnC2)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c2.transform.position;
                 playerPawnTwo.SetActive(false);
                 playerPawnNumber--;
@@ -389,6 +418,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnThreeOnC3 && !PawnOneOnC3 && !PawnTwoOnC3)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();
@@ -402,6 +432,7 @@ public class AIMove : MonoBehaviour
         {
             if(otherPawnOneOnC1)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c1.transform.position;
                 playerPawnOne.SetActive(false);
                 playerPawnNumber--;
@@ -410,6 +441,7 @@ public class AIMove : MonoBehaviour
             }
             else if(otherPawnThreeOnC3)
             {
+                audioSource.PlayOneShot(takePawn, volume);
                 AIPawnThree.transform.position = c3.transform.position;
                 playerPawnThree.SetActive(false);
                 playerPawnNumber--;
@@ -418,6 +450,7 @@ public class AIMove : MonoBehaviour
             }
             else if(!otherPawnTwoOnC2 && !PawnOneOnC2 && !PawnThreeOnC2)
             {
+                audioSource.PlayOneShot(pawnMove, volume);
                 AIPawnThree.transform.position = c2.transform.position;
                 pawnThreeCantMove = false;
                 swapToPlayerTurn();

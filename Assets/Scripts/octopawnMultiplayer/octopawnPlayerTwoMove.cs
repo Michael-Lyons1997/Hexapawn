@@ -34,6 +34,10 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
     public GameObject d3;
     public GameObject d4;
     public octopawnPlayerOneMove playerOneScript;
+    public AudioSource audioSource;
+    public AudioClip pawnMove;
+    public AudioClip takePawn;
+    public float volume;
     bool pawnOneClicked;
     bool pawnTwoClicked;
     bool pawnThreeClicked;
@@ -163,6 +167,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
         pawnTwoCantMove = false;
         pawnThreeCantMove = false;
         pawnFourCantMove = false;
+        volume = 1.0f;
     }
 
     // Update is called once per frame
@@ -1077,6 +1082,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                   {
                       if(otherPawnOneOnB2)
                       {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1092,6 +1098,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                   {
                       if(otherPawnOneOnC2)
                       {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1107,6 +1114,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                   {
                       if(otherPawnOneOnC1)
                       {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1122,6 +1130,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                   {
                       if(otherPawnOneOnD1)
                       {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1140,6 +1149,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnOneOnB1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnOne.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1152,6 +1162,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     if(otherPawnOneOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnOne.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1167,6 +1178,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnOneOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnOne.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1182,6 +1194,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnOneOnC1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnOne.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1197,6 +1210,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnOneOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnOne.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1212,6 +1226,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnOneOnD1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnOne.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1230,6 +1245,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                    if(otherPawnOneOnB2)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnOne.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1245,6 +1261,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                    if(otherPawnOneOnC1)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnOne.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1260,6 +1277,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                    if(otherPawnOneOnC2)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnOne.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1275,6 +1293,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                    if(otherPawnOneOnD1)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnOne.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1293,6 +1312,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnOneOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnOne.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1308,6 +1328,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnOneOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnOne.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1323,6 +1344,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnOneOnD1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnOne.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1347,6 +1369,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1362,6 +1385,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1377,6 +1401,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnC1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1389,6 +1414,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnTwoOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1404,6 +1430,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnD2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1419,6 +1446,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnD2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1437,6 +1465,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnB1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnTwo.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1449,6 +1478,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnTwoOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnTwo.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1464,6 +1494,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnTwo.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1479,6 +1510,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnC1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnTwo.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1491,6 +1523,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnTwoOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnTwo.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1506,6 +1539,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnTwo.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1521,6 +1555,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnD2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnTwo.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1536,6 +1571,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnD2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnTwo.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1554,6 +1590,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                     if(otherPawnTwoOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnTwo.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1566,6 +1603,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnTwoOnB4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnTwo.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1581,6 +1619,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                     if(otherPawnTwoOnC1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnTwo.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1593,6 +1632,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnTwoOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnTwo.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1608,6 +1648,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnTwo.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1623,6 +1664,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                     if(otherPawnTwoOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnTwo.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1638,6 +1680,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                     if(otherPawnTwoOnD2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnTwo.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1653,6 +1696,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                     if(otherPawnTwoOnD2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnTwo.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1671,6 +1715,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnTwo.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1686,6 +1731,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnTwo.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1701,6 +1747,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnTwo.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1716,6 +1763,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnTwoOnD2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnTwo.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1740,6 +1788,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1755,6 +1804,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1770,6 +1820,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1785,6 +1836,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnD3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1803,6 +1855,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnB1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnThree.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1815,6 +1868,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnThreeOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnThree.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1830,6 +1884,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnThree.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1845,6 +1900,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnThree.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1860,6 +1916,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnThree.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1872,6 +1929,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnThreeOnC4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnThree.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1887,6 +1945,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnD3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnThree.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1902,6 +1961,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnD3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnThree.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1920,6 +1980,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnThree.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1932,6 +1993,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnThreeOnB4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnThree.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1947,6 +2009,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnThree.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1962,6 +2025,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnThree.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1974,6 +2038,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     else if(otherPawnThreeOnC4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnThree.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -1989,6 +2054,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnThree.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2004,6 +2070,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnD3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnThree.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2019,6 +2086,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnD3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnThree.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2037,6 +2105,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnThree.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2052,6 +2121,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnThree.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2064,6 +2134,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                     }
                     if(otherPawnThreeOnC4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnThree.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2079,6 +2150,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnThree.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2094,6 +2166,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnD3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnThree.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2109,6 +2182,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnThreeOnD3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnThree.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2134,6 +2208,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnFour.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2149,6 +2224,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnFour.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2164,6 +2240,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnD4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnOne.transform.position = playerOnePawnFour.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2182,6 +2259,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnFour.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2197,6 +2275,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnFour.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2212,6 +2291,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnC4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnFour.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2227,6 +2307,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnD4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnTwo.transform.position = playerOnePawnFour.transform.position;
                         pawnTwoClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2245,6 +2326,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                    if(otherPawnFourOnB2)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnFour.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2257,6 +2339,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                    }
                    else if(otherPawnFourOnB4)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnFour.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2272,6 +2355,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                    if(otherPawnFourOnC3)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnFour.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2287,6 +2371,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {    
                    if(otherPawnFourOnC4)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnFour.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2302,6 +2387,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                    if(otherPawnFourOnC3)
                    {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnFour.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2317,6 +2403,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                {
                     if(otherPawnFourOnD4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnThree.transform.position = playerOnePawnFour.transform.position;
                         pawnThreeClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2335,6 +2422,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnFour.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2350,6 +2438,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnC4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnFour.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2365,6 +2454,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnFour.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2380,6 +2470,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
                 {
                     if(otherPawnFourOnD4)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerTwoPawnFour.transform.position = playerOnePawnFour.transform.position;
                         pawnFourClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -2403,6 +2494,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnB1 && !otherPawnTwoOnB1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnOne.transform.position = b1.transform.position;
                     pawnOneClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2422,6 +2514,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnTwo.transform.position = b2.transform.position;
                     pawnTwoClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2441,6 +2534,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3 && !otherPawnFourOnB3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnThree.transform.position = b3.transform.position;
                     pawnThreeClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2460,6 +2554,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnThreeOnB4 && !otherPawnFourOnB4)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnFour.transform.position = b4.transform.position;
                     pawnFourClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2479,6 +2574,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnC1 && !otherPawnTwoOnC1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnOne.transform.position = c1.transform.position;
                     pawnOneClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2492,6 +2588,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnC1 && !otherPawnTwoOnC1 && !PawnThreeOnC1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnTwo.transform.position = c1.transform.position;
                     pawnTwoClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2511,6 +2608,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !otherPawnThreeOnC2 && !PawnThreeOnC2 && !PawnFourOnC2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnOne.transform.position = c2.transform.position;
                     pawnOneClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2524,6 +2622,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !otherPawnThreeOnC2 && !PawnThreeOnC2 && !PawnFourOnC2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnTwo.transform.position = c2.transform.position;
                     pawnTwoClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2537,6 +2636,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnC2 && !otherPawnTwoOnC2 && !otherPawnThreeOnC2 && !PawnThreeOnC2 && !PawnFourOnC2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnThree.transform.position = c2.transform.position;
                     pawnThreeClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2556,6 +2656,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnTwo.transform.position = c3.transform.position;
                     pawnTwoClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2569,6 +2670,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnThree.transform.position = c3.transform.position;
                     pawnThreeClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2582,6 +2684,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnTwoOnC3 && !otherPawnThreeOnC3 && !otherPawnFourOnC3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnFour.transform.position = c3.transform.position;
                     pawnFourClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2601,6 +2704,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnThreeOnC4 && !otherPawnFourOnC4)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnThree.transform.position = c4.transform.position;
                     pawnThreeClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2614,6 +2718,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnThreeOnC4 && !otherPawnFourOnC4)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnFour.transform.position = c4.transform.position;
                     pawnFourClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2633,6 +2738,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnD1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnOne.transform.position = d1.transform.position;
                     pawnOneClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2646,6 +2752,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnD1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnTwo.transform.position = d1.transform.position;
                     pawnTwoClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2659,6 +2766,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnOneOnD1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnThree.transform.position = d1.transform.position;
                     pawnThreeClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2678,6 +2786,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnTwoOnD2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnOne.transform.position = d2.transform.position;
                     pawnOneClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2691,6 +2800,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnTwoOnD2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnTwo.transform.position = d2.transform.position;
                     pawnTwoClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2704,6 +2814,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnTwoOnD2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnThree.transform.position = d2.transform.position;
                     pawnThreeClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2717,6 +2828,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnTwoOnD2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnFour.transform.position = d2.transform.position;
                     pawnFourClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2736,6 +2848,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnThreeOnD3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnOne.transform.position = d3.transform.position;
                     pawnOneClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2749,6 +2862,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnThreeOnD3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnTwo.transform.position = d3.transform.position;
                     pawnTwoClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2762,6 +2876,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnThreeOnD3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnThree.transform.position = d3.transform.position;
                     pawnThreeClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2775,6 +2890,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnThreeOnD3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnFour.transform.position = d3.transform.position;
                     pawnFourClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2794,6 +2910,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnFourOnD4)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnTwo.transform.position = d4.transform.position;
                     pawnTwoClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2807,6 +2924,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnFourOnD4)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnThree.transform.position = d4.transform.position;
                     pawnThreeClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -2820,6 +2938,7 @@ public class octopawnPlayerTwoMove : MonoBehaviour, IPointerClickHandler, IPoint
             {
                 if(!otherPawnFourOnD4)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerTwoPawnFour.transform.position = d4.transform.position;
                     pawnFourClicked = false; 
                     pawnHighlight.SetActive(false);

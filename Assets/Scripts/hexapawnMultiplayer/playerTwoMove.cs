@@ -25,6 +25,10 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
     public GameObject c2;
     public GameObject c3;
     public playerOneMove playerOneMoveScript;
+    public AudioSource audioSource;
+    public AudioClip pawnMove;
+    public AudioClip takePawn;
+    public float volume;
     bool pawnOneClicked;
     bool pawnTwoClicked;
     bool pawnThreeClicked;
@@ -98,6 +102,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
         pawnOneCantMove = false;
         pawnTwoCantMove = false;
         pawnThreeCantMove = false;
+        volume = 1.0f;
     }
 
     // Update is called once per frame
@@ -460,6 +465,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnOneOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnOne.transform.position = opponentPawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -475,6 +481,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnOneOnC1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnOne.transform.position = opponentPawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -493,6 +500,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnOneOnB1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnTwo.transform.position = opponentPawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -508,6 +516,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnOneOnC1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnTwo.transform.position = opponentPawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -526,6 +535,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnOneOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnThree.transform.position = opponentPawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -541,6 +551,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnOneOnC1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnThree.transform.position = opponentPawnOne.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -565,6 +576,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnTwoOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnOne.transform.position = opponentPawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -580,6 +592,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnOne.transform.position = opponentPawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -598,6 +611,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnTwoOnB1)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnTwo.transform.position = opponentPawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -610,6 +624,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                     }
                     else if(otherPawnTwoOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnTwo.transform.position = opponentPawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -625,6 +640,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnTwo.transform.position = opponentPawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -640,6 +656,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnTwo.transform.position = opponentPawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -658,6 +675,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnTwoOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnThree.transform.position = opponentPawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -673,6 +691,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnTwoOnC2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnThree.transform.position = opponentPawnTwo.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -697,6 +716,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnThreeOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnOne.transform.position = opponentPawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -712,6 +732,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnThreeOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnOne.transform.position = opponentPawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -730,6 +751,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnThreeOnB3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnTwo.transform.position = opponentPawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -745,6 +767,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnThreeOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnTwo.transform.position = opponentPawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -763,6 +786,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnThreeOnB2)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnThree.transform.position = opponentPawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -778,6 +802,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 {
                     if(otherPawnThreeOnC3)
                     {
+                        audioSource.PlayOneShot(takePawn, volume);
                         playerPawnThree.transform.position = opponentPawnThree.transform.position;
                         pawnOneClicked = false; 
                         pawnHighlight.SetActive(false);
@@ -801,6 +826,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnOneOnB1 && !otherPawnTwoOnB1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnOne.transform.position = b1.transform.position;
                     pawnOneClicked = false; 
                     pawnHighlight.SetActive(false);
@@ -820,6 +846,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnTwo.transform.position = b2.transform.position;
                     pawnTwoClicked = false;
                     pawnHighlight.SetActive(false);
@@ -839,6 +866,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnTwoOnB3 && !otherPawnThreeOnB3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnThree.transform.position = b3.transform.position;
                     pawnThreeClicked = false;
                     pawnHighlight.SetActive(false);
@@ -858,6 +886,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnOneOnC1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnOne.transform.position = c1.transform.position;
                     pawnOneClicked = false;
                     pawnHighlight.SetActive(false);
@@ -871,6 +900,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnOneOnC1)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnTwo.transform.position = c1.transform.position;
                     pawnTwoClicked = false;
                     pawnHighlight.SetActive(false);
@@ -890,6 +920,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnTwoOnC2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnOne.transform.position = c2.transform.position;
                     pawnOneClicked = false;
                     pawnHighlight.SetActive(false);
@@ -903,6 +934,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnTwoOnC2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnTwo.transform.position = c2.transform.position;
                     pawnTwoClicked = false;
                     pawnHighlight.SetActive(false);
@@ -916,6 +948,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnTwoOnC2)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnThree.transform.position = c2.transform.position;
                     pawnThreeClicked = false;
                     pawnHighlight.SetActive(false);
@@ -935,6 +968,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnThreeOnC3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnTwo.transform.position = c3.transform.position;
                     pawnTwoClicked = false;
                     pawnHighlight.SetActive(false);
@@ -948,6 +982,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
             {
                 if(!otherPawnThreeOnC3)
                 {
+                    audioSource.PlayOneShot(pawnMove, volume);
                     playerPawnThree.transform.position = c3.transform.position;
                     pawnThreeClicked = false;
                     pawnHighlight.SetActive(false);
