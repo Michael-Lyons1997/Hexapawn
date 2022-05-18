@@ -465,6 +465,7 @@ public class AIMove : MonoBehaviour
     void swapToPlayerTurn()
     {
         AITurn = false;
+        playerScript.turnTimer = 3.0f;
         playerScript.playerTurn = true;
     }
 }

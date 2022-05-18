@@ -72,6 +72,8 @@ public class multiplayerBoardState : MonoBehaviour
     bool playerTwoPawnOneCantMove;
     bool playerTwoPawnTwoCantMove;
     bool playerTwoPawnThreeCantMove;
+    bool playerOneLoseOnTime;
+    bool playerTwoLoseOnTime;
 
     // Start is called before the first frame update
     void Start()
@@ -121,6 +123,7 @@ public class multiplayerBoardState : MonoBehaviour
         playerTwoPawnThreeOnC1 = false;
         playerTwoPawnThreeOnC2 = false;
         playerTwoPawnThreeOnC3 = false;
+
     }
 
     // Update is called once per frame
@@ -134,8 +137,18 @@ public class multiplayerBoardState : MonoBehaviour
         playerTwoPawnOneCantMove = GameObject.FindWithTag("GameController").GetComponent<playerTwoMove>().pawnOneCantMove;
         playerTwoPawnTwoCantMove = GameObject.FindWithTag("GameController").GetComponent<playerTwoMove>().pawnTwoCantMove;
         playerTwoPawnThreeCantMove = GameObject.FindWithTag("GameController").GetComponent<playerTwoMove>().pawnThreeCantMove;
+        playerOneLoseOnTime = GameObject.FindWithTag("GameController").GetComponent<playerOneMove>().timeLoss;
+        playerTwoLoseOnTime = GameObject.FindWithTag("GameController").GetComponent<playerTwoMove>().timeLoss;
         playerOnePawnCheck();
         playerTwoPawnCheck();
+        if(playerOneLoseOnTime)
+        {
+            StartCoroutine(playerTwoWins());
+        }
+        if(playerTwoLoseOnTime)
+        {
+            StartCoroutine(playerOneWins());
+        }
         if(playerOnePawnsLeft == 0)
         {
             StartCoroutine(playerTwoWins());
@@ -582,13 +595,13 @@ public class multiplayerBoardState : MonoBehaviour
 
     public IEnumerator playerOneWins()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         SceneManager.LoadScene("playerOneWins");
     }
 
     public IEnumerator playerTwoWins()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         SceneManager.LoadScene("playerTwoWins");
     }
 }

@@ -72,6 +72,7 @@ public class boardState : MonoBehaviour
     bool AIPawnOneCantMove;
     bool AIPawnTwoCantMove;
     bool AIPawnThreeCantMove;
+    bool playerLoseOnTime;
 
     // Start is called before the first frame update
     void Start()
@@ -134,8 +135,13 @@ public class boardState : MonoBehaviour
         AIPawnOneCantMove = GameObject.FindWithTag("GameController").GetComponent<AIMove>().pawnOneCantMove;
         AIPawnTwoCantMove = GameObject.FindWithTag("GameController").GetComponent<AIMove>().pawnTwoCantMove;
         AIPawnThreeCantMove = GameObject.FindWithTag("GameController").GetComponent<AIMove>().pawnThreeCantMove;
+        playerLoseOnTime = GameObject.FindWithTag("GameController").GetComponent<playerMove>().timeLoss;
         playerPawnCheck();
         AIPawnCheck();
+        if(playerLoseOnTime)
+        {
+            StartCoroutine(changeToLoseScreen());
+        }
         if(numberofPlayerPawnsLeft == 0)
         {
             StartCoroutine(changeToLoseScreen());
@@ -582,13 +588,13 @@ public class boardState : MonoBehaviour
 
     public IEnumerator changeToWinScreen()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         SceneManager.LoadScene("gameWinScreen");
     }
 
     public IEnumerator changeToLoseScreen()
     {   
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         SceneManager.LoadScene("gameLoseScreen");
     }
 }

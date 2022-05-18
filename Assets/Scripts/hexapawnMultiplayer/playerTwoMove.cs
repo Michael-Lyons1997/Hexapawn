@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
@@ -29,6 +30,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
     public AudioClip pawnMove;
     public AudioClip takePawn;
     public float volume;
+    public float turnTimer;
     bool pawnOneClicked;
     bool pawnTwoClicked;
     bool pawnThreeClicked;
@@ -66,6 +68,8 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
     public bool pawnOneCantMove;
     public bool pawnTwoCantMove;
     public bool pawnThreeCantMove;
+    public bool timeLoss;
+    public Text uiText;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,6 +107,8 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
         pawnTwoCantMove = false;
         pawnThreeCantMove = false;
         volume = 1.0f;
+        turnTimer = 3.0f;
+        timeLoss = false;
     }
 
     // Update is called once per frame
@@ -139,6 +145,12 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
         otherPawnThreeOnC3 = GameObject.FindWithTag("GameController").GetComponent<multiplayerBoardState>().playerOnePawnThreeOnC3;
         if(playerTwoTurn)
         {
+            uiText.text = turnTimer.ToString();
+            turnTimer -= 1.0f * Time.deltaTime;
+            if(turnTimer <= 0.0f)
+            {
+                timeLoss = true;
+            }
             if(PawnOneOnA1)
             {
                 if((otherPawnOneOnB1 || otherPawnTwoOnB1 || PawnTwoOnB1) && (!otherPawnOneOnB2 && !otherPawnTwoOnB2 && !otherPawnThreeOnB2))
@@ -998,6 +1010,7 @@ public class playerTwoMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
     void swapTurns()
     {
         playerTwoTurn = false;
+        playerOneMoveScript.turnTimer = 3.0f;
         playerOneMoveScript.playerOneTurn = true;
     }
 }

@@ -135,6 +135,7 @@ public class octopawnBoardState : MonoBehaviour
     bool AIPawnTwoCantMove;
     bool AIPawnThreeCantMove;
     bool AIPawnFourCantMove;
+    bool playerLoseOnTime;
 
     // Start is called before the first frame update
     void Start()
@@ -246,8 +247,13 @@ public class octopawnBoardState : MonoBehaviour
         AIPawnTwoCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnAIMove>().pawnTwoCantMove;
         AIPawnThreeCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnAIMove>().pawnThreeCantMove;
         AIPawnFourCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnAIMove>().pawnFourCantMove;
+        playerLoseOnTime = GameObject.FindWithTag("GameController").GetComponent<octopawnPlayerMove>().timeLoss;
         playerPawnCheck();
         AIPawnCheck();
+        if(playerLoseOnTime)
+        {
+            StartCoroutine(changeToLoseScreen());
+        }
         if(numberofPlayerPawnsLeft == 0)
         {
             StartCoroutine(changeToLoseScreen());
@@ -1228,13 +1234,13 @@ public class octopawnBoardState : MonoBehaviour
 
     public IEnumerator changeToWinScreen()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         SceneManager.LoadScene("gameWinScreen");
     }
 
     public IEnumerator changeToLoseScreen()
     {   
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         SceneManager.LoadScene("gameLoseScreen");
     }
 }

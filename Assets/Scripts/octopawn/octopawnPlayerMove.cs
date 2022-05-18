@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
@@ -38,6 +39,7 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
     public AudioClip pawnMove;
     public AudioClip takePawn;
     public float volume;
+    public float turnTimer;
     bool pawnOneClicked;
     bool pawnTwoClicked;
     bool pawnThreeClicked;
@@ -115,11 +117,13 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
     bool otherPawnFourOnC3;
     bool otherPawnFourOnC4;
     public bool playerTurn;
+    public bool timeLoss;
     public int AIPawnNumber;
     public bool pawnOneCantMove;
     public bool pawnTwoCantMove;
     public bool pawnThreeCantMove;
     public bool pawnFourCantMove;
+    public Text uiText;
     // Start is called before the first frame update
     void Start()
     {
@@ -168,6 +172,8 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
         pawnThreeCantMove = false;
         pawnFourCantMove = false;
         volume = 1.0f;
+        turnTimer = 3.0f;
+        timeLoss = false;
     }
 
     // Update is called once per frame
@@ -247,6 +253,12 @@ public class octopawnPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerD
         otherPawnFourOnC4 = GameObject.FindWithTag("GameController").GetComponent<octopawnBoardState>().AIPawnFourOnC4;
         if(playerTurn)
         {
+            uiText.text = turnTimer.ToString();
+            turnTimer -= 1.0f * Time.deltaTime;
+            if(turnTimer <= 0.0f)
+            {
+                timeLoss = true;
+            }
             //Pawn one invalid move check
             if(PawnOneOnD1)
             {

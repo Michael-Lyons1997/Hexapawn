@@ -135,6 +135,8 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
     bool playerTwoPawnTwoCantMove;
     bool playerTwoPawnThreeCantMove;
     bool playerTwoPawnFourCantMove;
+    bool playerOneLoseOnTime;
+    bool playerTwoLoseOnTime;
 
     // Start is called before the first frame update
     void Start()
@@ -246,8 +248,18 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
         playerTwoPawnTwoCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnPlayerTwoMove>().pawnTwoCantMove;
         playerTwoPawnThreeCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnPlayerTwoMove>().pawnThreeCantMove;
         playerTwoPawnFourCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnPlayerTwoMove>().pawnFourCantMove;
+        playerOneLoseOnTime = GameObject.FindWithTag("GameController").GetComponent<octopawnPlayerOneMove>().timeLoss;
+        playerTwoLoseOnTime = GameObject.FindWithTag("GameController").GetComponent<octopawnPlayerTwoMove>().timeLoss;
         playerOnePawnCheck();
         playerTwoPawnCheck();
+        if(playerOneLoseOnTime)
+        {
+            StartCoroutine(playerTwoWins());
+        }
+        if(playerTwoLoseOnTime)
+        {
+            StartCoroutine(playerOneWins());
+        }
         if(numberofplayerOnePawnsLeft == 0)
         {
             StartCoroutine(playerTwoWins());
@@ -1228,13 +1240,13 @@ public class multiplayerOctopawnBoardState : MonoBehaviour
 
     public IEnumerator playerOneWins()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         SceneManager.LoadScene("playerOneWins");
     }
 
     public IEnumerator playerTwoWins()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.1f);
         SceneManager.LoadScene("playerTwoWins");
     }
 }
