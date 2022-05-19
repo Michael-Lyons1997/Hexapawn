@@ -955,7 +955,7 @@ public class playerOneMove : MonoBehaviour, IPointerClickHandler, IPointerDownHa
                 if(!otherPawnOneOnB1 && !otherPawnTwoOnB1)
                 {
                     audioSource.PlayOneShot(pawnMove, volume);
-                    playerPawnOne.transform.position = b1.transform.position;
+                    playerPawnTwo.transform.position = b1.transform.position;
                     pawnOneClicked = false;
                     pawnHighlight.SetActive(false);
                     squareHighlight.SetActive(false);
