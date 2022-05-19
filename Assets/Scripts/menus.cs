@@ -6,6 +6,16 @@ using UnityEngine.SceneManagement;
 public class menus : MonoBehaviour
 {
 
+    public void loadHexapawnDifficulty()
+    {
+        SceneManager.LoadScene("hexapawnDifficulty");
+    }
+
+    public void loadOctopawnDifficulty()
+    {
+        SceneManager.LoadScene("octopawnDifficulty");
+    }
+
     public void loadGameChoice()
     {
         SceneManager.LoadScene("whichGameToPlay");
@@ -21,29 +31,49 @@ public class menus : MonoBehaviour
         SceneManager.LoadScene("whichInstructionstoShow");
     }
 
-    public void loadSinglePlayer()
+    public void loadHexapawnEasy()
     {
-        SceneManager.LoadScene("singleplayer");
+        SceneManager.LoadScene("hexapawnEasySingleplayer");
+    }
+
+    public void loadHexapawnMedium()
+    {
+        SceneManager.LoadScene("hexapawnMediumSingleplayer");
+    }
+
+    public void loadHexapawnHard()
+    {
+        SceneManager.LoadScene("hexapawnHardSingleplayer");
+    }
+
+    public void loadHexapawnInsane()
+    {
+        SceneManager.LoadScene("hexapawnInsaneSingleplayer");
     }
     
-     public void loadOctopawnSinglePlayer()
+    public void loadOctopawnEasy()
     {
-        SceneManager.LoadScene("octopawnSingleplayer");
+        SceneManager.LoadScene("octopawnEasySingleplayer");
     }
 
-    public void loadMultiPlayer()
+    public void loadOctopawnMedium()
     {
-        SceneManager.LoadScene("multiplayer");
+        SceneManager.LoadScene("octopawnMediumSingleplayer");
     }
 
-    public void loadOnlineMultiPlayer()
+    public void loadOctopawnHard()
     {
-        SceneManager.LoadScene("onlineMultiplayer");
+        SceneManager.LoadScene("octopawnHardSingleplayer");
     }
 
-    public void loadOnlineOctopawnMultiPlayer()
+    public void loadOctopawnInsane()
     {
-        SceneManager.LoadScene("onlineOctopawnMultiplayer");
+        SceneManager.LoadScene("octopawnInsaneSingleplayer");
+    }
+
+    public void loadHexapawnMultiPlayer()
+    {
+        SceneManager.LoadScene("hexapawnMultiplayer");
     }
 
     public void loadOctopawnMultiPlayer()
