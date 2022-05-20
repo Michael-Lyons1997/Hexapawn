@@ -135,7 +135,6 @@ public class octopawnEasyBoardState : MonoBehaviour
     bool AIPawnTwoCantMove;
     bool AIPawnThreeCantMove;
     bool AIPawnFourCantMove;
-    bool playerLoseOnTime;
 
     // Start is called before the first frame update
     void Start()
@@ -247,13 +246,8 @@ public class octopawnEasyBoardState : MonoBehaviour
         AIPawnTwoCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnEasyAIMove>().pawnTwoCantMove;
         AIPawnThreeCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnEasyAIMove>().pawnThreeCantMove;
         AIPawnFourCantMove = GameObject.FindWithTag("GameController").GetComponent<octopawnEasyAIMove>().pawnFourCantMove;
-        playerLoseOnTime = GameObject.FindWithTag("GameController").GetComponent<octopawnEasyPlayerMove>().timeLoss;
         playerPawnCheck();
         AIPawnCheck();
-        if(playerLoseOnTime)
-        {
-            StartCoroutine(changeToLoseScreen());
-        }
         if(numberofPlayerPawnsLeft == 0)
         {
             StartCoroutine(changeToLoseScreen());

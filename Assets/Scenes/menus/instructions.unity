@@ -387,11 +387,12 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Hexapawn and Octopawn Rules:\nYou control the white pawns.\nWhite always
-    goes first.\nYou have three seconds to move, or you lose.\nOn your turn, there
-    are two types of valid moves:\r\n(1) Move one of your pawns 1 square straight
-    ahead if free\r.\n(2) Move one of your pawns 1 square diagonally ahead if occupied
-    by the opponent and capture the piece\r.\nThe game is won in one of three ways:\r\n(1)
-    Moving a pawn to the opposite end of the board\r\n(2) Capturing all enemy pawns\r\n(3)
+    goes first.\nAll game modes apart from easy have a turn timer.\nIf the timer
+    runs out on your turn, you lose.\nOn your turn, there are two types of valid
+    moves:\r\n(1) Move one of your pawns 1 square straight ahead if free\r.\n(2)
+    Move one of your pawns 1 square diagonally ahead if occupied by the opponent
+    and capture the piece\r.\nThe game is won in one of three ways:\r\n(1) Moving
+    a pawn to the opposite end of the board\r\n(2) Capturing all enemy pawns\r\n(3)
     Achieving a position in which the enemy can't move"
 --- !u!222 &1151910244
 CanvasRenderer:

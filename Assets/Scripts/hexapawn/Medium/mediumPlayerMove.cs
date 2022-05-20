@@ -107,7 +107,7 @@ public class mediumPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerDow
         pawnTwoCantMove = false;
         pawnThreeCantMove = false;
         volume = 1.0f;
-        turnTimer = 3.0f;
+        turnTimer = 5.0f;
         timeLoss = false;
     }
 

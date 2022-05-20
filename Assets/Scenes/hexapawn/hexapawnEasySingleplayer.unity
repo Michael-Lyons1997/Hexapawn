@@ -416,7 +416,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -716,106 +716,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
---- !u!1 &737317673
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 737317677}
-  - component: {fileID: 737317676}
-  - component: {fileID: 737317675}
-  - component: {fileID: 737317674}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &737317674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737317673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &737317675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737317673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!223 &737317676
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737317673}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &737317677
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737317673}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1566749556}
-  - {fileID: 1780129696}
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &800631207
 GameObject:
   m_ObjectHideFlags: 0
@@ -5720,7 +5620,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB2
           m_Mode: 1
           m_Arguments:
@@ -5899,38 +5799,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a525608b9455089489f1a347fa41f90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  pawnHighlight: {fileID: 0}
-  squareHighlight: {fileID: 0}
-  squarePawnHighlight: {fileID: 0}
-  squarePawnHighlightTwo: {fileID: 0}
-  a1: {fileID: 0}
-  a2: {fileID: 0}
-  a3: {fileID: 0}
-  b1: {fileID: 0}
-  b2: {fileID: 0}
-  b3: {fileID: 0}
-  c1: {fileID: 0}
-  c2: {fileID: 0}
-  c3: {fileID: 0}
-  AIScript: {fileID: 0}
-  audioSource: {fileID: 0}
-  pawnMove: {fileID: 0}
-  takePawn: {fileID: 0}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
+  pawnHighlight: {fileID: 1810527559}
+  squareHighlight: {fileID: 1785832733}
+  squarePawnHighlight: {fileID: 800631207}
+  squarePawnHighlightTwo: {fileID: 1398656064}
+  a1: {fileID: 1618070631}
+  a2: {fileID: 1026409178}
+  a3: {fileID: 1925343155}
+  b1: {fileID: 1224825140}
+  b2: {fileID: 905451236}
+  b3: {fileID: 1410576133}
+  c1: {fileID: 619622634}
+  c2: {fileID: 967684857}
+  c3: {fileID: 2061459570}
+  AIScript: {fileID: 1018508129}
+  audioSource: {fileID: 1018508131}
+  pawnMove: {fileID: 8300000, guid: d10fe2c74208ed340b53aae1d483bd4d, type: 3}
+  takePawn: {fileID: 8300000, guid: 2f07eb0cd9c2a964ba41e6fd0c57ca84, type: 3}
   volume: 0
-  turnTimer: 0
   playerTurn: 0
-  timeLoss: 0
   AIPawnNumber: 0
   pawnOneCantMove: 0
   pawnTwoCantMove: 0
   pawnThreeCantMove: 0
-  uiText: {fileID: 0}
 --- !u!114 &1018508126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5943,27 +5840,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619754817dee097418ca126afa7bd748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  playerPawnOneCollider: {fileID: 0}
-  playerPawnTwoCollider: {fileID: 0}
-  playerPawnThreeCollider: {fileID: 0}
-  AIPawnOneCollider: {fileID: 0}
-  AIPawnTwoCollider: {fileID: 0}
-  AIPawnThreeCollider: {fileID: 0}
-  a1Collider: {fileID: 0}
-  a2Collider: {fileID: 0}
-  a3Collider: {fileID: 0}
-  b1Collider: {fileID: 0}
-  b2Collider: {fileID: 0}
-  b3Collider: {fileID: 0}
-  c1Collider: {fileID: 0}
-  c2Collider: {fileID: 0}
-  c3Collider: {fileID: 0}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
+  playerPawnOneCollider: {fileID: 1019222535}
+  playerPawnTwoCollider: {fileID: 1381798997}
+  playerPawnThreeCollider: {fileID: 1989481819}
+  AIPawnOneCollider: {fileID: 1688518096}
+  AIPawnTwoCollider: {fileID: 364772559}
+  AIPawnThreeCollider: {fileID: 1153140769}
+  a1Collider: {fileID: 1618070635}
+  a2Collider: {fileID: 1026409182}
+  a3Collider: {fileID: 1925343159}
+  b1Collider: {fileID: 1224825144}
+  b2Collider: {fileID: 905451240}
+  b3Collider: {fileID: 1410576137}
+  c1Collider: {fileID: 619622638}
+  c2Collider: {fileID: 967684861}
+  c3Collider: {fileID: 2061459574}
   playerPawnOneOnA1: 0
   playerPawnOneOnA2: 0
   playerPawnOneOnA3: 0
@@ -6078,25 +5975,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091389dc19b7e974588a0af164c3362f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  a1: {fileID: 0}
-  a2: {fileID: 0}
-  a3: {fileID: 0}
-  b1: {fileID: 0}
-  b2: {fileID: 0}
-  b3: {fileID: 0}
-  c1: {fileID: 0}
-  c2: {fileID: 0}
-  c3: {fileID: 0}
-  playerScript: {fileID: 0}
-  audioSource: {fileID: 0}
-  pawnMove: {fileID: 0}
-  takePawn: {fileID: 0}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  a1: {fileID: 1618070631}
+  a2: {fileID: 1026409178}
+  a3: {fileID: 1925343155}
+  b1: {fileID: 1224825140}
+  b2: {fileID: 905451236}
+  b3: {fileID: 1410576133}
+  c1: {fileID: 619622634}
+  c2: {fileID: 967684857}
+  c3: {fileID: 2061459570}
+  playerScript: {fileID: 1018508125}
+  audioSource: {fileID: 1018508131}
+  pawnMove: {fileID: 8300000, guid: d10fe2c74208ed340b53aae1d483bd4d, type: 3}
+  takePawn: {fileID: 8300000, guid: 2f07eb0cd9c2a964ba41e6fd0c57ca84, type: 3}
   volume: 0
   AITurn: 0
   playerPawnNumber: 0
@@ -6362,7 +6259,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnOne
           m_Mode: 1
           m_Arguments:
@@ -6473,7 +6370,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA2
           m_Mode: 1
           m_Arguments:
@@ -6739,7 +6636,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnThree
           m_Mode: 1
           m_Arguments:
@@ -6931,7 +6828,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB1
           m_Mode: 1
           m_Arguments:
@@ -7116,7 +7013,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -12031,7 +11928,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB3
           m_Mode: 1
           m_Arguments:
@@ -12068,84 +11965,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
---- !u!1 &1566749555
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1566749556}
-  - component: {fileID: 1566749558}
-  - component: {fileID: 1566749557}
-  m_Layer: 5
-  m_Name: time
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1566749556
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566749555}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 737317677}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20.3, y: -10.1}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &1566749557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566749555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Turn time:'
---- !u!222 &1566749558
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566749555}
-  m_CullTransparentMesh: 0
 --- !u!1 &1618070631
 GameObject:
   m_ObjectHideFlags: 0
@@ -12246,7 +12065,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA1
           m_Mode: 1
           m_Arguments:
@@ -12431,7 +12250,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnOne
           m_Mode: 1
           m_Arguments:
@@ -12523,84 +12342,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1780129695
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1780129696}
-  - component: {fileID: 1780129698}
-  - component: {fileID: 1780129697}
-  m_Layer: 5
-  m_Name: Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1780129696
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780129695}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 737317677}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20.3, y: -30.5}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &1780129697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780129695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 5.0
---- !u!222 &1780129698
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780129695}
-  m_CullTransparentMesh: 0
 --- !u!1 &1785832733
 GameObject:
   m_ObjectHideFlags: 0
@@ -17667,7 +17408,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA3
           m_Mode: 1
           m_Arguments:
@@ -17852,7 +17593,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnThree
           m_Mode: 1
           m_Arguments:

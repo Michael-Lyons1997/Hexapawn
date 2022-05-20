@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/menus/whichGameToPlay.unity
     guid: 26bcfd2020028ed4e87e7410b782aecd
   - enabled: 1
-    path: Assets/Scenes/hexapawn/hexapawnDifficulty.unity
+    path: Assets/Scenes/menus/hexapawnDifficulty.unity
     guid: 3417ed0dfe18cf94595c058ec7f66c16
   - enabled: 1
     path: Assets/Scenes/hexapawn/hexapawnEasySingleplayer.unity
@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/hexapawn/hexapawnMultiplayer.unity
     guid: 9777ebce94a0a494198ee9d3a0ee46fc
   - enabled: 1
-    path: Assets/Scenes/octopawn/octopawnDifficulty.unity
+    path: Assets/Scenes/menus/octopawnDifficulty.unity
     guid: 91607a9ca85bf024f9e4cc371046e576
   - enabled: 1
     path: Assets/Scenes/octopawn/octopawnEasySingleplayer.unity

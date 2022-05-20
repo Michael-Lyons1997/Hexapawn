@@ -1436,7 +1436,6 @@ public class octopawnEasyAIMove : MonoBehaviour
     void swapToPlayerTurn()
     {
         AITurn = false;
-        playerScript.turnTimer = 3.0f;
         playerScript.playerTurn = true;
     }
 }

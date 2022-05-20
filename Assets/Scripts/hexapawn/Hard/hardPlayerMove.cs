@@ -149,7 +149,7 @@ public class hardPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerDownH
             turnTimer -= 1.0f * Time.deltaTime;
             if(turnTimer <= 0.0f)
             {
-                //timeLoss = true;
+                timeLoss = true;
             }
             if(PawnOneOnC1)
             {

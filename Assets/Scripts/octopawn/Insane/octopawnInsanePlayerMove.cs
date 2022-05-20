@@ -172,7 +172,7 @@ public class octopawnInsanePlayerMove : MonoBehaviour, IPointerClickHandler, IPo
         pawnThreeCantMove = false;
         pawnFourCantMove = false;
         volume = 1.0f;
-        turnTimer = 3.0f;
+        turnTimer = 1.0f;
         timeLoss = false;
     }
 

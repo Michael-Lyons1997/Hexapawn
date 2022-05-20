@@ -107,7 +107,7 @@ public class insanePlayerMove : MonoBehaviour, IPointerClickHandler, IPointerDow
         pawnTwoCantMove = false;
         pawnThreeCantMove = false;
         volume = 1.0f;
-        turnTimer = 3.0f;
+        turnTimer = 1.0f;
         timeLoss = false;
     }
 
@@ -149,7 +149,7 @@ public class insanePlayerMove : MonoBehaviour, IPointerClickHandler, IPointerDow
             turnTimer -= 1.0f * Time.deltaTime;
             if(turnTimer <= 0.0f)
             {
-                //timeLoss = true;
+                timeLoss = true;
             }
             if(PawnOneOnC1)
             {
