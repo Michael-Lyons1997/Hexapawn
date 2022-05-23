@@ -77,26 +77,27 @@ public class insaneAI : MonoBehaviour
         otherPawnThreeOnB2 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().playerPawnThreeOnB2;
         otherPawnThreeOnB3 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().playerPawnThreeOnB3;
         otherPawnThreeOnC3 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().playerPawnThreeOnC3;
-        whichPawnToMove = Random.Range(1, 4);
-        switch(whichPawnToMove)
+        
+        if((PawnOneOnA1 && otherPawnOneOnB2) || (PawnOneOnA1 && otherPawnTwoOnB2) || (PawnOneOnA1 && otherPawnThreeOnB2) 
+            || (PawnOneOnB1 && otherPawnTwoOnC2) || (PawnOneOnB2 && otherPawnOneOnC1) || (PawnOneOnB2 && otherPawnThreeOnC3))
         {
-            case 1:
-                pawnOneMove = true;
-                pawnTwoMove = false;
-                pawnThreeMove = false;
-                break;
-            case 2:
-                pawnOneMove = false;
-                pawnTwoMove = true;
-                pawnThreeMove = false;
-                break;
-            case 3: 
-                pawnOneMove = false;
-                pawnTwoMove = false;
-                pawnThreeMove = true;
-                break;
-            default:
-                break;
+            pawnOneMove = true;
+            pawnTwoMove = false;
+            pawnThreeMove = false;
+        }
+        if((PawnTwoOnA2 && otherPawnOneOnB1) || (PawnTwoOnA2 && otherPawnTwoOnB1) || (PawnTwoOnA2 && otherPawnTwoOnB3)|| (PawnTwoOnA2 && otherPawnThreeOnB3)
+            || (PawnTwoOnB1 && otherPawnTwoOnC2) || (PawnTwoOnB2 && otherPawnOneOnC1) || (PawnTwoOnB2 && otherPawnThreeOnC3) || (PawnTwoOnB3 && otherPawnTwoOnC2))
+        {
+            pawnOneMove = false;
+            pawnTwoMove = true;
+            pawnThreeMove = false;
+        }
+        if((PawnThreeOnA3 && otherPawnOneOnB2) || (PawnThreeOnA3 && otherPawnTwoOnB2) || (PawnThreeOnA3 && otherPawnThreeOnB2) 
+            || (PawnThreeOnB2 && otherPawnOneOnC1) || (PawnThreeOnB2 && otherPawnThreeOnC3) || (PawnThreeOnB3 && otherPawnTwoOnC2))
+        {
+            pawnOneMove = false;
+            pawnTwoMove = false;
+            pawnThreeMove = true;
         }
     }
 }
