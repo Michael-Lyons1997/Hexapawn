@@ -174,6 +174,7 @@ public class octopawnHardAI : MonoBehaviour
 
     public IEnumerator moveAI()
     {
+        yield return new WaitForSecondsRealtime(0.5f);
         if((PawnOneOnA1 && otherPawnOneOnB2) || (PawnOneOnA1 && otherPawnTwoOnB2) || (PawnOneOnA1 && otherPawnThreeOnB2) || (PawnOneOnA1 && otherPawnFourOnB2) 
             || (PawnOneOnB1 && otherPawnOneOnC2) || (PawnOneOnB1 && otherPawnTwoOnC2) || (PawnOneOnB1 && otherPawnThreeOnC2)
             || (PawnOneOnB2 && otherPawnOneOnC1) || (PawnOneOnB2 && otherPawnTwoOnC1) || (PawnOneOnB2 && otherPawnTwoOnC3) || (PawnOneOnB2 && otherPawnFourOnC3)

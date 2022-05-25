@@ -394,7 +394,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnC4
           m_Mode: 1
           m_Arguments:
@@ -531,7 +531,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA4
           m_Mode: 1
           m_Arguments:
@@ -690,7 +690,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -802,7 +802,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnFour
           m_Mode: 1
           m_Arguments:
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnC1
           m_Mode: 1
           m_Arguments:
@@ -6298,7 +6298,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB2
           m_Mode: 1
           m_Arguments:
@@ -6435,7 +6435,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnC2
           m_Mode: 1
           m_Arguments:
@@ -6573,7 +6573,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnFour
           m_Mode: 1
           m_Arguments:
@@ -7207,7 +7207,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnOne
           m_Mode: 1
           m_Arguments:
@@ -7318,7 +7318,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA2
           m_Mode: 1
           m_Arguments:
@@ -7584,7 +7584,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnThree
           m_Mode: 1
           m_Arguments:
@@ -7776,7 +7776,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB1
           m_Mode: 1
           m_Arguments:
@@ -8042,7 +8042,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -12957,7 +12957,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB3
           m_Mode: 1
           m_Arguments:
@@ -13310,7 +13310,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA1
           m_Mode: 1
           m_Arguments:
@@ -13495,7 +13495,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnOne
           m_Mode: 1
           m_Arguments:
@@ -13632,7 +13632,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB4
           m_Mode: 1
           m_Arguments:
@@ -18871,7 +18871,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA3
           m_Mode: 1
           m_Arguments:
@@ -19056,7 +19056,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnThree
           m_Mode: 1
           m_Arguments:
@@ -19167,7 +19167,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnC3
           m_Mode: 1
           m_Arguments:
