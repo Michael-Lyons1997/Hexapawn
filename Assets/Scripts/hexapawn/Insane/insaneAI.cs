@@ -118,7 +118,6 @@ public class insaneAI : MonoBehaviour
         if((PawnThreeOnA3 && otherPawnOneOnB2) || (PawnThreeOnA3 && otherPawnTwoOnB2) || (PawnThreeOnA3 && otherPawnThreeOnB2) 
             || (PawnThreeOnB2 && otherPawnOneOnC1) || (PawnThreeOnB2 && otherPawnThreeOnC3) || (PawnThreeOnB3 && otherPawnTwoOnC2))
         {
-            Debug.Log("pawn should take");
             pawnOneMove = false;
             pawnTwoMove = false;
             pawnThreeMove = true;
@@ -126,7 +125,6 @@ public class insaneAI : MonoBehaviour
         else if(((PawnThreeOnA3 && !otherPawnThreeOnB3) && (PawnThreeOnA3 && !otherPawnTwoOnB3))
                 || ((PawnThreeOnB2 && !otherPawnTwoOnC2) && (PawnThreeOnB3 && !otherPawnThreeOnC3)))
         {
-            Debug.Log("pawn should move ahead");
             pawnOneMove = false;
             pawnTwoMove = false;
             pawnThreeMove = true;
