@@ -149,7 +149,7 @@ public class mediumPlayerMove : MonoBehaviour, IPointerClickHandler, IPointerDow
             turnTimer -= 1.0f * Time.deltaTime;
             if(turnTimer <= 0.0f)
             {
-                //timeLoss = true;
+                timeLoss = true;
             }
             if(PawnOneOnC1)
             {

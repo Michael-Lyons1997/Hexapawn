@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class octopawnInsaneAI : MonoBehaviour
 {
-    int whichPawnToMove = 0;
     public bool pawnOneMove;
     public bool pawnTwoMove;
     public bool pawnThreeMove;
     public bool pawnFourMove;
+    bool ourTurn;
     bool PawnOneOnA1;
     bool PawnOneOnB1;
     bool PawnOneOnB2;
@@ -93,6 +93,7 @@ public class octopawnInsaneAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ourTurn = GameObject.FindWithTag("GameController").GetComponent<octopawnInsaneAIMove>().AITurn;
         PawnOneOnA1 = GameObject.FindWithTag("GameController").GetComponent<octopawnInsaneBoardState>().AIPawnOneOnA1;
         PawnOneOnB1 = GameObject.FindWithTag("GameController").GetComponent<octopawnInsaneBoardState>().AIPawnOneOnB1;
         PawnOneOnB2 = GameObject.FindWithTag("GameController").GetComponent<octopawnInsaneBoardState>().AIPawnOneOnB2;
@@ -165,11 +166,28 @@ public class octopawnInsaneAI : MonoBehaviour
         otherPawnFourOnC3 = GameObject.FindWithTag("GameController").GetComponent<octopawnInsaneBoardState>().playerPawnFourOnC3;
         otherPawnFourOnC4 = GameObject.FindWithTag("GameController").GetComponent<octopawnInsaneBoardState>().playerPawnFourOnC4;
         otherPawnFourOnD4 = GameObject.FindWithTag("GameController").GetComponent<octopawnInsaneBoardState>().playerPawnFourOnD4;
+        if(ourTurn)
+        {
+            StartCoroutine(moveAI());
+        }
+    }
 
-         if((PawnOneOnA1 && otherPawnOneOnB2) || (PawnOneOnA1 && otherPawnTwoOnB2) || (PawnOneOnA1 && otherPawnThreeOnB2) || (PawnOneOnA1 && otherPawnFourOnB2) 
+    public IEnumerator moveAI()
+    {
+        if((PawnOneOnA1 && otherPawnOneOnB2) || (PawnOneOnA1 && otherPawnTwoOnB2) || (PawnOneOnA1 && otherPawnThreeOnB2) || (PawnOneOnA1 && otherPawnFourOnB2) 
             || (PawnOneOnB1 && otherPawnOneOnC2) || (PawnOneOnB1 && otherPawnTwoOnC2) || (PawnOneOnB1 && otherPawnThreeOnC2)
             || (PawnOneOnB2 && otherPawnOneOnC1) || (PawnOneOnB2 && otherPawnTwoOnC1) || (PawnOneOnB2 && otherPawnTwoOnC3) || (PawnOneOnB2 && otherPawnFourOnC3)
             || (PawnOneOnC1 && otherPawnTwoOnD2) || (PawnOneOnC2 && otherPawnOneOnD1) || (PawnOneOnC2 && otherPawnThreeOnD3) || (PawnOneOnC3 && otherPawnTwoOnD2) || (PawnOneOnC3 && otherPawnFourOnD4))
+        {
+            pawnOneMove = true;
+            pawnTwoMove = false;
+            pawnThreeMove = false;
+            pawnFourMove = false;
+        }
+        else if(((PawnOneOnA1 && !otherPawnOneOnB1) && (PawnOneOnA1 && !otherPawnTwoOnB1) && (PawnOneOnA1 && !otherPawnThreeOnB1))    
+                || ((PawnOneOnB1 && !otherPawnOneOnC1) && (PawnOneOnB1 && !otherPawnTwoOnC1))
+                || ((PawnOneOnB2 && !otherPawnOneOnC2) && (PawnOneOnB2 && !otherPawnTwoOnC2) && (PawnOneOnB2 && !otherPawnThreeOnC2))
+                || ((PawnOneOnC1 && !otherPawnOneOnD1) && (PawnOneOnC2 && !otherPawnTwoOnD2) && (PawnOneOnC3 && !otherPawnThreeOnD3)))
         {
             pawnOneMove = true;
             pawnTwoMove = false;
@@ -187,11 +205,33 @@ public class octopawnInsaneAI : MonoBehaviour
             pawnThreeMove = false;
             pawnFourMove = false;
         }
+        else if(((PawnTwoOnA2 && !otherPawnOneOnB2) && (PawnTwoOnA2 && !otherPawnTwoOnB2) && (PawnTwoOnA2 && !otherPawnThreeOnB2) && (PawnTwoOnA2 && !otherPawnFourOnB2))
+            || ((PawnTwoOnB1 && !otherPawnOneOnC1) && (PawnTwoOnB1 && !otherPawnTwoOnC1))
+            || ((PawnTwoOnB2 && !otherPawnOneOnC2) && (PawnTwoOnB2 && !otherPawnTwoOnC2) && (PawnTwoOnB2 && !otherPawnThreeOnC2))
+            || ((PawnTwoOnB3 && !otherPawnTwoOnC3) && (PawnTwoOnB3 && !otherPawnThreeOnC3) && (PawnTwoOnB3 && !otherPawnFourOnC3))
+            || ((PawnTwoOnC1 && !otherPawnOneOnD1) && (PawnTwoOnC2 && !otherPawnTwoOnD2) && (PawnTwoOnC3 && !otherPawnThreeOnD3) && (PawnTwoOnC4 && !otherPawnFourOnD4)))
+        {
+            pawnOneMove = false;
+            pawnTwoMove = true;
+            pawnThreeMove = false;
+            pawnFourMove = false;
+        }
         if((PawnThreeOnA3 && otherPawnOneOnB2) || (PawnThreeOnA3 && otherPawnTwoOnB2) || (PawnThreeOnA3 && otherPawnThreeOnB2) || (PawnThreeOnA3 && otherPawnTwoOnB4) || (PawnThreeOnA3 && otherPawnThreeOnB4) || (PawnThreeOnA3 && otherPawnFourOnB4)
             || (PawnThreeOnB2 && otherPawnOneOnC1) || (PawnThreeOnB2 && otherPawnTwoOnC1)|| (PawnThreeOnB2 && otherPawnTwoOnC3) || (PawnThreeOnB2 && otherPawnThreeOnC3) || (PawnThreeOnB2 && otherPawnFourOnC3)
             || (PawnThreeOnB3 && otherPawnOneOnC2) || (PawnThreeOnB3 && otherPawnTwoOnC2) || (PawnThreeOnB3 && otherPawnThreeOnC2) || (PawnThreeOnB3 && otherPawnThreeOnC4) || (PawnThreeOnB3 && otherPawnFourOnC4)
             || (PawnThreeOnB4 && otherPawnTwoOnC3) || (PawnThreeOnB4 && otherPawnThreeOnC3) || (PawnThreeOnB4 && otherPawnFourOnC3)
             || (PawnTwoOnC1 && otherPawnTwoOnD2) || (PawnTwoOnC2 && otherPawnOneOnD1) || (PawnTwoOnC2 && otherPawnThreeOnD3) || (PawnTwoOnC3 && otherPawnTwoOnD2) || (PawnTwoOnC3 && otherPawnFourOnD4) || (PawnTwoOnC4 && otherPawnThreeOnD3))
+        {
+            pawnOneMove = false;
+            pawnTwoMove = false;
+            pawnThreeMove = true;
+            pawnFourMove = false;
+        }
+        else if(((PawnThreeOnA3 && !otherPawnOneOnB3) && (PawnThreeOnA3 && !otherPawnTwoOnB3) && (PawnThreeOnA3 && !otherPawnThreeOnB3) && (PawnThreeOnA3 && !otherPawnTwoOnB3))
+            || ((PawnThreeOnB2 && !otherPawnOneOnC2) && (PawnThreeOnB2 && !otherPawnTwoOnC2) && (PawnThreeOnB2 && !otherPawnThreeOnC2))
+            || ((PawnThreeOnB3 && !otherPawnTwoOnC3) && (PawnThreeOnB3 && !otherPawnThreeOnC3) && (PawnThreeOnB3 && !otherPawnFourOnC3))
+            || ((PawnThreeOnB4 && !otherPawnThreeOnC4) && (PawnThreeOnB4 && !otherPawnFourOnC4))
+            || ((PawnTwoOnC1 && !otherPawnOneOnD1) && (PawnTwoOnC2 && !otherPawnTwoOnD2) && (PawnTwoOnC3 && !otherPawnThreeOnD3) && (PawnTwoOnC4 && !otherPawnFourOnD4)))
         {
             pawnOneMove = false;
             pawnTwoMove = false;
@@ -208,5 +248,14 @@ public class octopawnInsaneAI : MonoBehaviour
             pawnThreeMove = false;
             pawnFourMove = true;
         }
+        else if(((PawnFourOnA4 && !otherPawnTwoOnB4) && (PawnFourOnA4 && !otherPawnThreeOnB4) && (PawnFourOnA4 && !otherPawnFourOnB4))
+            || ((PawnFourOnB3 && !otherPawnTwoOnC3) && (PawnFourOnB3 && !otherPawnThreeOnC3) && (PawnFourOnB3 && !otherPawnFourOnC3))
+            || ((PawnFourOnB4 && !otherPawnThreeOnC4) && (PawnFourOnB4 && !otherPawnFourOnC4))
+            || ((PawnFourOnC2 && !otherPawnTwoOnD2) && (PawnFourOnC3 && !otherPawnThreeOnD3) && (PawnFourOnC4 && !otherPawnFourOnD4)))
+        {
+            pawnOneMove = false;
+            pawnTwoMove = false;
+            pawnThreeMove = false;
+            pawnFourMove = true;
+        }
     }
-}

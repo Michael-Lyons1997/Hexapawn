@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class hardAI : MonoBehaviour
 {
-    int whichPawnToMove = 0;
     public bool pawnOneMove;
     public bool pawnTwoMove;
     public bool pawnThreeMove;
+    bool ourTurn;
     bool PawnOneOnA1;
     bool PawnOneOnB1;
     bool PawnOneOnB2;
@@ -48,6 +48,7 @@ public class hardAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ourTurn = GameObject.FindWithTag("GameController").GetComponent<hardAIMove>().AITurn;
         PawnOneOnA1 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().AIPawnOneOnA1;
         PawnOneOnB1 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().AIPawnOneOnB1;
         PawnOneOnB2 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().AIPawnOneOnB2;
@@ -77,9 +78,24 @@ public class hardAI : MonoBehaviour
         otherPawnThreeOnB2 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().playerPawnThreeOnB2;
         otherPawnThreeOnB3 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().playerPawnThreeOnB3;
         otherPawnThreeOnC3 = GameObject.FindWithTag("GameController").GetComponent<hardBoardState>().playerPawnThreeOnC3;
-    
-        if((PawnOneOnA1 && otherPawnOneOnB2) || (PawnOneOnA1 && otherPawnTwoOnB2) || (PawnOneOnA1 && otherPawnThreeOnB2) 
+        if(ourTurn)
+        {
+            StartCoroutine(moveAI());
+        }
+    }
+
+    public IEnumerator moveAI()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        if((PawnOneOnA1 && otherPawnOneOnB2) || (PawnOneOnA1 && otherPawnTwoOnB2) || (PawnOneOnA1 && otherPawnThreeOnB2)
             || (PawnOneOnB1 && otherPawnTwoOnC2) || (PawnOneOnB2 && otherPawnOneOnC1) || (PawnOneOnB2 && otherPawnThreeOnC3))
+        {
+            pawnOneMove = true;
+            pawnTwoMove = false;
+            pawnThreeMove = false;
+        }
+        else if(((PawnOneOnA1 && !otherPawnOneOnB1) && (PawnOneOnA1 && !otherPawnTwoOnB1))
+                || ((PawnOneOnB1 && !otherPawnOneOnC1) && (PawnOneOnB2 && !otherPawnTwoOnC2)))
         {
             pawnOneMove = true;
             pawnTwoMove = false;
@@ -92,8 +108,22 @@ public class hardAI : MonoBehaviour
             pawnTwoMove = true;
             pawnThreeMove = false;
         }
+        else if(((PawnTwoOnA2 && !otherPawnOneOnB2) && (PawnTwoOnA2 && !otherPawnTwoOnB2) && (PawnTwoOnA2 && !otherPawnThreeOnB2))
+                || ((PawnTwoOnB1 && !otherPawnOneOnC1) && (PawnTwoOnB2 && !otherPawnTwoOnC2) && (PawnTwoOnB3 && !otherPawnThreeOnC3)))
+        {
+            pawnOneMove = false;
+            pawnTwoMove = true;
+            pawnThreeMove = false;
+        }
         if((PawnThreeOnA3 && otherPawnOneOnB2) || (PawnThreeOnA3 && otherPawnTwoOnB2) || (PawnThreeOnA3 && otherPawnThreeOnB2) 
             || (PawnThreeOnB2 && otherPawnOneOnC1) || (PawnThreeOnB2 && otherPawnThreeOnC3) || (PawnThreeOnB3 && otherPawnTwoOnC2))
+        {
+            pawnOneMove = false;
+            pawnTwoMove = false;
+            pawnThreeMove = true;
+        }
+        else if(((PawnThreeOnA3 && !otherPawnThreeOnB3) && (PawnThreeOnA3 && !otherPawnTwoOnB3))
+                || ((PawnThreeOnB2 && !otherPawnTwoOnC2) && (PawnThreeOnB3 && !otherPawnThreeOnC3)))
         {
             pawnOneMove = false;
             pawnTwoMove = false;

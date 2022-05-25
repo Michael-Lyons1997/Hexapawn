@@ -416,7 +416,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -5720,7 +5720,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB2
           m_Mode: 1
           m_Arguments:
@@ -5899,29 +5899,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a55a47e08b63f240ac6a669f9d56ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  pawnHighlight: {fileID: 0}
-  squareHighlight: {fileID: 0}
-  squarePawnHighlight: {fileID: 0}
-  squarePawnHighlightTwo: {fileID: 0}
-  a1: {fileID: 0}
-  a2: {fileID: 0}
-  a3: {fileID: 0}
-  b1: {fileID: 0}
-  b2: {fileID: 0}
-  b3: {fileID: 0}
-  c1: {fileID: 0}
-  c2: {fileID: 0}
-  c3: {fileID: 0}
-  AIScript: {fileID: 0}
-  audioSource: {fileID: 0}
-  pawnMove: {fileID: 0}
-  takePawn: {fileID: 0}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
+  pawnHighlight: {fileID: 1810527559}
+  squareHighlight: {fileID: 1785832733}
+  squarePawnHighlight: {fileID: 800631207}
+  squarePawnHighlightTwo: {fileID: 1398656064}
+  a1: {fileID: 1618070631}
+  a2: {fileID: 1026409178}
+  a3: {fileID: 1925343155}
+  b1: {fileID: 1224825140}
+  b2: {fileID: 905451236}
+  b3: {fileID: 1410576133}
+  c1: {fileID: 619622634}
+  c2: {fileID: 967684857}
+  c3: {fileID: 2061459570}
+  AIScript: {fileID: 1018508129}
+  audioSource: {fileID: 1018508131}
+  pawnMove: {fileID: 8300000, guid: d10fe2c74208ed340b53aae1d483bd4d, type: 3}
+  takePawn: {fileID: 8300000, guid: 2f07eb0cd9c2a964ba41e6fd0c57ca84, type: 3}
   volume: 0
   turnTimer: 0
   playerTurn: 0
@@ -5930,7 +5930,7 @@ MonoBehaviour:
   pawnOneCantMove: 0
   pawnTwoCantMove: 0
   pawnThreeCantMove: 0
-  uiText: {fileID: 0}
+  uiText: {fileID: 1780129697}
 --- !u!114 &1018508126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5943,27 +5943,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38065bc3342c3e4abcc322a972120d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  playerPawnOneCollider: {fileID: 0}
-  playerPawnTwoCollider: {fileID: 0}
-  playerPawnThreeCollider: {fileID: 0}
-  AIPawnOneCollider: {fileID: 0}
-  AIPawnTwoCollider: {fileID: 0}
-  AIPawnThreeCollider: {fileID: 0}
-  a1Collider: {fileID: 0}
-  a2Collider: {fileID: 0}
-  a3Collider: {fileID: 0}
-  b1Collider: {fileID: 0}
-  b2Collider: {fileID: 0}
-  b3Collider: {fileID: 0}
-  c1Collider: {fileID: 0}
-  c2Collider: {fileID: 0}
-  c3Collider: {fileID: 0}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
+  playerPawnOneCollider: {fileID: 1019222535}
+  playerPawnTwoCollider: {fileID: 1381798997}
+  playerPawnThreeCollider: {fileID: 1989481819}
+  AIPawnOneCollider: {fileID: 1688518096}
+  AIPawnTwoCollider: {fileID: 364772559}
+  AIPawnThreeCollider: {fileID: 1153140769}
+  a1Collider: {fileID: 1618070635}
+  a2Collider: {fileID: 1026409182}
+  a3Collider: {fileID: 1925343159}
+  b1Collider: {fileID: 1224825144}
+  b2Collider: {fileID: 905451240}
+  b3Collider: {fileID: 1410576137}
+  c1Collider: {fileID: 619622638}
+  c2Collider: {fileID: 967684861}
+  c3Collider: {fileID: 2061459574}
   playerPawnOneOnA1: 0
   playerPawnOneOnA2: 0
   playerPawnOneOnA3: 0
@@ -6078,25 +6078,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56177e9e48d9c844bc1c09bf648b4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIPawnOne: {fileID: 0}
-  AIPawnTwo: {fileID: 0}
-  AIPawnThree: {fileID: 0}
-  playerPawnOne: {fileID: 0}
-  playerPawnTwo: {fileID: 0}
-  playerPawnThree: {fileID: 0}
-  a1: {fileID: 0}
-  a2: {fileID: 0}
-  a3: {fileID: 0}
-  b1: {fileID: 0}
-  b2: {fileID: 0}
-  b3: {fileID: 0}
-  c1: {fileID: 0}
-  c2: {fileID: 0}
-  c3: {fileID: 0}
-  playerScript: {fileID: 0}
-  audioSource: {fileID: 0}
-  pawnMove: {fileID: 0}
-  takePawn: {fileID: 0}
+  AIPawnOne: {fileID: 1688518095}
+  AIPawnTwo: {fileID: 364772556}
+  AIPawnThree: {fileID: 1153140766}
+  playerPawnOne: {fileID: 1019222532}
+  playerPawnTwo: {fileID: 1381798994}
+  playerPawnThree: {fileID: 1989481816}
+  a1: {fileID: 1618070631}
+  a2: {fileID: 1026409178}
+  a3: {fileID: 1925343155}
+  b1: {fileID: 1224825140}
+  b2: {fileID: 905451236}
+  b3: {fileID: 1410576133}
+  c1: {fileID: 619622634}
+  c2: {fileID: 967684857}
+  c3: {fileID: 2061459570}
+  playerScript: {fileID: 1018508125}
+  audioSource: {fileID: 1018508131}
+  pawnMove: {fileID: 8300000, guid: d10fe2c74208ed340b53aae1d483bd4d, type: 3}
+  takePawn: {fileID: 8300000, guid: 2f07eb0cd9c2a964ba41e6fd0c57ca84, type: 3}
   volume: 0
   AITurn: 0
   playerPawnNumber: 0
@@ -6362,7 +6362,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnOne
           m_Mode: 1
           m_Arguments:
@@ -6473,7 +6473,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA2
           m_Mode: 1
           m_Arguments:
@@ -6739,7 +6739,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnThree
           m_Mode: 1
           m_Arguments:
@@ -6931,7 +6931,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB1
           m_Mode: 1
           m_Arguments:
@@ -7116,7 +7116,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnTwo
           m_Mode: 1
           m_Arguments:
@@ -12031,7 +12031,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnB3
           m_Mode: 1
           m_Arguments:
@@ -12246,7 +12246,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA1
           m_Mode: 1
           m_Arguments:
@@ -12431,7 +12431,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: TakeAIPawnOne
           m_Mode: 1
           m_Arguments:
@@ -17667,7 +17667,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: clickOnA3
           m_Mode: 1
           m_Arguments:
@@ -17852,7 +17852,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1018508125}
           m_MethodName: selectPlayerPawnThree
           m_Mode: 1
           m_Arguments:
